@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BAFC – Be A Football Coach</title>
+<meta name="apple-mobile-web-app-title" content="BAFC">
+<meta name="theme-color" content="#1f7a3a">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22 viewBox=%220 0 400 400%22 role=%22img%22 aria-label=%22BAFC-logo: taktikktavle med kryss, ringer og pil%22%3E%3Cdefs%3E%3CclipPath id=%22rq%22%3E%3Crect x=%2220%22 y=%2220%22 width=%22360%22 height=%22360%22 rx=%2284%22/%3E%3C/clipPath%3E%3C/defs%3E%3Cg clip-path=%22url(%23rq)%22%3E%3Crect x=%2220%22 y=%2220%22 width=%22360%22 height=%22360%22 fill=%22%231f7a3a%22/%3E%3Cg fill=%22%2327904a%22%3E%3Crect x=%2220%22 y=%2220%22 width=%22360%22 height=%2242%22/%3E%3Crect x=%2220%22 y=%22104%22 width=%22360%22 height=%2242%22/%3E%3Crect x=%2220%22 y=%22188%22 width=%22360%22 height=%2242%22/%3E%3C/g%3E%3Cg fill=%22none%22 stroke=%22%23ffffff%22 stroke-width=%226%22 stroke-opacity=%22.9%22%3E%3Cline x1=%2220%22 y1=%22150%22 x2=%22380%22 y2=%22150%22/%3E%3Ccircle cx=%22200%22 cy=%22150%22 r=%2248%22/%3E%3C/g%3E%3Cg fill=%22none%22 stroke=%22%23ffffff%22 stroke-width=%229%22%3E%3Ccircle cx=%22112%22 cy=%2296%22 r=%2217%22/%3E%3Ccircle cx=%22286%22 cy=%22214%22 r=%2217%22/%3E%3C/g%3E%3Cg stroke=%22%23ffd23f%22 stroke-width=%2210%22 stroke-linecap=%22round%22%3E%3Cline x1=%22276%22 y1=%2276%22 x2=%22306%22 y2=%22106%22/%3E%3Cline x1=%22306%22 y1=%2276%22 x2=%22276%22 y2=%22106%22/%3E%3Cline x1=%2296%22 y1=%22200%22 x2=%22126%22 y2=%22230%22/%3E%3Cline x1=%22126%22 y1=%22200%22 x2=%2296%22 y2=%22230%22/%3E%3C/g%3E%3Cpath d=%22M134 104C176 128 214 150 258 196%22 fill=%22none%22 stroke=%22%23ffd23f%22 stroke-width=%229%22 stroke-linecap=%22round%22 stroke-dasharray=%222 18%22/%3E%3Cpolygon points=%22270,208 240,200 258,182%22 fill=%22%23ffd23f%22/%3E%3Crect x=%2220%22 y=%22268%22 width=%22360%22 height=%22112%22 fill=%22%23122016%22/%3E%3Ctext x=%22200%22 y=%22350%22 text-anchor=%22middle%22 style=%22font-family: Arial Black, Arial, sans-serif; font-weight: 800; font-size: 82px; fill: %23ffd23f; letter-spacing: 2px%22%3EBAFC%3C/text%3E%3C/g%3E%3Crect x=%2220%22 y=%2220%22 width=%22360%22 height=%22360%22 rx=%2284%22 fill=%22none%22 stroke=%22%23122016%22 stroke-width=%2210%22/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: lekent, varmt, som en lørdag på kunstgresset
+   IDEA: trenerens taktikktavle ved sidelinja – banen er spillebrettet
+   PICTURE: stående bane med spillere som brikker, ball som ruller
+   COLOUR and TYPE: gressgrønt, kritt-hvitt, vestgul aksent; Rubik
+   LAYOUT: tittel, faner (Kamp/Lag), bane, benk, knapper, logg – én kolonne på mobil */
+:root{color-scheme:light dark;--bg:light-dark(#eef5ea,#0c1a10);--ink:light-dark(#122016,#e8f3e6);--mut:light-dark(#4c6352,#9db7a3);--card:light-dark(#fff,#132a19);--line:light-dark(#d3e2cf,#22402a);--vest:#ffd23f;--red:#e5484d}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Rubik,system-ui,sans-serif;overflow-x:clip}
+.wrap{max-width:1100px;margin:0 auto;padding:16px max(4vw,14px) 40px}
+header{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:8px 16px;margin-bottom:12px}
+h1{font-size:clamp(28px,6vw,42px);line-height:1.05;margin:0;font-weight:800}
+.sub{color:var(--mut);margin:2px 0 0;font-size:15px}
+.score{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px 14px}
+.score b{font-size:30px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.score small{color:var(--mut);font-size:13px;display:block;white-space:nowrap}
+#clock{font-size:24px}
+.tabs{display:flex;gap:6px;margin:0 0 14px;border-bottom:2px solid var(--line)}
+.tab{all:unset;cursor:pointer;padding:10px 18px;font-weight:800;border-radius:10px 10px 0 0;min-height:24px;color:var(--mut);margin-bottom:-2px;border-bottom:3px solid transparent}
+.tab[aria-selected=true]{color:var(--ink);border-bottom-color:var(--vest)}
+.tab:focus-visible{outline:3px solid var(--vest)}
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+@media(min-width:820px){.grid{grid-template-columns:minmax(0,420px) minmax(0,1fr)}}
+.pitch{background:#2f8f46;border-radius:18px;padding:8px;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.pitch svg{display:block;width:100%;height:auto;touch-action:manipulation}
+.pl{cursor:pointer}
+.pl text{font:800 13px Rubik,sans-serif;fill:#122016;pointer-events:none}
+.pl .nm{font:600 10px Rubik,sans-serif;fill:#fff}
+.pl .tg{font:400 9px Rubik,sans-serif;fill:#fff;opacity:.85}
+.hint{font-size:14px;color:var(--mut);margin:8px 2px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:12px}
+.card h2{font-size:18px;margin:0 0 10px}
+.bench{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}
+.bp{all:unset;box-sizing:border-box;cursor:pointer;display:flex;gap:10px;align-items:center;border:2px solid var(--line);border-radius:12px;padding:8px 10px;min-height:56px}
+.bp:focus-visible,.btn:focus-visible,.opt:focus-visible{outline:3px solid var(--vest);outline-offset:2px}
+.bp.sel{border-color:var(--vest);background:color-mix(in srgb,var(--vest) 22%,transparent)}
+.nr{flex:none;width:34px;height:34px;border-radius:50%;background:var(--vest);color:#122016;display:grid;place-items:center;font-weight:800}
+.bp .t{font-size:14px;line-height:1.2}
+.bp .t small{display:block;color:var(--mut);font-size:13px}
+.bar{height:5px;border-radius:3px;background:var(--line);margin-top:4px;overflow:hidden}
+.bar i{display:block;height:100%}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.btn{all:unset;box-sizing:border-box;cursor:pointer;min-height:48px;padding:0 20px;border-radius:12px;font-weight:800;display:inline-flex;align-items:center;background:var(--ink);color:var(--bg)}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.btn[disabled]{opacity:.4;pointer-events:none}
+.log{list-style:none;margin:0;padding:0;max-height:260px;overflow:auto;font-size:15px}
+.log li{padding:6px 0;border-bottom:1px solid var(--line)}
+.log li.g{font-weight:800}.log li.m{color:var(--red)}.log li.c{color:var(--mut)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:8px;text-align:center}
+.stats div{background:var(--bg);border-radius:10px;padding:8px 4px}
+.stats b{display:block;font-size:22px;font-variant-numeric:tabular-nums}
+.stats span{font-size:13px;color:var(--mut)}
+.msg{background:color-mix(in srgb,var(--vest) 25%,var(--card));border-radius:12px;padding:10px 12px;margin:8px 0;font-size:15px}
+.mood{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;vertical-align:middle}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;place-items:center;padding:16px;z-index:5}
+.overlay.on{display:grid}
+.dlg{background:var(--card);color:var(--ink);border-radius:18px;padding:20px;max-width:460px;width:100%;max-height:90vh;overflow:auto}
+.dlg h3{font-size:26px;margin:0 0 6px;line-height:1.1}
+table{width:100%;border-collapse:collapse;font-size:14px}
+td,th{padding:5px 4px;border-bottom:1px solid var(--line);text-align:left}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.opt{all:unset;box-sizing:border-box;cursor:pointer;border:2px solid var(--line);border-radius:12px;padding:10px 12px;font-size:14px;line-height:1.35}
+.opt b{display:block;font-size:16px;margin-bottom:2px}
+.opt[aria-pressed=true]{border-color:var(--vest);background:color-mix(in srgb,var(--vest) 20%,transparent)}
+.opt[disabled]{opacity:.5;pointer-events:none}
+input,select{font:16px Rubik,sans-serif;padding:9px 10px;border-radius:10px;border:2px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+label.f{display:block;font-size:14px;color:var(--mut)}
+.prow{display:grid;grid-template-columns:40px minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.2fr);gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.prow .lv{grid-column:2/-1;font-size:13px;color:var(--mut);margin-top:-4px}
+@media(max-width:560px){.prow{grid-template-columns:40px minmax(0,1fr) minmax(0,1fr)}.prow .nmc{grid-column:2/-1}.prow>.nr{grid-row:span 2;align-self:start;margin-top:22px}}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.form-row{display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:14px;align-items:start}
+@media(max-width:560px){.form-row{grid-template-columns:minmax(0,1fr)}}
+.mini{background:#2f8f46;border-radius:12px;padding:4px}
+.mini svg{display:block;width:100%;height:auto}
+[hidden]{display:none!important}
+.pitch{position:relative}
+.gflash{position:absolute;inset:0;display:none;place-items:center;pointer-events:none;border-radius:18px;text-align:center}
+.gflash.on{display:grid;animation:gf 2s linear}
+.gflash b{display:block;font:800 clamp(56px,16vw,96px)/1 Rubik,sans-serif;color:#ffd23f;text-shadow:0 5px 0 #122016,0 0 30px rgba(0,0,0,.6);transform:rotate(-6deg)}
+.gflash small{display:block;font:800 20px Rubik,sans-serif;color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.7);margin-top:10px}
+.gflash.them b{color:#fff;font-size:clamp(40px,11vw,64px)}
+@keyframes gf{0%,20%,40%,60%{opacity:1;background:rgba(255,210,63,.45)}10%,30%,50%{opacity:.25;background:transparent}70%,100%{opacity:1;background:rgba(0,0,0,.15)}}
+.gflash.them{animation-name:gft}
+@keyframes gft{0%,25%,50%{opacity:1;background:rgba(229,72,77,.4)}12%,37%{opacity:.3;background:transparent}60%,100%{opacity:1;background:rgba(0,0,0,.15)}}
+.score.pulse{animation:pulse .6s ease 3}
+@keyframes pulse{50%{transform:scale(1.12);background:#ffd23f;color:#122016}}
+@media (prefers-reduced-motion:reduce){.gflash.on,.score.pulse{animation:none}}
+.pk{display:inline-block;font-size:12px;font-weight:800;padding:2px 8px;border-radius:999px;color:#fff;white-space:nowrap}
+.ph{display:flex;align-items:center;gap:8px;margin:16px 0 2px;font-size:15px}
+.vmt td,.vmt th{padding:6px 4px}
+.vmt tr.me td{font-weight:800;background:color-mix(in srgb,var(--vest) 18%,transparent)}
+.path{list-style:none;margin:10px 0 0;padding:0;font-size:14px}
+.path li{display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-bottom:1px solid var(--line)}
+.path li span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+
+.stadium{background:#1b2430;border-radius:18px;padding:0 6px;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.stadium .pitch{border-radius:6px;box-shadow:none;padding:4px}
+.stand{position:relative;height:30px;background-image:radial-gradient(circle at 5px 5px,#e5484d 3px,transparent 3.5px),radial-gradient(circle at 5px 5px,#f5f5f5 3px,transparent 3.5px),radial-gradient(circle at 5px 5px,#3b82f6 3px,transparent 3.5px),radial-gradient(circle at 5px 5px,#ffd23f 3px,transparent 3.5px);background-size:22px 14px,26px 14px,34px 14px,38px 14px;background-position:0 2px,9px 9px,15px 2px,4px 16px}
+.stand::before,.stand::after{content:"";position:absolute;top:7px;width:24px;height:16px;border-radius:2px;box-shadow:0 0 0 1px #0006;background:linear-gradient(90deg,transparent 31%,#00205b 31% 44%,transparent 44%),linear-gradient(0deg,transparent 40%,#00205b 40% 60%,transparent 60%),linear-gradient(90deg,transparent 25%,#fff 25% 50%,transparent 50%),linear-gradient(0deg,transparent 30%,#fff 30% 70%,transparent 70%),#ba0c2f}
+.stand::before{left:12px}.stand::after{right:12px}
+.stadium.hop .stand{animation:hop .28s ease 7 alternate}
+@keyframes hop{to{background-position:0 -3px,9px 4px,15px -3px,4px 11px}}
+.pausetag{position:absolute;inset:0;display:grid;place-items:center;font:800 40px Rubik,sans-serif;color:#fff;background:rgba(0,0,0,.35);pointer-events:none;border-radius:6px;z-index:1}
+.leg{transform-box:fill-box;transform-origin:50% 0}
+#pitch.run .leg.a{animation:lg .32s linear infinite alternate}
+#pitch.run .leg.b{animation:lg .32s linear infinite alternate-reverse}
+@keyframes lg{from{transform:rotate(-30deg)}to{transform:rotate(30deg)}}
+.benchrow{margin-top:10px}
+.benchrow>b{display:block;font-size:13px;color:var(--mut);margin:0 2px 4px}
+#bench{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.bp.c{flex-direction:column;align-items:stretch;gap:3px;padding:7px;min-height:0}
+.bp.c .top{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600}
+.bp.c .top span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bp.c .nr{width:26px;height:26px;font-size:13px}
+.bp.c small{font-size:12px;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.btn.big{width:100%;justify-content:center;min-height:56px;font-size:18px;margin-top:10px}
+.btns.sec{margin:8px 0}
+.btns.sec .btn{min-height:44px;padding:0 13px;font-size:14px}
+#drink{width:100%;justify-content:center;gap:8px;margin-top:8px;min-height:44px;font-size:15px;background:#ffd23f;color:#122016}
+#tutdim{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:3}
+#tut{position:fixed;left:12px;right:12px;max-width:440px;margin:0 auto;z-index:6;background:var(--card);color:var(--ink);border:2px solid var(--vest);border-radius:16px;padding:14px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+#tut p{margin:0;font-size:16px}
+.tut-hl{outline:4px solid var(--vest);outline-offset:3px;position:relative;z-index:4;border-radius:12px}
+.tab.tut-hl,#bench.tut-hl{background:var(--card)}
+.sb{background:#111827;color:#fff;border-radius:14px;padding:14px 12px;text-align:center}
+.sb h3{font-size:14px!important;font-weight:600;color:#ffd23f;margin:0 0 6px!important;letter-spacing:.02em}
+.sbrow{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:8px;align-items:center;font-weight:800}
+.sbrow span{font-size:16px;overflow-wrap:anywhere}
+.sbrow b{font-size:40px;line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap}
+.sbsc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 40px;font-size:13px;color:#cbd5e1;margin-top:8px;line-height:1.35}
+.sbsc div:first-child{text-align:right}.sbsc div:last-child{text-align:left}
+.sw{all:unset;cursor:pointer;width:40px;height:40px;border-radius:50%;border:3px solid var(--line);display:inline-grid;place-items:center}
+.sw[aria-pressed=true]{border-color:var(--ink);box-shadow:0 0 0 3px var(--vest)}
+.sw:focus-visible{outline:3px solid var(--vest);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.stadium.hop .stand,#pitch.run .leg{animation:none!important}}
+.avis{background:#fbfaf5;color:#111;border:1px solid #d6d3c7;border-radius:6px;padding:10px 12px;margin:10px 0}
+.avis small{display:block;font:600 11px Rubik,sans-serif;border-bottom:2px solid #111;padding-bottom:3px;margin-bottom:6px}
+.avis b{display:block;font:700 22px/1.15 Georgia,'Times New Roman',serif;text-wrap:balance}
+.avis span{display:block;font:15px/1.4 Georgia,'Times New Roman',serif;margin-top:5px}
+.bdg{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}
+.bdg div{border:2px solid var(--line);border-radius:12px;padding:8px;font-size:13px;line-height:1.3;color:var(--mut)}
+.bdg div b{display:block;font-size:14px;color:var(--ink)}
+.bdg div.on{border-color:var(--vest);background:color-mix(in srgb,var(--vest) 20%,transparent)}
+.bdg div.on b::before{content:"★ ";color:#d99a00}
+.hype{position:absolute;left:50%;transform:translateX(-50%);top:7px;width:48%;height:16px;border-radius:8px;background:#000b;overflow:hidden;border:1px solid #fff6}
+.hype i{display:block;height:100%;width:0;background:linear-gradient(90deg,#ffd23f,#ff7a1a);transition:width .4s}
+.hype span{position:absolute;inset:0;display:grid;place-items:center;font:600 10px Rubik,sans-serif;color:#fff;text-shadow:0 1px 2px #000}
+#shouts .btn{flex:1 1 0;justify-content:center;padding:0 6px;white-space:nowrap}
+#shouts .btn.act{background:var(--vest);color:#122016;border-color:var(--vest)}
+.stand::before,.stand::after{content:none}
+.flag{position:absolute;top:7px;width:24px;height:16px;border-radius:2px;box-shadow:0 0 0 1px #0006;overflow:hidden}
+.flag svg{display:block;width:24px;height:16px}
+.flag.fl{left:12px}.flag.fr{right:12px}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;border:1.5px solid var(--ink);vertical-align:-1.5px}
+.score small#opp{font-size:14px;font-weight:600;color:var(--ink)}
+.fl2{display:inline-block;width:21px;height:14px;vertical-align:-2px;border-radius:2px;overflow:hidden;box-shadow:0 0 0 1px #0005}
+.fl2 svg{display:block;width:100%;height:100%}
+input[type=color]{display:block;padding:3px;height:46px;width:70px}
+.brand{color:var(--ink);margin:0 0 12px}
+.brand svg{display:block;height:48px;width:auto}
+.brand .tagl{fill:light-dark(#1f7a3a,#7ddc98)}
+.lrn{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:10px 0;padding:2px;scrollbar-width:none}
+.lrn::-webkit-scrollbar{display:none}
+.lrn:focus-visible{outline:3px solid var(--vest);outline-offset:2px;border-radius:16px}
+.lrn>section{flex:0 0 100%;min-width:0;scroll-snap-align:center;border:2px solid var(--line);border-radius:16px;padding:16px;background:var(--bg)}
+.lrn h4{font-size:21px;line-height:1.15;margin:10px 0 6px}
+.lrn ul{margin:0;padding-left:20px;font-size:15px;line-height:1.5}
+.lrn .ic{width:56px;height:56px;border-radius:14px;background:#1f7a3a;display:grid;place-items:center}
+.lrnnav{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.lrnnav span{font-weight:600;font-variant-numeric:tabular-nums}
+.bmtabs{display:flex;overflow-x:auto;gap:2px;border-bottom:2px solid var(--line);margin:-6px 0 12px;scrollbar-width:none}
+.bmtabs .tab{flex:none;padding:8px 7px;font-size:13.5px;white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><svg width="960" height="260" viewBox="0 0 960 260" role="img" aria-label="BAFC, Be A Football Coach: liggende logo med ikon og tekst"><defs><clipPath id="rw"><rect x="10" y="10" width="240" height="240" rx="56"/></clipPath></defs><g clip-path="url(#rw)"><rect x="10" y="10" width="240" height="240" fill="#1f7a3a"/><g fill="#27904a"><rect x="10" y="10" width="240" height="40"/><rect x="10" y="90" width="240" height="40"/><rect x="10" y="170" width="240" height="40"/></g><g fill="none" stroke="#ffffff" stroke-width="5" stroke-opacity=".9"><line x1="10" y1="130" x2="250" y2="130"/><circle cx="130" cy="130" r="40"/></g><g fill="none" stroke="#ffffff" stroke-width="8"><circle cx="70" cy="72" r="14"/><circle cx="192" cy="190" r="14"/></g><g stroke="#ffd23f" stroke-width="9" stroke-linecap="round"><line x1="180" y1="58" x2="204" y2="82"/><line x1="204" y1="58" x2="180" y2="82"/><line x1="58" y1="178" x2="82" y2="202"/><line x1="82" y1="178" x2="58" y2="202"/></g><path d="M88 80C116 98 142 116 170 166" fill="none" stroke="#ffd23f" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 16"/><polygon points="178,180 154,168 174,156" fill="#ffd23f"/></g><rect x="10" y="10" width="240" height="240" rx="56" fill="none" stroke="#122016" stroke-width="8"/><text x="296" y="158" style="font-family: Rubik, system-ui, sans-serif; font-weight: 800; font-size: 168px; fill: currentColor; letter-spacing: 2px">BAFC</text><text x="302" y="222" style="font-family: Rubik, system-ui, sans-serif; font-weight: 600; font-size: 44px" class="tagl">Be A Football Coach</text></svg></div>
+  <header>
+    <div>
+      <h1 style="display:flex;align-items:center;gap:10px"><span id="logo" style="flex:none;display:inline-flex"></span><span id="team">Norge</span></h1>
+      <p class="sub" id="sub">Sesong med 7er-laget ditt</p>
+    </div>
+    <div class="score">
+      <div><small id="opp">Motstander</small><b id="sc">0 – 0</b></div>
+      <div><small id="half">1. omgang</small><b id="clock">1:00</b></div>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab" role="tab" id="t-kamp" aria-selected="true" aria-controls="v-kamp">Kamp</button>
+    <button class="tab" role="tab" id="t-lag" aria-selected="false" aria-controls="v-lag">Lag</button>
+    <button class="tab" id="t-meny" style="margin-left:auto;color:var(--ink)">☰ Meny</button>
+  </nav>
+
+  <section id="v-kamp" role="tabpanel">
+    <div class="grid">
+      <div>
+        <div class="stadium" id="stadium">
+          <div class="stand"><span class="flag fl"></span><span class="flag fr"></span></div>
+          <div class="pitch"><div class="gflash" id="gflash"></div><div class="pausetag" id="pausetag" hidden>Pause</div><svg id="pitch" viewBox="0 0 300 400" role="img" aria-label="Fotballbane med spillerne dine"></svg></div>
+          <div class="stand"><span class="flag fl"></span><span class="flag fr"></span><div class="hype" title="Stemning"><i id="hypei"></i><span id="hypet">Stemning</span></div></div>
+        </div>
+        <div class="btns sec" id="shouts" hidden style="margin:8px 0 0"><button class="btn alt" data-sh="press">Press!</button><button class="btn alt" data-sh="rolig">Rolig!</button><button class="btn alt" data-sh="frem">Alle frem!</button></div>
+        <button class="btn" id="drink"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 1 4 13.5h6L8.5 23 20 9.5h-6.5z" fill="#122016"/></svg><span id="drinktxt">Energidrikk (5)</span></button>
+        <div class="benchrow"><b>Benken</b><div class="bench" id="bench"></div></div>
+        <button class="btn big" id="play">Start kampen</button>
+        <div class="btns sec">
+          <button class="btn alt" id="pep">Peptalk</button>
+          <button class="btn alt" id="auto">Rettferdig bytte</button>
+          <button class="btn alt" id="train">Trening (0)</button>
+          <button class="btn alt" id="ff">Spol fram</button>
+          <button class="btn alt" id="help">? Hjelp</button>
+        </div>
+        <div id="scout"></div>
+        <div id="msgs"></div>
+      </div>
+      <div>
+        <div class="card">
+          <h2>Kamplogg</h2>
+          <ul class="log" id="log"><li class="c">Kampen har ikke startet.</li></ul>
+        </div>
+        <div class="card">
+          <h2>VM 2026</h2>
+          <div class="stats" id="stats"></div>
+          <div id="vm"></div>
+          <p class="hint" id="saved" style="margin-top:10px"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="v-lag" role="tabpanel" hidden>
+    <div id="welcome"></div>
+    <div class="card">
+      <h2>Trener og lag</h2>
+      <div class="two">
+        <label class="f">Trenernavn<input id="f-coach" maxlength="16" placeholder="F.eks. Erik"></label>
+        <label class="f">Lagnavn<input id="f-team" maxlength="16" placeholder="Norge"></label>
+      </div>
+      <label class="f" style="margin-top:10px;max-width:320px">Landslag<select id="natsel"></select></label>
+      <p class="hint" id="nathint" style="margin:4px 2px 0"></p>
+      <div class="btns" style="margin-bottom:0"><button class="btn alt" id="nt">Bruk Norges landslag</button><button class="btn alt" id="std">Standardnavn</button></div>
+      <p class="hint" id="ntmsg"></p>
+    </div>
+    <div class="card" id="owncard" hidden>
+      <h2>Flagg for eget lag</h2>
+      <p class="hint" style="margin:0 0 10px">Lagnavnet skriver du i feltet «Lagnavn» over. Draktfargen velger du under. Her lager du flagget.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:end">
+        <label class="f" style="flex:1 1 170px">Mønster<select id="cf-p"><option value="h3">Tre striper bortover</option><option value="v3">Tre striper nedover</option><option value="h2">To striper</option><option value="kors">Kors</option><option value="sirkel">Sirkel</option><option value="stjerne">Stjerne</option><option value="diag">Skrå delt</option></select></label>
+        <label class="f">Farge 1<input type="color" id="cf-a"></label>
+        <label class="f">Farge 2<input type="color" id="cf-b"></label>
+        <label class="f">Farge 3<input type="color" id="cf-c"></label>
+        <span id="cf-prev" style="display:inline-block;width:96px;height:64px;border-radius:6px;overflow:hidden;box-shadow:0 0 0 2px var(--line)"></span>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Drakt og logo</h2>
+      <div id="kits" style="display:flex;flex-wrap:wrap;gap:10px"></div>
+      <div id="logos" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px"></div>
+    </div>
+    <div class="card">
+      <h2>Tropp</h2>
+      <p class="hint" id="squadhint" style="margin:0 0 8px"></p>
+      <div class="opts" id="squad" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr))"></div>
+    </div>
+    <div class="card">
+      <h2>Vanskelighetsgrad, stopp, lyd og tema</h2>
+      <div class="opts" id="diffs"></div>
+      <p style="margin:14px 0 6px"><b>Stopp i kampen</b></p>
+      <div class="opts" id="stops"></div>
+      <div class="btns" style="margin-bottom:0"><button class="btn alt" id="snd">Lyd: på</button><button class="btn alt" id="amb">Publikumslyd: på</button><button class="btn alt" id="thm">Tema: automatisk</button></div>
+    </div>
+    <div class="card">
+      <h2>Formasjon</h2>
+      <div class="form-row">
+        <div class="opts" id="forms"></div>
+        <div class="mini"><svg id="miniform" viewBox="0 0 300 400" aria-label="Formasjonen på banen"></svg></div>
+      </div>
+      <p class="hint" id="formlock"></p>
+    </div>
+    <div class="card">
+      <h2>Spillestil</h2>
+      <div class="opts" id="styles"></div>
+    </div>
+    <div class="card">
+      <h2>Spillerne</h2>
+      <div id="social"></div>
+      <label class="f" style="max-width:280px;margin:8px 0">Kaptein<select id="capsel"></select></label>
+      <p class="hint" style="margin:0 0 6px">Spillerne er sortert etter favorittposisjon. Velg posisjon og én spesialferdighet for hver spiller. På sin egen plass spiller de 10 % bedre, og på feil plass 12 % dårligere.</p>
+      <div id="players"></div>
+      <details style="margin-top:12px;font-size:14px"><summary>Hva gjør ferdighetene?</summary><div id="trhelp"></div></details>
+    </div>
+    <div class="card">
+      <h2>VM</h2>
+      <div class="btns" style="margin:0">
+        <button class="btn" id="tomatch">Til kampen</button>
+        <button class="btn alt" id="reset">Start nytt VM</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div id="tutdim" hidden></div><div id="tut" hidden></div>
+<div class="overlay" id="ov"><div class="dlg" id="dlg"></div></div>
+
+<script>
+{
+/* ---------- Data ---------- */
+// VM 2026: Gruppe I (Irak, Senegal, Frankrike) og sluttspill. c = draktfarge
+const DEFOPP=[{st:'Gruppe I, kamp 1',n:'Irak',q:'lavt',s:15,c:'#f5f5f5',g:1},{st:'Gruppe I, kamp 2',n:'Senegal',q:'fysisk',s:18,c:'#16a34a',g:1},{st:'Gruppe I, kamp 3',n:'Frankrike',q:'rask',s:24,c:'#1e3a8a',g:1},
+ {st:'Sekstendelsfinale',n:'USA',q:'press',s:21,c:'#f5f5f5'},{st:'Åttedelsfinale',n:'Nederland',q:'pasning',s:24,c:'#f97316'},{st:'Kvartfinale',n:'Brasil',q:'teknisk',s:27,c:'#facc15'},{st:'Semifinale',n:'Spania',q:'besitt',s:30,c:'#1f2937'},{st:'Finale',n:'Argentina',q:'stjerne',s:33,c:'#7dd3fc'}];
+const ME='@me';
+// landslag du kan velge: k = draktfarge, m = hvor sterke motstanderne føles, n = spillernavn (16)
+const TEAMS={
+ England:{k:'#f5f5f5',m:0.94,n:['Harry','Jack','Oliver','George','Charlie','Alfie','Freddie','Archie','Leo','Henry','Oscar','Arthur','Teddy','Reggie','Stanley','Albie']},
+ Norge:{k:'#d7263d',m:1,n:null},
+ Argentina:{k:'#7dd3fc',m:0.94,n:['Mateo','Thiago','Benjamín','Santino','Joaquín','Lautaro','Bautista','Facundo','Valentín','Ignacio','Tomás','Agustín','Franco','Nicolás','Lucas','Emiliano']},
+ Spania:{k:'#d7263d',m:0.94,n:['Hugo','Pablo','Álvaro','Diego','Javier','Sergio','Marcos','Iker','Adrián','Rubén','Unai','Jorge','Dani','Mario','Raúl','Gonzalo']},
+ Portugal:{k:'#d7263d',m:0.94,n:['João','Tiago','Rui','Duarte','Gonçalo','Diogo','Martim','Afonso','Rodrigo','Nuno','Vasco','Miguel','Pedro','André','Tomé','Xavier']},
+ Frankrike:{k:'#1d4ed8',m:0.94,n:['Louis','Jules','Léo','Gabriel','Raphaël','Arthur','Lucas','Nathan','Théo','Maxime','Antoine','Clément','Baptiste','Julien','Mathis','Romain']},
+ Tyskland:{k:'#f5f5f5',m:0.94,n:['Lukas','Felix','Jonas','Maximilian','Paul','Leon','Finn','Moritz','Niklas','Jannik','Emil','Anton','Fabian','Tobias','Florian','Till']},
+ Italia:{k:'#1d4ed8',m:0.94,n:['Lorenzo','Matteo','Leonardo','Alessandro','Francesco','Andrea','Riccardo','Tommaso','Davide','Federico','Giovanni','Pietro','Simone','Marco','Luca','Enzo']},
+ Marokko:{k:'#d7263d',m:0.97,n:['Youssef','Amine','Mehdi','Hamza','Ayoub','Bilal','Karim','Ismail','Omar','Rayan','Yassine','Anas','Soufiane','Nabil','Walid','Zakaria']},
+ Wales:{k:'#d7263d',m:1.04,n:['Dylan','Rhys','Owen','Gethin','Ieuan','Osian','Gruff','Tomos','Harri','Macsen','Iwan','Elis','Cai','Morgan','Steffan','Bryn']},
+ Danmark:{k:'#d7263d',m:1,n:['Magnus','Mikkel','Frederik','Emil','Mads','Rasmus','Oliver','Victor','Malthe','Anders','Kasper','Søren','Christian','Jeppe','Nikolaj','Tobias']},
+ Sverige:{k:'#facc15',m:1,n:['Erik','Oscar','Viktor','Gustav','Axel','Hugo','Elias','Ludvig','Isak','Anton','Albin','Filip','Melker','Sixten','Love','Nils']},
+ Skottland:{k:'#1e3a8a',m:1.04,n:['Callum','Fraser','Angus','Hamish','Lewis','Finlay','Rory','Ewan','Blair','Struan','Fergus','Craig','Murray','Gregor','Kieran','Duncan']},
+ India:{k:'#7dd3fc',m:1.14,n:['Arjun','Rohan','Vikram','Aditya','Rahul','Kabir','Dev','Ishaan','Aarav','Sahil','Nikhil','Karan','Manish','Varun','Anil','Raj']},
+ Eget:{k:'#16a34a',m:1,n:null},
+ Ukraina:{k:'#facc15',m:1.02,n:['Oleksandr','Andrij','Mykola','Taras','Bohdan','Dmytro','Jurij','Vasyl','Maksym','Artem','Serhij','Ivan','Petro','Oleh','Roman','Viktor']}};
+const natTag=n=>TEAMS[n].m<0.96?' (favoritt)':TEAMS[n].m>1.1?' (underdog, vanskeligere)':TEAMS[n].m>1.03?' (litt vanskeligere)':'';
+const natOpts=()=>Object.keys(TEAMS).filter(n=>n!=='Eget').concat('Eget').map(n=>`<option value="${n}"${CFG.nat===n?' selected':''}>${n==='Eget'?'Eget lag (lag selv)':n+natTag(n)}</option>`).join('');
+function flagSvg(n){
+  const R=(x,y,w,h,c)=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${c}"/>`,V=(a,b,c)=>R(0,0,8,16,a)+R(8,0,8,16,b)+R(16,0,8,16,c),H=(a,b,c)=>R(0,0,24,5.4,a)+R(0,5.3,24,5.4,b)+R(0,10.6,24,5.4,c);
+  const X=(bg,c,w,x)=>R(0,0,24,16,bg)+R(x,0,w,16,c)+R(0,8-w/2,24,w,c),O=(x,y,r,c)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${c}"/>`;
+  const S=(x,y,r,c)=>{let p='';for(let i=0;i<10;i++){const a=-Math.PI/2+i*Math.PI/5,q=i%2?r*0.42:r;p+=`${(x+q*Math.cos(a)).toFixed(1)},${(y+q*Math.sin(a)).toFixed(1)} `}return `<polygon points="${p}" fill="${c}"/>`};
+  const wrap=b=>`<svg viewBox="0 0 24 16" aria-hidden="true">${b}</svg>`;
+  if(n==='Eget'){const f=CFG.cflag||{},a=f.a||'#16a34a',b=f.b||'#ffffff',c=f.c||'#111827';
+    const P={h3:H(a,b,c),v3:V(a,b,c),h2:R(0,0,24,8,a)+R(0,8,24,8,b),kors:X(a,b,3.4,7),sirkel:R(0,0,24,16,a)+O(12,8,4.6,b),stjerne:R(0,0,24,16,a)+S(12,8,5.4,b),diag:R(0,0,24,16,a)+`<path d="M0 16 24 0V16Z" fill="${b}"/>`};
+    return wrap(P[f.p]||P.h3)}
+  const UJ=R(0,0,12,8,'#012169')+'<path d="M0 0 12 8M12 0 0 8" stroke="#fff" stroke-width="1.6"/>'+R(5,0,2,8,'#fff')+R(0,3,12,2,'#fff')+R(5.5,0,1,8,'#c8102e')+R(0,3.5,12,1,'#c8102e');
+  const F={Norge:X('#ba0c2f','#fff',5,6)+R(7.25,0,2.5,16,'#00205b')+R(0,6.75,24,2.5,'#00205b'),Danmark:X('#c8102e','#fff',3,7),Sverige:X('#006aa7','#fecc02',3.4,7),England:X('#fff','#ce1124',3,10.5),
+   Skottland:R(0,0,24,16,'#005eb8')+'<path d="M0 0 24 16M24 0 0 16" stroke="#fff" stroke-width="3"/>',Frankrike:V('#0055a4','#fff','#ef4135'),Italia:V('#009246','#fff','#ce2b37'),Tyskland:H('#000','#dd0000','#ffce00'),
+   Ukraina:R(0,0,24,8,'#0057b7')+R(0,8,24,8,'#ffd700'),India:H('#ff9933','#fff','#138808')+'<circle cx="12" cy="8" r="2" fill="none" stroke="#000080" stroke-width=".8"/>',Argentina:H('#74acdf','#fff','#74acdf')+O(12,8,1.8,'#f6b40e'),
+   Spania:R(0,0,24,16,'#aa151b')+R(0,4,24,8,'#f1bf00'),Portugal:R(0,0,9.6,16,'#006600')+R(9.6,0,14.4,16,'#ff0000')+O(9.6,8,3,'#ffcc00'),
+   Marokko:R(0,0,24,16,'#c1272d')+'<path d="M12 4.2l2.2 6.9-5.8-4.3h7.2l-5.8 4.3z" fill="none" stroke="#006233" stroke-width="1"/>',Wales:R(0,0,24,8,'#fff')+R(0,8,24,8,'#00b140')+'<path d="M6 9c2-4 6-5 9-3 2-1 3 0 3 1-1 0-2 1-2 2 1 1 0 3-2 3H8c-1 0-2-1-2-3z" fill="#c8102e"/>',
+   Irak:H('#ce1126','#fff','#000')+R(9,7,6,2,'#007a3d'),'New Zealand':R(0,0,24,16,'#00247d')+UJ+S(18,4.5,1.6,'#cc142b')+S(21,8.5,1.5,'#cc142b')+S(16,9.5,1.6,'#cc142b')+S(18.5,13,1.7,'#cc142b'),
+   Haiti:R(0,0,24,8,'#00209f')+R(0,8,24,8,'#d21034')+R(9,5,6,6,'#fff'),Jordan:H('#000','#fff','#007a3d')+'<path d="M0 0 11 8 0 16Z" fill="#ce1126"/>',
+   Usbekistan:H('#0099b5','#fff','#1eb53a')+R(0,5,24,.6,'#ce1126')+R(0,10.4,24,.6,'#ce1126')+O(4,2.7,1.6,'#fff'),'Kapp Verde':R(0,0,24,16,'#003893')+R(0,8.5,24,3.4,'#fff')+R(0,9.7,24,1.1,'#cf2027')+S(9,10.2,2.2,'#f7d116'),
+   'Saudi-Arabia':R(0,0,24,16,'#006c35')+R(6,6,12,1.6,'#fff')+R(7,10,10,1,'#fff'),Panama:R(0,0,24,16,'#fff')+R(12,0,12,8,'#da121a')+R(0,8,12,8,'#072357')+S(6,4,2,'#072357')+S(18,12,2,'#da121a'),
+   Qatar:R(0,0,24,16,'#8a1538')+'<path d="M0 0H7l3 2-3 2 3 2-3 2 3 2-3 2 3 2-3 2H0Z" fill="#fff"/>',
+   'Sør-Afrika':R(0,0,24,8,'#e03c31')+R(0,8,24,8,'#001489')+'<path d="M0 0 10 8 0 16M9 8H24" fill="none" stroke="#fff" stroke-width="5.4"/><path d="M0 0 10 8 0 16M9 8H24" fill="none" stroke="#007749" stroke-width="3.2"/><path d="M0 3.4 5.6 8 0 12.6Z" fill="#000" stroke="#ffb81c" stroke-width="1"/>',
+   Senegal:V('#00853f','#fdef42','#e31b23')+S(12,8,2.4,'#00853f'),USA:R(0,0,24,16,'#fff')+[0,2.46,4.92,7.38,9.85,12.3,14.77].map(y=>R(0,y,24,1.23,'#b22234')).join('')+R(0,0,10,8.6,'#3c3b6e'),
+   Mexico:V('#006847','#fff','#ce1126')+O(12,8,1.8,'#a0522d'),Japan:R(0,0,24,16,'#fff')+O(12,8,4.8,'#bc002d'),
+   'Sør-Korea':R(0,0,24,16,'#fff')+'<path d="M8 8a4 4 0 0 1 8 0z" fill="#cd2e3a"/><path d="M8 8a4 4 0 0 0 8 0z" fill="#0047a0"/>'+R(3,3,3,1,'#000')+R(18,3,3,1,'#000')+R(3,12,3,1,'#000')+R(18,12,3,1,'#000'),
+   Sveits:R(0,0,24,16,'#da291c')+R(10.5,3.5,3,9,'#fff')+R(7.5,6.5,9,3,'#fff'),'Østerrike':H('#ed2939','#fff','#ed2939'),
+   Australia:R(0,0,24,16,'#012169')+UJ+S(6,12,2,'#fff')+S(18,4,1.3,'#fff')+S(21,8,1.3,'#fff')+S(16.5,9,1.3,'#fff')+S(18.5,13,1.3,'#fff'),Egypt:H('#ce1126','#fff','#000')+O(12,8,1.7,'#c09300'),
+   Canada:R(0,0,24,16,'#fff')+R(0,0,6,16,'#d52b1e')+R(18,0,6,16,'#d52b1e')+'<path d="M12 3.5l1.2 2.4 2-.6-.7 2.4 1.9 1-2.6 1.2.2 2.4-2-1.2-2 1.2.2-2.4-2.6-1.2 1.9-1-.7-2.4 2 .6z" fill="#d52b1e"/>',
+   Ecuador:R(0,0,24,8,'#ffdd00')+R(0,8,24,4,'#034ea2')+R(0,12,24,4,'#ed1c24')+O(12,8,1.8,'#8b5a2b'),Ghana:H('#ce1126','#fcd116','#006b3f')+S(12,8,2.3,'#000'),Nederland:H('#ae1c28','#fff','#21468b'),
+   Brasil:R(0,0,24,16,'#009c3b')+'<path d="M12 2 21.5 8 12 14 2.5 8Z" fill="#ffdf00"/>'+O(12,8,3.3,'#002776'),Belgia:V('#000','#fae042','#ed2939'),
+   Kroatia:H('#ff0000','#fff','#171796')+R(9.5,4.5,5,6,'#ff0000')+R(9.5,4.5,2.5,3,'#fff')+R(12,7.5,2.5,3,'#fff'),Colombia:R(0,0,24,8,'#fcd116')+R(0,8,24,4,'#003893')+R(0,12,24,4,'#ce1126'),
+   Uruguay:R(0,0,24,16,'#fff')+[2.7,6.2,9.8,13.3].map(y=>R(0,y,24,1.8,'#0038a8')).join('')+R(0,0,9,8,'#fff')+O(4.5,4,2.4,'#fcd116')};
+  const nat=NAT.find(x=>x[0]===n);
+  return wrap(F[n]||R(0,0,24,16,nat?nat[1]:'#888'));
+}
+const fl=n=>`<span class="fl2">${flagSvg(n)}</span>`;
+const STAGES=['Gruppe I, kamp 1','Gruppe I, kamp 2','Gruppe I, kamp 3','Sekstendelsfinale','Åttedelsfinale','Kvartfinale','Semifinale','Finale'];
+// nasjoner: [navn, draktfarge, nivå 1-3]
+const NAT=[['Irak','#f5f5f5',1],['New Zealand','#111827',1],['Haiti','#1d4ed8',1],['Jordan','#f5f5f5',1],['Usbekistan','#2563eb',1],['Kapp Verde','#1e40af',1],['Saudi-Arabia','#15803d',1],['Panama','#f5f5f5',1],['Qatar','#7f1d3f',1],['Sør-Afrika','#facc15',1],
+ ['Senegal','#16a34a',2],['USA','#f5f5f5',2],['Mexico','#166534',2],['Japan','#1e3a8a',2],['Sør-Korea','#f5f5f5',2],['Sveits','#f5f5f5',2],['Østerrike','#111827',2],['Australia','#facc15',2],['Egypt','#111827',2],['Canada','#f5f5f5',2],['Ecuador','#facc15',2],['Skottland','#1e3a8a',2],['Ghana','#f5f5f5',2],
+ ['Frankrike','#1e3a8a',3],['Nederland','#f97316',3],['Brasil','#facc15',3],['Spania','#1f2937',3],['Argentina','#7dd3fc',3],['England','#f5f5f5',3],['Tyskland','#f5f5f5',3],['Portugal','#166534',3],['Belgia','#111827',3],['Kroatia','#f5f5f5',3],['Marokko','#166534',3],['Colombia','#facc15',3],['Uruguay','#7dd3fc',3],['Italia','#1d4ed8',3],['Norge','#d7263d',2],['Danmark','#d7263d',2],['Sverige','#facc15',2],['Wales','#d7263d',2],['Ukraina','#facc15',2],['India','#7dd3fc',1]];
+const RIV=['Don Skrytelino','Madame Triumf','Sir Vant-Alltid','Baron Offside','Herr Grublekopf','Kaptein Kjepphøy'];
+const rndPick=a=>a[Math.floor(Math.random()*a.length)];
+const QK=['lavt','fysisk','rask','press','pasning','teknisk','besitt','stjerne'];
+const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+function genOpp(){
+  const t=k=>shuf(NAT.filter(x=>x[2]===k&&x[0]!==CFG.nat)),t1=t(1),t2=t(2),t3=t(3),qs=shuf(QK),GSTR={1:15,2:18,3:24},KO=[21,24,27,30,33];
+  const grp=shuf([t1[0],t2[0],t3[0]]),ko=[t2[1],t3[1],t3[2],t3[0],t3[3]],rv=rndPick(RIV);
+  const fk=Object.keys(FORM),mk=(x,e)=>{if(x===t3[0])e.rv=rv;e.f=rndPick(fk);e.star=rndPick(STARS);return e};
+  return grp.map((x,i)=>mk(x,{st:STAGES[i],n:x[0],q:qs[i],s:GSTR[x[2]],c:x[1],g:1})).concat(ko.map((x,i)=>mk(x,{st:STAGES[i+3],n:x[0],q:qs[i+3],s:KO[i],c:x[1]})));
+}
+function sanOpps(a){
+  try{
+    if(!Array.isArray(a)||a.length!==8)return DEFOPP;
+    const o=a.map((x,i)=>{const e={st:STAGES[i],n:clean(x.n),q:QK.includes(x.q)?x.q:'lavt',s:cl(+x.s||15,10,40),c:/^#[0-9a-f]{6}$/i.test(x.c)?x.c:'#e5484d'};if(i<3)e.g=1;if(x.rv&&clean(x.rv))e.rv=clean(x.rv);if(FORM[x.f])e.f=x.f;if(clean(x.star))e.star=clean(x.star);return e});
+    if(new Set(o.map(x=>x.n)).size<7||o.some(x=>!x.n))return DEFOPP;
+    return o;
+  }catch(e){return DEFOPP}
+}
+let OPP=DEFOPP,GRP=[ME].concat(DEFOPP.slice(0,3).map(o=>o.n));
+function setOpp(l){OPP=l;GRP=[ME].concat(l.slice(0,3).map(o=>o.n))}
+const gStr=n=>(OPP.find(o=>o.n===n)||{s:18}).s;
+const NT=[['Nyland','K','kip'],['Haaland','A','skudd'],['Nusa','A','fart'],['Østigård','F','fors'],['Ødegaard','M','pas'],['Aursnes','M','stam'],['Berge','M','pas'],['Ajer','F','fors'],['Sørloth','A','skudd'],['Ryerson','F','stam'],['Tangvik','K','kip'],['Wolfe','F','fart'],['Thorsby','M','stam'],['Bobb','M','skudd'],['Strand Larsen','A','skudd'],['Heggem','F','hum']];
+const STP={mange:{n:'Mange',d:'Hendelser, feiring ved alle mål og mange valg.',ev:0.85,big:0.3,cel:2,sp:1},noen:{n:'Noen',d:'En god blanding. Feiring bare ved viktige mål.',ev:0.6,big:0.18,cel:1,sp:0.5},faa:{n:'Få',d:'Kampen ruller nesten uten stopp.',ev:0.25,big:0.06,cel:0,sp:0}};
+const STARS=['Zorro Bananas','Max Tunnel','Leo Krøll','Bobby Snurr','Rico Raket','Timo Tå','Dino Dribbel','Kiko Kanon','Pelle Parade','Sami Sprint','Hugo Hæl','Milo Volley'];
+const DIFF={lett:{n:'Lett',d:'Svakere motstandere. Fint for de yngste og for å lære spillet.',m:0.82,g:0.03},middels:{n:'Middels',d:'Jevne kamper. En grei trener når finalen omtrent hver fjerde gang.',m:1.05,g:-0.012},vanskelig:{n:'Vanskelig',d:'Sterke motstandere. Du må bruke taktikk, bytter og motgrep for å nå langt.',m:1.3,g:-0.06}};
+const DOTS=(n,max)=>'●'.repeat(n)+'○'.repeat(max-n);
+const QUIRK=[null,'publikum','drommer','krangle','lagkam',null,'morgen',null,'krangle','lagkam','drommer',null,'lagkam','morgen','publikum','krangle'];
+const QN={drommer:['Drømmeren','mister av og til fokus midt i kampen'],krangle:['Kranglefanten','får lettere gult kort'],lagkam:['Lagkameraten','gjør angrepet 4 % bedre for alle'],morgen:['Syvsoveren','treg i 1. omgang, ekstra god i 2.'],publikum:['Publikumsyndlingen','stemningen stiger ekstra når hen scorer']};
+const WX={sol:['Sol','Fint fotballvær. Ingen effekt.'],regn:['Regn','Glatt bane gir færre sjanser, og kort pasningsspill fungerer dårligere.'],vind:['Sterk vind','Lange baller blir upresise.'],varme:['Hetebølge','Alle blir slitne 30 % fortere. Bruk benken og energidrikkene.']};
+let SH={k:null,until:0,cd:0},HY={until:0};
+const KITS=['#d7263d','#1d4ed8','#16a34a','#f5f5f5','#111827','#f97316','#7c3aed','#facc15','#7dd3fc','#1e3a8a'];
+const LOGOS={skjold:'<path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/>',stjerne:'<path d="M12 2l3 6.5 7 .8-5.2 4.8 1.5 7L12 17.6 5.7 21l1.5-7L2 9.3l7-.8z"/>',ball:'<circle cx="12" cy="12" r="10"/><path d="M12 7l4.5 3.3-1.7 5.2H9.2L7.5 10.3z" fill="#fff"/>',lyn:'<path d="M13.5 1 4 13.5h6L8.5 23 20 9.5h-6.5z"/>',krone:'<path d="M3 19h18l1.5-12-5.5 4-5-8-5 8-5.5-4z"/>',fjell:'<path d="M2 20 9 6l4 7 3-4 6 11z"/>'};
+const logoSvg=(k,col,sz)=>`<svg width="${sz}" height="${sz}" viewBox="0 0 24 24" fill="${col}" stroke="#122016" stroke-width="1.2" stroke-linejoin="round" aria-hidden="true">${LOGOS[k]||LOGOS.skjold}</svg>`;
+const lightCol=c=>['#f5f5f5','#facc15','#7dd3fc'].includes(c);
+const SKIN=['#f2c9a0','#e0ac7e','#c68642','#8d5524','#f7d7b5'],HAIR=['#3b2a1a','#e8c15a','#111111','#a0522d','#7a4a2a','#c0392b'];
+function fig(shirt,seed,nr,sc){
+  const sk=SKIN[seed%5],hr=HAIR[(seed*7+3)%6];
+  return `<g transform="scale(${sc})"><ellipse cy="19" rx="11" ry="3.5" fill="#000" opacity=".22"/>
+   <line class="leg a" x1="-4" y1="9" x2="-4" y2="18" stroke="${sk}" stroke-width="4" stroke-linecap="round"/><line class="leg b" x1="4" y1="9" x2="4" y2="18" stroke="${sk}" stroke-width="4" stroke-linecap="round"/>
+   <rect x="-10" y="-8" width="20" height="19" rx="5" fill="${shirt}" stroke="#122016" stroke-width="1"/>
+   <circle cy="-15" r="7" fill="${sk}" stroke="#122016" stroke-width="1"/><path d="M-7 -16a7 7 0 0 1 14 0c-3-3.5-11-3.5-14 0z" fill="${hr}"/>
+   ${nr===''?'':`<text y="6" text-anchor="middle" style="fill:${lightCol(shirt)?'#122016':'#fff'};font-size:11px">${nr}</text>`}</g>`;
+}
+const gkCol=()=>['#1d4ed8','#7c3aed','#111827','#1e3a8a','#7dd3fc'].includes(CFG.kit)?'#f59e0b':'#3b82f6';
+const oppCol=()=>{const c=(OPP[S.m]||{}).c||'#e5484d';return c!==CFG.kit?c:(lightCol(c)?'#111827':'#f5f5f5')};
+const PCOL={K:'#3b82f6',F:'#0d9488',M:'#d97706',A:'#e11d48'};
+// navn, nr, nivå, keeperevne, standard posisjon, standard ferdighet
+const NAMES=[['Emma',1,2,5,'K','kip'],['Noah',9,5,1,'A','skudd'],['Sara',7,4,2,'A','fart'],['Jakob',4,3,3,'F','fors'],['Nora',10,4,1,'M','pas'],['Filip',5,3,2,'M','stam'],['Ida',8,3,2,'M','pas'],['Elias',6,2,3,'F','fors'],['Maja',11,4,1,'A','fart'],['Oskar',3,2,4,'F','hum'],['Liam',12,2,4,'K','kip'],['Sofie',2,3,2,'F','fart'],['Henrik',14,3,2,'M','stam'],['Tuva',15,3,1,'M','skudd'],['Aksel',16,3,1,'A','skudd'],['Leah',13,3,3,'F','hum']];
+const POSN={K:'Keeper',F:'Forsvar',M:'Midtbane',A:'Angrep'};
+const TR={pas:{n:'Pasning',d:'Hele angrepet blir 8 % bedre når hen er på banen'},skudd:{n:'Skudd',d:'Scorer oftere og er sikrere på straffe'},fart:{n:'Fart',d:'Kommer oftere til sjanser og er 10 % farligere'},stam:{n:'Utholdenhet',d:'Blir halvparten så fort sliten'},fors:{n:'Forsvar',d:'Motstanderen blir 6 % svakere når hen er på banen'},kip:{n:'Reflekser',d:'Mye bedre keeper når hen står i mål'},hum:{n:'Humørspreder',d:'Gjør lagkameratene gladere etter kamp'}};
+const FORM={
+ '2-3-1':{n:'2-3-1 Balansert',d:'Trygg og jevn. Ingen bonus, ingen svakhet.',a:1,o:1,f:1,s:[['K',150,365],['F',95,300],['F',205,300],['M',60,215],['M',150,230],['M',240,215],['A',150,130]]},
+ '3-2-1':{n:'3-2-1 Trygg',d:'Ekstra forsvarer. Motstanderen 12 % svakere, angrepet 8 % svakere.',a:0.92,o:0.88,f:1,s:[['K',150,365],['F',60,295],['F',150,305],['F',240,295],['M',100,215],['M',200,215],['A',150,130]]},
+ '2-2-2':{n:'2-2-2 Offensiv',d:'To spisser. Angrepet 12 % bedre, men motstanderen 10 % farligere.',a:1.12,o:1.1,f:1.05,s:[['K',150,365],['F',95,300],['F',205,300],['M',95,215],['M',205,215],['A',100,130],['A',200,130]]},
+ '3-1-2':{n:'3-1-2 Kontring',d:'Tett bak og to spisser. Færre sjanser, men farlige kontringer.',a:1.06,o:0.9,f:0.88,s:[['K',150,365],['F',60,295],['F',150,305],['F',240,295],['M',150,220],['A',100,135],['A',200,135]]}};
+const STYLE={
+ vanlig:{n:'Vanlig spill',d:'Ingen spesielle instrukser.',f:1,o:1,drain:1},
+ kort:{n:'Kort pasningsspill',d:'Pasningsspillere gir dobbel bonus. Litt færre, men bedre sjanser.',f:0.92,o:1,drain:1,goal:0.05},
+ press:{n:'Høyt press',d:'Motstanderen blir 12 % svakere, men alle blir slitne 40 % fortere.',f:1,o:0.88,drain:1.4},
+ lang:{n:'Lange baller',d:'Fartsspillere gir dobbel bonus. Flere sjanser begge veier.',f:1.12,o:1.05,drain:1}};
+const OPOS=[[150,35],[85,105],[215,105],[60,185],[150,165],[240,185],[150,265]];
+const oposNow=()=>{const f=FORM[(OPP[S.m]||{}).f];return f?f.s.map(([r_,x,y])=>[300-x,400-y]):OPOS};
+const HALF=25, REAL=60; // 25 spilleminutter per omgang, 60 sekunder i normal fart
+
+/* ---------- Hjelpere ---------- */
+const $=id=>document.getElementById(id);
+const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const clean=v=>String(v||'').replace(/[<>&"'`]/g,'').trim().slice(0,16);
+const cl=(v,a,b)=>Math.max(a,Math.min(b,v));
+const sleep=ms=>FAST?Promise.resolve():new Promise(r=>setTimeout(r,ms));
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function wpick(arr,w){let t=arr.reduce((s,p)=>s+w(p),0),r=Math.random()*t;for(const p of arr){r-=w(p);if(r<=0)return p}return arr[0]}
+const trOk=(v,i)=>TR[v]?v:NAMES[i][5];
+const posOk=(v,i)=>POSN[v]?v:NAMES[i][4];
+
+/* ---------- Oppsett (CFG) og spilltilstand (S) ---------- */
+let CFG={coach:'',team:'Norge',names:NAMES.map(x=>x[0]),traits:NAMES.map(x=>x[5]),pos:NAMES.map(x=>x[4]),form:'2-3-1',style:'vanlig',squad:[0,1,2,3,4,5,6,7,8,9],diff:'middels',sound:true,kit:'#d7263d',logo:'skjold',nat:'Norge',cname:'',cflag:{p:'h3',a:'#16a34a',b:'#ffffff',c:'#111827'},theme:'auto',stops:'noen',amb:true};
+const TN=()=>CFG.team||CFG.nat||'Norge';
+function cfgFrom(c){
+  if(!c||!Array.isArray(c.names))return null;
+  return {coach:clean(c.coach),team:clean(c.team)||'Norge',names:NAMES.map((x,i)=>clean(c.names[i])||x[0]),traits:NAMES.map((x,i)=>trOk((c.traits||[])[i],i)),pos:NAMES.map((x,i)=>posOk((c.pos||[])[i],i)),form:FORM[c.form]?c.form:'2-3-1',style:STYLE[c.style]?c.style:'vanlig',squad:(Array.isArray(c.squad)&&c.squad.length===10&&new Set(c.squad).size===10&&c.squad.every(x=>Number.isInteger(x)&&x>=0&&x<NAMES.length))?c.squad.slice():[0,1,2,3,4,5,6,7,8,9],diff:DIFF[c.diff]?c.diff:'middels',sound:c.sound!==false,kit:KITS.includes(c.kit)?c.kit:'#d7263d',logo:LOGOS[c.logo]?c.logo:'skjold',nat:TEAMS[c.nat]?c.nat:'Norge',theme:['auto','lys','mork'].includes(c.theme)?c.theme:'auto',stops:['mange','noen','faa'].includes(c.stops)?c.stops:'noen',amb:c.amb!==false,cname:clean(c.cname),cflag:(f=>{const h=x=>/^#[0-9a-f]{6}$/i.test(x)?x:null;f=f||{};return {p:['h3','v3','h2','kors','sirkel','stjerne','diag'].includes(f.p)?f.p:'h3',a:h(f.a)||'#16a34a',b:h(f.b)||'#ffffff',c:h(f.c)||'#111827'}})(c.cflag)};
+}
+try{const c=cfgFrom(JSON.parse(localStorage.getItem('treneren-cfg')||'null'));if(c)CFG=c}catch(e){}
+const coach=()=>CFG.coach||'Trener';
+const THEME0=document.documentElement.dataset.theme||'',THN={auto:'automatisk',lys:'lyst',mork:'mørkt'};
+function applyTheme(){const e=document.documentElement,t=CFG.theme==='lys'?'light':CFG.theme==='mork'?'dark':THEME0;if(t)e.dataset.theme=t;else delete e.dataset.theme}
+function nextTheme(){CFG.theme={auto:'lys',lys:'mork',mork:'auto'}[CFG.theme]||'auto';applyTheme();saveCfg();save()}
+applyTheme();
+let S;
+function fresh(){
+  setOpp(genOpp());
+  S={opps:OPP,m:0,h:0,t:0,us:0,them:0,pep:[false,false],busy:false,sel:null,boost:null,drinks:5,out:false,champ:false,hist:[],tp:0,ored:[],oyc:{},goals:[],tab:Object.fromEntries(GRP.map(n=>[n,{k:0,p:0,gf:0,ga:0}])),
+    sq:CFG.squad.map((pi,i)=>{const x=NAMES[pi];return {id:i,pi,nr:x[1],sk:x[2],gk:x[3],en:100,min:0,mood:3,tot:0,g:0,sv:0,mg:0,msv:0,off:0,inj:0,yc:0,ban:false,tr2:null,why:[],last:[]}}),
+    field:[],rec:{w:0,u:0,t:0,gf:0,ga:0,pts:0,fair:0},log:[],msgs:[]};
+  applyCfg();arrange();initExtras();
+}
+function initExtras(){
+  S.cap=S.sq.filter(p=>p.pos!=='K').sort((a,b)=>b.sk-a.sk)[0].id;
+  const ids=shuf(S.sq.map(p=>p.id));S.pairs=[[ids[0],ids[1]],[ids[2],ids[3]]];
+  S.wx=rndPick(['sol','sol','regn','vind','varme']);S.hype=0;S.gres=[];S.scout=0;S.fire=0;S.fireN=0;S.hypeN=0;
+}
+function applyCfg(){S.sq.forEach(p=>{p.n=CFG.names[p.pi];p.tr=CFG.traits[p.pi];p.pos=CFG.pos[p.pi];if(p.tr2===p.tr)p.tr2=null})}
+function arrange(){
+  const sl=FORM[CFG.form].s,left=S.sq.slice(),f=[],best=(arr,k)=>arr.slice().sort((a,b)=>b[k]-a[k])[0];
+  const kp=best(left.filter(p=>p.pos==='K'),'gk')||best(left,'gk');f.push(kp.id);left.splice(left.indexOf(kp),1);
+  for(let i=1;i<7;i++){const c=best(left.filter(p=>p.pos===sl[i][0]),'sk')||best(left,'sk');f.push(c.id);left.splice(left.indexOf(c),1)}
+  S.field=f;
+}
+const P=id=>S.sq[id];
+const bench=()=>S.sq.filter(p=>!S.field.includes(p.id));
+const has=(p,t)=>p.tr===t||p.tr2===t;
+const slots=()=>FORM[CFG.form].s;
+const moodCol=m=>m>=4?'#2fbf5b':m>=2?'#ffb020':'#e5484d';
+const moodTxt=m=>m>=4?'Glad':m>=2?'OK':m>=1?'Sur':'Veldig sur';
+const md=(p,n,txt)=>{p.mood=cl(p.mood+n,0,5);(p.why=p.why||[]).push((n>0?'↑ ':'↓ ')+txt)};
+const MF=[0.5,0.62,0.86,0.94,1.02,1.1];
+function fitMul(p,i){const role=slots()[i][0];if(p.pos===role)return 1.1;return p.pos==='K'?0.8:0.88}
+const onSpot=(p,i)=>p.pos===slots()[i][0];
+function eff(p,i){
+  const q=QUIRK[p.pi],qm=q==='morgen'?(S.h===0?0.85:1.12):q==='drommer'&&S.busy&&Math.random()<0.2?0.6:1;
+  return p.sk*MF[cl(p.mood,0,5)]*(0.55+p.en/220)*fitMul(p,i)*(has(p,'fart')?(CFG.style==='lang'?1.2:1.1):1)*qm;
+}
+const threeBack=()=>CFG.form[0]==='3';
+const nOn=t=>S.field.slice(1).filter(id=>has(P(id),t)).length;
+const Q={
+ lavt:{n:'ligger lavt',d:'De forsvarer seg med mange spillere, så angrepet ditt blir 15 % svakere.',tip:'Motgrep: kort pasningsspill eller 2-2-2.',a:0.85,c:()=>CFG.style==='kort'||CFG.form==='2-2-2'},
+ fysisk:{n:'fysisk sterke',d:'Spillerne dine blir slitne 30 % fortere.',tip:'Motgrep: minst to med Utholdenhet på banen, og ikke høyt press.',drain:1.3,c:()=>nOn('stam')>=2&&CFG.style!=='press'},
+ rask:{n:'lynraske angripere',d:'Angrepet deres er 15 % farligere.',tip:'Motgrep: tre forsvarere (3-2-1 eller 3-1-2).',os:1.15,c:threeBack},
+ press:{n:'presser høyt',d:'De stresser pasningsspillet, så angrepet ditt blir 12 % svakere.',tip:'Motgrep: lange baller.',a:0.88,c:()=>CFG.style==='lang'},
+ pasning:{n:'pasningslag',d:'De holder ballen godt og er 12 % farligere.',tip:'Motgrep: høyt press.',os:1.12,c:()=>CFG.style==='press'},
+ teknisk:{n:'tekniske driblere',d:'De scorer lettere når de først får en sjanse.',tip:'Motgrep: minst to med Forsvar på banen.',goal:0.06,c:()=>nOn('fors')>=2},
+ besitt:{n:'har ballen hele tiden',d:'Angrepet ditt blir 12 % svakere, og de er litt farligere.',tip:'Motgrep: høyt press eller 3-1-2 kontring.',a:0.88,os:1.05,c:()=>CFG.style==='press'||CFG.form==='3-1-2'},
+ stjerne:{n:'har en verdensstjerne',d:'Stjernespilleren deres scorer på nesten alt.',tip:'Motgrep: tre forsvarere og en keeper med Reflekser.',goal:0.08,os:1.08,c:()=>threeBack()&&has(P(S.field[0]),'kip')}};
+function qNow(){const o=OPP[S.m];if(!o)return {q:null,ok:false};const q=Q[o.q];let ok=false;try{ok=!!q.c()}catch(e){}return {q,ok}}
+let QD=1;
+const shoutOn=()=>SH.k&&S.busy&&S.t<SH.until?SH.k:null;
+function mods(){
+  let a=1,d=1,f=1;const sh=shoutOn(),on=id=>S.field.includes(id);
+  if(sh==='press')d*=0.85;else if(sh==='rolig')a*=0.9;else if(sh==='frem'){a*=1.3;d*=1.2;f*=1.15}
+  if(S.wx==='regn'){f*=0.88;if(CFG.style==='kort')a*=0.92}else if(S.wx==='vind'&&CFG.style==='lang')a*=0.85;
+  if(S.busy&&HY.until>S.t)a*=1.15;
+  if(S.cap!=null&&on(S.cap)){a*=1.05;d*=0.96}
+  a*=1+0.04*S.field.slice(1).filter(id=>QUIRK[P(id).pi]==='lagkam').length;
+  if(S.pairs){const[fr,fe]=S.pairs;if(fr&&on(fr[0])&&on(fr[1]))a*=1.05;if(fe&&on(fe[0])&&on(fe[1])){a*=0.94;d*=1.04}}
+  if(S.scout)d*=0.92;if(S.fire)a*=1.08;
+  return {a,d,f};
+}
+const drainMod=()=>{const sh=shoutOn();return (S.wx==='varme'?1.3:1)*(sh==='press'?1.5:sh==='rolig'?0.4:sh==='frem'?1.2:1)};
+function hype(d){
+  if(!S.busy)return;
+  S.hype=cl((S.hype||0)+d,0,100);
+  if(S.hype>=100){HY.until=S.t+15;S.hype=40;S.log.push(['g',`${gameMin()}' Publikum koker! Laget får et løft i angrepet.`]);if(FAST)return;const sd=$('stadium');sd.classList.remove('hop');void sd.offsetWidth;sd.classList.add('hop');setTimeout(()=>sd.classList.remove('hop'),2200)}
+  drawHype();
+}
+function drawHype(){if(FAST)return;ambSet();const on=S.busy&&HY.until>S.t;$('hypei').style.width=(on?100:(S.hype||0))+'%';$('hypet').textContent=on?'Publikum koker!':'Stemning'}
+function drawShouts(){
+  if(FAST)return;
+  $('shouts').hidden=!S.busy;if(!S.busy)return;
+  const N={press:'Press!',rolig:'Rolig!',frem:'Alle frem!'};
+  document.querySelectorAll('#shouts [data-sh]').forEach(b=>{const k=b.dataset.sh,act=shoutOn()===k,wait=Math.ceil(SH.cd-S.t);
+    b.classList.toggle('act',act);b.disabled=!act&&wait>0;b.textContent=act?`${N[k]} ${Math.ceil(SH.until-S.t)} s`:wait>0?`${N[k]} (${wait})`:N[k]});
+}
+function team(){
+  const o=OPP[S.m],F=FORM[CFG.form],St=STYLE[CFG.style],B=S.boost||{a:1,d:1,f:1};
+  const out=S.field.slice(1).map((id,k)=>({p:P(id),i:k+1})),gk=P(S.field[0]);
+  const npas=out.filter(x=>has(x.p,'pas')).length,nfors=out.filter(x=>has(x.p,'fors')).length;
+  const {q,ok}=qNow();QD=ok?1:(q.drain||1);
+  const att=out.reduce((s,x)=>s+eff(x.p,x.i),0)*(1+(CFG.style==='kort'?0.16:0.08)*npas)*F.a*B.a*(ok?1.05:(q.a||1));
+  const os=o.s*(TEAMS[CFG.nat]||{m:1}).m*DIFF[CFG.diff].m*F.o*St.o*(1-0.06*nfors)*B.d*(ok?1:(q.os||1));
+  const gkv=gk.gk+(has(gk,'kip')?1.5:0)-(gk.pos==='K'?0:1.5);
+  const nr_=(S.ored||[]).length,M_=mods(),A2=att*Math.pow(1.08,nr_)*M_.a,O2=os*Math.pow(0.85,nr_)*M_.d;
+  return {att:A2,os:O2,gkv,gk,out,qg:ok?0:(q.goal||0),pUs:A2/(A2+O2),f:0.45*F.f*St.f*(B.f||1)*M_.f};
+}
+
+/* ---------- Tegning ---------- */
+let A=null,SPD=RM?4:1,PAUSED=false,FAST=false,ITS=[];
+const FDT=4.4;
+function drawPitch(){
+  if(FAST)return;
+  const sel=S.sel,sl=slots(),oc=oppCol();
+  let g=`<rect x="0" y="0" width="300" height="400" fill="#2f8f46"/>`;
+  for(let i=0;i<8;i++)g+=`<rect x="0" y="${i*50}" width="300" height="25" fill="#2a8240"/>`;
+  g+=`<g fill="none" stroke="#fff" stroke-opacity=".85" stroke-width="2"><rect x="10" y="10" width="280" height="380"/><line x1="10" y1="200" x2="290" y2="200"/><circle cx="150" cy="200" r="34"/><rect x="85" y="10" width="130" height="48"/><rect x="85" y="342" width="130" height="48"/><rect x="125" y="2" width="50" height="8"/><rect x="125" y="390" width="50" height="8"/></g>`;
+  const wm='font:800 27px Rubik,sans-serif;fill:#fff;opacity:.2';
+  if(OPP[S.m])g+=`<g pointer-events="none" text-anchor="middle"><text x="150" y="92" style="${wm}">${esc(OPP[S.m].n.toUpperCase())}</text></g>`;
+  if(S.wx==='regn'){let l='';for(let k=0;k<46;k++){const x=(k*67)%300,y=(k*113)%400;l+=`<line x1="${x}" y1="${y}" x2="${x-5}" y2="${y+13}"/>`}g+=`<g stroke="#d6ecff" stroke-opacity=".4" stroke-width="1.5" pointer-events="none">${l}</g>`}
+  else if(S.wx==='varme')g+='<rect width="300" height="400" fill="#ffb020" opacity=".12" pointer-events="none"/>';
+  else if(S.wx==='vind'){let l='';for(let k=0;k<9;k++){const y=30+k*42,x=(k*97)%200;l+=`<path d="M${x} ${y}q22-9 44 0t44 0"/>`}g+=`<g fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="2" stroke-linecap="round" pointer-events="none">${l}</g>`}
+  g+=oposNow().map(([x,y],i)=>{const q=A?A.o[i]:{x,y};return `<g id="o${i}" ${(S.ored||[]).includes(i)?'style="display:none" ':''}transform="translate(${q.x.toFixed(1)} ${q.y.toFixed(1)})">${fig(i===0?'#7c3aed':oc,i*3+S.m+11,'',0.82)}</g>`}).join('');
+  g+=S.field.map((id,i)=>{const p=P(id),q=A?A.u[i]:{x:sl[i][1],y:sl[i][2]},s=sel===id,ok=onSpot(p,i);
+    const col=p.en>60?'#7CFC9A':p.en>35?'#ffb020':'#ff5b5b',ny=i===0?-28:35,ty=i===0?-39:45;
+    return `<g class="pl" id="u${i}" data-id="${id}" transform="translate(${q.x.toFixed(1)} ${q.y.toFixed(1)})" tabindex="0" role="button" aria-label="${esc(p.n)}, ${POSN[sl[i][0]]}">
+      <circle r="22" fill="transparent"/>
+      ${s?'<ellipse cy="19" rx="17" ry="7" fill="#ffd23f" opacity=".9"/>':ok?'':'<ellipse cy="19" rx="16" ry="6.5" fill="none" stroke="#ff7a1a" stroke-width="2.5" stroke-dasharray="4 3"/>'}
+      ${fig(i===0?gkCol():CFG.kit,p.pi,p.nr,1)}
+      ${p.yc?'<rect x="9" y="-27" width="8" height="11" rx="1.5" fill="#ffd23f" stroke="#122016" stroke-width="1"/>':''}
+      <rect x="-13" y="${i===0?24:22}" width="26" height="4" rx="2" fill="#0007"/><rect x="-13" y="${i===0?24:22}" width="${(26*p.en/100).toFixed(1)}" height="4" rx="2" fill="${col}"/>
+      ${S.cap===id?'<rect x="-11" y="-3" width="4" height="5" fill="#ffd23f" stroke="#122016" stroke-width=".7"/>':''}
+      <text class="nm" y="${ny}" text-anchor="middle">${esc(p.n)}${S.cap===id?' (C)':''}</text>
+      <text class="tg" y="${ty}" text-anchor="middle">${TR[p.tr].n}${p.tr2?' +':''}${ok?'':' · feil plass'}</text></g>`}).join('');
+  const b=A?A.b:{x:150,y:200};
+  g+=`<circle id="ball" cx="${b.x.toFixed(1)}" cy="${b.y.toFixed(1)}" r="6" fill="#fff" stroke="#122016" stroke-width="1.5"/>`;
+  $('pitch').innerHTML=g;
+  $('pitch').classList.toggle('run',!!A&&!PAUSED);
+  $('pausetag').hidden=!(S.busy&&PAUSED);
+}
+function drawBench(){
+  if(FAST)return;
+  $('bench').innerHTML=bench().map(p=>`<button class="bp c${S.sel===p.id?' sel':''}" data-id="${p.id}">
+    <span class="top"><span class="nr" style="background:${PCOL[p.pos]};color:#fff">${p.nr}</span><span>${esc(p.n)}</span></span>
+    <small>${POSN[p.pos]} · ${TR[p.tr].n}${p.tr2?' +':''}</small>
+    <small>${p.off?`<b style="color:var(--red)">${p.off===3?'Skadet':p.off===2?'Utestengt':'Rødt kort'}</b>`:`<span class="mood" style="background:${moodCol(p.mood)}"></span>${moodTxt(p.mood)} · ${Math.round(p.min)} min${p.yc?' · <b>gult</b>':''}`}</small>
+    <span class="bar"><i style="width:${p.en}%;background:${p.en>60?'#2fbf5b':p.en>35?'#ffb020':'#e5484d'}"></i></span></button>`).join('')||'<p class="hint">Ingen på benken.</p>';
+}
+function clockTxt(){
+  if(S.h>=2&&!S.busy)return['Slutt','–'];
+  const left=Math.max(0,REAL-S.t),m=Math.floor(left/60),s=Math.floor(left%60);
+  const gm=Math.min(2*HALF,Math.floor(S.h*HALF+S.t/REAL*HALF));
+  return[`${S.h+1}. omgang · ${gm}'`,`${m}:${String(s).padStart(2,'0')}`];
+}
+function drawClock(){if(FAST)return;const[a,b]=clockTxt();$('half').textContent=a;$('clock').textContent=b;drawShouts();drawHype()}
+function drawTop(){
+  if(FAST)return;
+  const o=OPP[S.m];
+  $('opp').innerHTML=o?`${fl(CFG.nat)} ${esc(TN())} – ${esc(o.n)} ${fl(o.n)}`:'Ferdig';
+  $('sc').textContent=S.us+' – '+S.them;
+  $('team').textContent=TN();$('logo').innerHTML=logoSvg(CFG.logo,CFG.kit,34);document.querySelectorAll('.flag').forEach(e=>e.innerHTML=flagSvg(CFG.nat));
+  $('sub').textContent=(CFG.coach?'Trener '+CFG.coach+' · ':'')+(S.mode==='single'?(S.out?'Enkeltkampen er ferdig':`Enkeltkamp · ${CFG.form}`):S.champ?'Verdensmester!':S.out?'VM er over':o?`VM ${o.st} · ${CFG.form}`:'VM er over');
+  drawClock();
+  const r=S.rec;
+  $('stats').innerHTML=[['Fair play',r.fair],['S-U-T',`${r.w}-${r.u}-${r.t}`],['Mål',`${r.gf}-${r.ga}`]].map(([a,b])=>`<div><b>${b}</b><span>${a}</span></div>`).join('');
+  drawVM();
+  const sc=qNow();
+  const RB=['Jeg har allerede bestilt seiersmiddag. Dere kan få restene.','Jeg har sett laget ditt trene. Jeg sov godt etterpå.','Skal jeg sende en buss, så dere kommer dere fortere hjem?'],RS=['Dere igjen? Jeg trodde dere hadde reist hjem.','Denne gangen tar jeg med ekstra lommetørklær til deg.','Hyggelig å se deg igjen. Synd det blir så kort.'];
+  const rvm=(o&&o.rv&&S.h===0&&!S.busy&&!S.out&&!S.champ)?`<div class="msg"><b>Melding fra ${esc(o.rv)}, trener for ${esc(o.n)}:</b> «${(o.g?RB:RS)[(o.rv.length+S.m)%3]}»</div>`:'';
+  const fe_=S.pairs&&S.pairs[1],feud=(fe_&&S.h<2&&!S.out&&!S.champ&&S.field.includes(fe_[0])&&S.field.includes(fe_[1]))?`<div class="msg">${esc(P(fe_[0]).n)} og ${esc(P(fe_[1]).n)} har kranglet og står begge på banen. Laget spiller dårligere.</div>`:'';
+  const wx=(o&&S.h<2&&!S.out&&!S.champ&&S.wx&&S.wx!=='sol')?`<div class="msg" style="background:var(--bg);border:1px solid var(--line)"><b>Været: ${WX[S.wx][0]}.</b> ${WX[S.wx][1]}</div>`:'';
+  $('scout').innerHTML=rvm+feud+wx+((o&&sc.q&&S.h<2&&!S.out&&!S.champ)?`<div class="msg" style="background:var(--bg);border:1px solid var(--line)"><b>Speiderrapport: ${o.n} ${sc.q.n}.</b> ${sc.q.d} ${sc.q.tip} <b>${sc.ok?'✓ Motgrepet er på plass.':'✗ Motgrepet mangler.'}</b></div>`:'');
+  $('train').textContent=`Trening (${S.tp})`;$('train').hidden=S.busy||S.tp<=0||!!SO;
+  const dOk=S.drinks>0&&S.sel!==null&&(S.busy||S.h<2)&&!SO;
+  $('drinktxt').textContent=S.drinks<=0?'Tomt for energidrikk':S.sel===null?`Energidrikk (${S.drinks}): velg spiller først`:`Gi energidrikk til ${P(S.sel).n} (${S.drinks} igjen)`;$('drink').disabled=!dOk;
+  $('play').textContent=S.busy?(PAUSED?'▶ Fortsett kampen':'⏸ Pause'):S.out||S.champ||S.m>=OPP.length?(S.mode==='single'?'Til menyen':'Se VM-resultatet'):S.h===0?'Start kampen':S.h===1?'Start 2. omgang':'Neste kamp';
+  const pepOk=!S.busy&&S.h<2&&!S.pep[S.h];
+  $('pep').hidden=!pepOk;$('pep').textContent=S.h===0?'Peptalk før kampen':'Peptalk i pausen';
+  $('auto').hidden=S.h>=2&&!S.busy;$('play').classList.toggle('alt',S.busy&&!PAUSED);
+  $('ff').textContent=SPD>1&&!RM?'Normal fart':'Spol fram';
+  $('msgs').innerHTML=S.msgs.map(m=>`<div class="msg">${esc(m)}</div>`).join('');
+}
+function sortTab(){return GRP.map(n=>Object.assign({n},S.tab[n])).sort((a,b)=>(b.p-a.p)||((b.gf-b.ga)-(a.gf-a.ga))||(b.gf-a.gf)||(a.n===ME?-1:1))}
+function drawVM(){
+  if(S.mode==='single'){$('vm').innerHTML=`<p class="hint"><b>Enkeltkamp mot ${esc(OPP[0].n)}.</b> Uavgjort avgjøres på straffer. VM-et ditt er lagret og venter i menyen.</p>`;return}
+  const t=sortTab();
+  let h=`<table class="vmt" style="margin-top:12px"><thead><tr><th>Gruppe I</th><th class="n">K</th><th class="n">+/-</th><th class="n">P</th></tr></thead><tbody>${t.map(x=>`<tr class="${x.n===ME?'me':''}"><td>${x.n===ME?fl(CFG.nat)+' '+esc(TN()):fl(x.n)+' '+esc(x.n)}</td><td class="n">${x.k}</td><td class="n">${x.gf-x.ga>0?'+':''}${x.gf-x.ga}</td><td class="n">${x.p}</td></tr>`).join('')}</tbody></table>`;
+  if((S.gres||[]).length)h+=`<p class="hint" style="margin:8px 0 0">${[0,1,2].filter(k=>S.gres.some(g=>g[0]===k)).map(k=>`<b>Runde ${k+1}:</b> ${S.gres.filter(g=>g[0]===k).map(g=>`${esc(g[1])} ${g[3]}–${g[4]} ${esc(g[2])}`).join(' · ')}`).join('<br>')}</p>`;
+  h+=`<ul class="path">${OPP.map((o,i)=>{const r=S.hist[i];return `<li><span>${o.st}: ${fl(o.n)} ${o.n}</span><span>${r?`${r.us} – ${r.them}${r.so?(r.so==='win'?' (str.)':' (str. tap)'):''}`:i===S.m&&!S.out&&!S.champ?'Neste':'–'}</span></li>`}).join('')}</ul>`;
+  const tsc=S.sq.filter(p=>p.g>0).sort((a,b)=>b.g-a.g).slice(0,3),kp=S.sq.filter(p=>p.sv>0).sort((a,b)=>b.sv-a.sv)[0];
+  h+=`<p class="hint"><b>Toppscorere:</b> ${tsc.length?tsc.map(p=>`${esc(p.n)} ${p.g}`).join(', '):'ingen mål ennå'}${kp?` · <b>Flest redninger:</b> ${esc(kp.n)} ${kp.sv}`:''}</p>`;
+  $('vm').innerHTML=h;
+}
+function drawLog(){
+  if(FAST)return;
+  $('log').innerHTML=S.log.length?S.log.slice().reverse().map(([c,t])=>`<li class="${c==='g'||c==='m'?c:'c'}">${esc(t)}</li>`).join(''):'<li class="c">Kampen har ikke startet. Sett opp laget og trykk «Start kampen».</li>';
+}
+function draw(){drawPitch();drawBench();drawTop();drawLog();if(!$('v-lag').hidden)drawLag();save()}
+
+/* ---------- Lag-siden ---------- */
+function drawMini(){
+  const sl=slots(),col={K:'#3b82f6',F:'#7dd3fc',M:'#ffd23f',A:'#ff7a1a'};
+  let g=`<rect width="300" height="400" fill="#2f8f46"/><g fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="3"><rect x="10" y="10" width="280" height="380"/><line x1="10" y1="200" x2="290" y2="200"/><rect x="85" y="342" width="130" height="48"/><rect x="85" y="10" width="130" height="48"/></g>`;
+  g+=sl.map(([r,x,y])=>`<circle cx="${x}" cy="${y}" r="22" fill="${col[r]}" stroke="#122016" stroke-width="2"/><text x="${x}" y="${y+8}" text-anchor="middle" style="font:800 22px Rubik,sans-serif;fill:#122016">${r}</text>`).join('');
+  $('miniform').innerHTML=g;
+}
+function drawLag(){
+  const lock=S.busy,started=S.busy||S.h>0||S.hist.length>0;
+  $('natsel').innerHTML=natOpts();$('natsel').disabled=started||S.mode==='single';$('nt').hidden=CFG.nat!=='Norge';
+  $('nathint').textContent=started||S.mode==='single'?'Landslaget kan byttes når du starter et nytt VM fra menyen.':'Bytter du landslag, får spillerne navn fra det landet, og gruppa trekkes på nytt.';
+  $('owncard').hidden=CFG.nat!=='Eget';if(CFG.nat==='Eget'){$('cf-p').value=CFG.cflag.p;$('cf-a').value=CFG.cflag.a;$('cf-b').value=CFG.cflag.b;$('cf-c').value=CFG.cflag.c;$('cf-prev').innerHTML=flagSvg('Eget');$('cf-prev').firstChild.style.cssText='display:block;width:100%;height:100%'}
+  $('squadhint').textContent=started?'Troppen er låst når VM har startet.':'Du tar med 10 av 16 spillere til VM. Trykk på en i troppen og så en utenfor for å bytte dem.';
+  $('squad').innerHTML=NAMES.map((x,pi)=>{const inn=CFG.squad.includes(pi);return `<button class="opt" data-sq="${pi}" aria-pressed="${inn}" ${started?'disabled':''} style="${lagSel===pi?'outline:3px solid var(--ink)':''}${inn?'':';opacity:.75'}"><b>${esc(CFG.names[pi])}</b><span class="pk" style="background:${PCOL[CFG.pos[pi]]}">${POSN[CFG.pos[pi]]}</span> ${TR[CFG.traits[pi]].n}<br>Nivå ${DOTS(x[2],5)} · ${inn?'i troppen':'utenfor'}</button>`}).join('');
+  $('diffs').innerHTML=Object.entries(DIFF).map(([k,f])=>`<button class="opt" data-diff="${k}" aria-pressed="${CFG.diff===k}" ${lock?'disabled':''}><b>${f.n}</b>${f.d}</button>`).join('');
+  $('snd').textContent='Lyd: '+(CFG.sound?'på':'av');$('thm').textContent='Tema: '+THN[CFG.theme];$('amb').textContent='Publikumslyd: '+(CFG.amb?'på':'av');
+  $('stops').innerHTML=Object.entries(STP).map(([k,f])=>`<button class="opt" data-stop="${k}" aria-pressed="${CFG.stops===k}"><b>${f.n}</b>${f.d}</button>`).join('');
+  $('kits').innerHTML=KITS.map(c=>`<button class="sw" data-kit="${c}" aria-pressed="${CFG.kit===c}" aria-label="Draktfarge" style="background:${c}"></button>`).join('');
+  $('logos').innerHTML=Object.keys(LOGOS).map(k=>`<button class="sw" data-logo="${k}" aria-pressed="${CFG.logo===k}" aria-label="Logo ${k}" style="border-radius:12px;width:48px;height:48px">${logoSvg(k,CFG.kit,30)}</button>`).join('');
+  $('f-coach').value=CFG.coach;$('f-team').value=CFG.team;
+  $('forms').innerHTML=Object.entries(FORM).map(([k,f])=>`<button class="opt" data-form="${k}" aria-pressed="${CFG.form===k}" ${lock?'disabled':''}><b>${f.n}</b>${f.d}</button>`).join('');
+  $('styles').innerHTML=Object.entries(STYLE).map(([k,f])=>`<button class="opt" data-style="${k}" aria-pressed="${CFG.style===k}" ${lock?'disabled':''}><b>${f.n}</b>${f.d}</button>`).join('');
+  $('formlock').textContent=lock?'Formasjon og spillestil kan endres når omgangen er ferdig.':'Formasjonen og spillestilen gjelder fra neste omgang. Bytt hvem som står hvor på Kamp-siden.';
+  drawMini();
+  const dots=(n,max)=>'●'.repeat(n)+'○'.repeat(max-n);
+  const fr_=S.pairs&&S.pairs[0],fe2=S.pairs&&S.pairs[1];
+  $('social').innerHTML=`<div class="msg" style="margin:0 0 4px">${fr_?`<b>Bestevenner:</b> ${esc(P(fr_[0]).n)} og ${esc(P(fr_[1]).n)} spiller bedre når begge er på banen. `:''}${fe2?`<b>Har kranglet:</b> ${esc(P(fe2[0]).n)} og ${esc(P(fe2[1]).n)} spiller dårligere sammen. En lagmiddag mellom kampene kan ordne opp.`:'Ingen krangler i laget akkurat nå.'}</div>`;
+  $('capsel').innerHTML=S.sq.map(p=>`<option value="${p.id}"${S.cap===p.id?' selected':''}>${esc(p.n)}</option>`).join('');$('capsel').disabled=S.busy;
+  const order=['K','F','M','A'];
+  $('players').innerHTML=order.map(k=>{const ps=S.sq.filter(p=>p.pos===k);if(!ps.length)return '';return `<div class="ph"><span class="pk" style="background:${PCOL[k]}">${POSN[k]}</span><span style="color:var(--mut)">${ps.length} ${ps.length===1?'spiller':'spillere'}</span></div>`+ps.map(p=>{const i=p.pi;return `<div class="prow"><span class="nr" style="background:${PCOL[p.pos]};color:#fff">${p.nr}</span>
+    <label class="f nmc">Navn<input data-pn="${i}" value="${esc(p.n)}" maxlength="16"></label>
+    <label class="f">Posisjon<select data-pp="${i}">${Object.entries(POSN).map(([k,n])=>`<option value="${k}"${p.pos===k?' selected':''}>${n}</option>`).join('')}</select></label>
+    <label class="f">Ferdighet<select data-pt="${i}">${Object.entries(TR).map(([k,t])=>`<option value="${k}"${p.tr===k?' selected':''}>${t.n}</option>`).join('')}</select></label>
+    <div class="lv">${S.cap===p.id?'<b>Kaptein</b> · ':''}${QUIRK[p.pi]?`<b>${QN[QUIRK[p.pi]][0]}</b> (${QN[QUIRK[p.pi]][1]}) · `:''}Nivå ${dots(p.sk,5)} · Keeper ${dots(p.gk,5)} · <span class="mood" style="background:${moodCol(p.mood)}"></span>${moodTxt(p.mood)}${p.last&&p.last.length?': '+p.last.map(esc).join(', '):''}</div></div>`}).join('')}).join('');
+  $('trhelp').innerHTML=Object.values(TR).map(t=>`<p style="margin:6px 0"><b>${t.n}:</b> ${t.d}.</p>`).join('');
+}
+let lagSel=null;
+function showTab(t){
+  const lag=t==='lag';
+  $('v-lag').hidden=!lag;$('v-kamp').hidden=lag;
+  $('t-lag').setAttribute('aria-selected',lag);$('t-kamp').setAttribute('aria-selected',!lag);
+  if(lag)drawLag();else draw();
+}
+const saveCfg=()=>{try{localStorage.setItem('treneren-cfg',JSON.stringify(CFG))}catch(e){}};
+
+/* ---------- Bytter ---------- */
+function pick(id){
+  if(S.h>=2&&!S.busy)return;
+  if(SO||P(id).off)return;
+  if(S.sel===null||S.sel===id){S.sel=S.sel===id?null:id;return draw()}
+  const a=S.sel,b=id,fa=S.field.indexOf(a),fb=S.field.indexOf(b);
+  if(fa<0&&fb<0){S.sel=id;return draw()}
+  if(fa>=0&&fb>=0){S.field[fa]=b;S.field[fb]=a}
+  else{const inn=fa>=0?b:a,ut=fa>=0?a:b,slot=fa>=0?fa:fb;S.field[slot]=inn;if(S.busy)S.log.push(['c',`${gameMin()}' Bytte: ${P(inn).n} inn, ${P(ut).n} ut.`])}
+  S.sel=null;draw();
+}
+function autoSwap(){
+  if(S.h>=2&&!S.busy)return;
+  const keep=S.field[0],sl=slots();
+  const chosen=S.sq.filter(p=>p.id!==keep&&!p.off).sort((a,b)=>(a.min-b.min)||(b.en-a.en)).slice(0,6);
+  const nf=[keep],left=chosen.slice();
+  for(let i=1;i<7;i++){const r=sl[i][0];let k=left.findIndex(p=>p.pos===r);if(k<0)k=0;nf.push(left.splice(k,1)[0].id)}
+  const ins=nf.filter(x=>!S.field.includes(x)).map(x=>P(x).n);
+  S.field=nf;S.sel=null;
+  if(S.busy&&ins.length)S.log.push(['c',`${gameMin()}' Rettferdig bytte: ${ins.join(', ')} inn.`]);
+  draw();
+}
+
+/* ---------- Animasjon og kampklokke ---------- */
+const gameMin=()=>Math.min(2*HALF,Math.floor(S.h*HALF+S.t/REAL*HALF)+1);
+let lastSec=-1,lastRing=0;
+function initA(){
+  const mk=([r,x,y])=>({x,y,hx:x,hy:y,w:Math.random()*6});
+  A={u:slots().map(mk),o:oposNow().map(([x,y])=>mk(['',x,y])),b:{x:150,y:200},bt:null,poss:'u',hold:{t:'u',i:4},recv:null,kd:null,last:performance.now(),run:true,clock:false};
+  requestAnimationFrame(frame);
+}
+function tick(dt){
+  const d=Math.min(dt,REAL-S.t);if(d<=0)return;S.t+=d;
+  const gm=d/REAL*HALF,dr=STYLE[CFG.style].drain*QD*((S.boost&&S.boost.dr)||1)*drainMod();
+  S.field.forEach((id,i)=>{const p=P(id);p.min+=gm;p.en=Math.max(5,p.en-gm*(i===0?0.5:1.4)*dr*(has(p,'stam')?0.5:1))});
+  bench().forEach(p=>p.en=Math.min(100,p.en+gm*2.2));
+}
+function frame(now){
+  if(!A||!A.run)return;
+  const dt=PAUSED?0:Math.min(0.05,(now-A.last)/1000)*SPD;A.last=now;
+  if(FAST)return;
+  if(A.clock&&S.t<REAL){
+    tick(dt);
+    const sec=Math.floor(S.t);if(sec!==lastSec){lastSec=sec;drawClock();if(sec%2===0)drawBench()}
+    if(now-lastRing>3000){lastRing=now;drawPitch()}
+  }
+  const b=A.b;
+  if(A.bt){const t=A.bt,dx=t.x-b.x,dy=t.y-b.y,d=Math.hypot(dx,dy),st=t.v*dt;
+    if(d<=st){b.x=t.x;b.y=t.y;A.bt=null;A.recv=null;t.res()}else{b.x+=dx/d*st;b.y+=dy/d*st}}
+  for(const tm of ['u','o']){
+    const arr=A[tm],up=tm==='u'?-1:1,att=A.poss===tm;
+    arr.forEach((p,i)=>{
+      let tx,ty,v=38;p.w+=dt*1.3;
+      if(A.recv&&A.recv.t===tm&&A.recv.i===i){tx=A.recv.x;ty=A.recv.y;v=62}
+      else if(A.hold&&!A.bt&&A.hold.t===tm&&A.hold.i===i){tx=b.x;ty=b.y-up*8;v=50}
+      else if(i===0){tx=cl(150+(b.x-150)*0.35,118,182);ty=p.hy;if(A.kd&&A.kd.t===tm){tx=A.kd.x;ty=A.kd.y;v=140}}
+      else{tx=p.hx+(b.x-150)*0.3+Math.sin(p.w)*8;ty=p.hy+(b.y-200)*0.45+(att?up*28:-up*10)+Math.cos(p.w*0.8)*6}
+      tx=cl(tx,18,282);ty=cl(ty,18,382);
+      const dx=tx-p.x,dy=ty-p.y,d=Math.hypot(dx,dy),st=v*dt;
+      if(d>0.5){if(d<=st){p.x=tx;p.y=ty}else{p.x+=dx/d*st;p.y+=dy/d*st}}
+      const el=document.getElementById(tm+i);if(el)el.setAttribute('transform',`translate(${p.x.toFixed(1)} ${p.y.toFixed(1)})`);
+    });
+  }
+  const be=$('ball');if(be){be.setAttribute('cx',b.x.toFixed(1));be.setAttribute('cy',b.y.toFixed(1))}
+  requestAnimationFrame(frame);
+}
+const moveBall=(x,y,v)=>FAST?(A.b.x=x,A.b.y=y,Promise.resolve()):new Promise(res=>{A.bt={x,y,v,res}});
+function pass(t,i){
+  const p=A[t][i],up=t==='u'?-1:1,x=cl(p.x+(Math.random()*30-15),20,280),y=cl(p.y+up*22,25,375);
+  A.recv={t,i,x,y};
+  const d=Math.hypot(x-A.b.x,y-A.b.y);
+  return moveBall(x,y,cl(d*0.9,45,85)).then(()=>{A.hold={t,i}});
+}
+function nextRecv(t){
+  const up=t==='u'?-1:1,cand=[1,2,3,4,5,6].filter(i=>!(A.hold&&A.hold.t===t&&A.hold.i===i)&&!(t==='o'&&(S.ored||[]).includes(i)));
+  return wpick(cand,i=>1+Math.max(0,up*(A[t][i].y-A.b.y))/30)}
+let AC=null;
+function ac(){if(!CFG.sound||FAST)return null;try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume();return AC}catch(e){return null}}
+function tone(f,t0,d,type,v,f2){try{const c=ac();if(!c)return;const o=c.createOscillator(),g=c.createGain(),t=c.currentTime+t0;o.type=type||'sine';o.frequency.setValueAtTime(f,t);if(f2)o.frequency.linearRampToValueAtTime(f2,t+d);g.gain.setValueAtTime(v||0.1,t);g.gain.exponentialRampToValueAtTime(0.001,t+d);o.connect(g);g.connect(c.destination);o.start(t);o.stop(t+d+0.05)}catch(e){}}
+function crowd(d,v,fq){try{const c=ac();if(!c)return;const n=Math.floor(c.sampleRate*d),b=c.createBuffer(1,n,c.sampleRate),a=b.getChannelData(0);for(let i=0;i<n;i++)a[i]=Math.random()*2-1;const s=c.createBufferSource();s.buffer=b;const f=c.createBiquadFilter();f.type='bandpass';f.frequency.value=fq||1100;f.Q.value=0.5;const g=c.createGain(),t=c.currentTime;g.gain.setValueAtTime(0.001,t);g.gain.linearRampToValueAtTime(v,t+0.3);g.gain.exponentialRampToValueAtTime(0.001,t+d);s.connect(f);f.connect(g);g.connect(c.destination);s.start(t)}catch(e){}}
+const SFX={
+ whistle:n=>{for(let i=0;i<n;i++){tone(2350,i*0.38,0.28,'square',0.05);tone(2500,i*0.38,0.28,'square',0.03)}},
+ goal:()=>{crowd(2.6,0.3);[523,659,784,1047].forEach((f,i)=>tone(f,i*0.13,0.35,'triangle',0.12))},
+ opp:()=>{crowd(1.2,0.1,500);tone(220,0,0.6,'sawtooth',0.07,110)},
+ miss:()=>crowd(0.8,0.1,700),
+ save:()=>{crowd(0.9,0.14);tone(660,0,0.15,'triangle',0.08);hype(8)}};
+let AMB=null;
+function ambStop(){if(AMB){try{AMB.s.stop()}catch(e){}AMB=null}}
+function ambStart(){
+  ambStop();if(!CFG.amb)return;const c=ac();if(!c)return;
+  try{const n=c.sampleRate*3,b=c.createBuffer(1,n,c.sampleRate),a=b.getChannelData(0);let l=0;for(let i=0;i<n;i++){l=l*0.985+(Math.random()*2-1)*0.015;a[i]=l*8*Math.min(1,i/2000,(n-i)/2000)}
+    const s=c.createBufferSource();s.buffer=b;s.loop=true;const f=c.createBiquadFilter();f.type='bandpass';f.frequency.value=700;f.Q.value=0.35;const g=c.createGain();g.gain.value=0.0001;
+    s.connect(f);f.connect(g);g.connect(c.destination);s.start();AMB={s,g}}catch(e){AMB=null}
+}
+function ambSet(){if(!AMB||!AC)return;try{const v=PAUSED||!S.busy?0.0001:0.035+0.1*(HY.until>S.t?1:(S.hype||0)/100);AMB.g.gain.setTargetAtTime(v,AC.currentTime,0.5)}catch(e){}}
+let gfT=null;
+function flashGoal(ours,who){
+  (S.goals=S.goals||[]).push({u:!!ours,n:String(who),m:gameMin()});
+  hype(ours?(S.sq.some(p=>QUIRK[p.pi]==='publikum'&&String(who).indexOf(p.n+' (')===0)?40:25):-20);
+  if(ours&&!FAST){const sd=$('stadium');sd.classList.remove('hop');void sd.offsetWidth;sd.classList.add('hop');setTimeout(()=>sd.classList.remove('hop'),2200)}
+  if(FAST)return;
+  const g=$('gflash');g.className='gflash';void g.offsetWidth;
+  g.innerHTML=ours?`<div><b>MÅÅÅL!</b><small>${esc(who)}</small></div>`:`<div><b>Mål for ${esc(who)}</b></div>`;
+  g.className='gflash on'+(ours?'':' them');if(ours)SFX.goal();else SFX.opp();
+  const sc=document.querySelector('.score');sc.classList.remove('pulse');void sc.offsetWidth;if(ours)sc.classList.add('pulse');
+  clearTimeout(gfT);gfT=setTimeout(()=>{g.className='gflash';sc.classList.remove('pulse')},2100);
+}
+async function sequence(kind,shSlot,result,who){
+  const t=kind==='us'?'u':kind==='them'?'o':(A.poss||'u');
+  A.poss=t;
+  const n=kind==='none'?2+Math.floor(Math.random()*2):1+Math.floor(Math.random()*2);
+  for(let k=0;k<n;k++)await pass(t,nextRecv(t));
+  if(kind==='none'){
+    const ot=t==='u'?'o':'u';let bi=1,bd=1e9;
+    A[ot].forEach((p,i)=>{if(i&&!(ot==='o'&&(S.ored||[]).includes(i))){const d=Math.hypot(p.x-A.b.x,p.y-A.b.y);if(d<bd){bd=d;bi=i}}});
+    A.poss=ot;await pass(ot,bi);return;
+  }
+  if(t==='u'&&shSlot)await pass('u',shSlot);else await pass(t,nextRecv(t));
+  await sleep(250/SPD);
+  const gy=t==='u'?6:394,ot=t==='u'?'o':'u';
+  if(result==='goal'){A.hold=null;const gx=150+(Math.random()*40-20);A.kd={t:ot,x:gx+(Math.random()<.5?-28:28),y:t==='u'?30:370};await moveBall(gx,gy,190);if(t==='u')S.us++;else S.them++;drawTop();flashGoal(t==='u',who);await sleep(1600/SPD)}
+  else if(result==='save'){A.hold=null;const gx=150+(Math.random()*40-20),gy2=t==='u'?32:368;A.kd={t:ot,x:gx,y:gy2};await moveBall(gx,gy2,170);A.hold={t:ot,i:0};await sleep(500/SPD)}
+  else{A.hold=null;await moveBall(Math.random()<.5?110:190,t==='u'?4:396,170);await sleep(400/SPD)}
+  A.kd=null;
+  if(result==='goal'){A.b.x=150;A.b.y=200;A.hold={t:ot,i:4};A.poss=ot;A[ot][4].x=150;A[ot][4].y=t==='u'?185:215}
+  else if(result==='miss'){A.b.x=150;A.b.y=t==='u'?40:360;A.hold={t:ot,i:0};A.poss=ot}
+  else A.poss=ot;
+}
+let evRes=null;
+const ask=html=>{if(FAST){const m=[...html.matchAll(/data-ev="([^"]*)"/g)].map(x=>x[1]);return Promise.resolve(rndPick(m))}return new Promise(res=>{evRes=res;show(html)})};
+function benchPick(role){return bench().filter(p=>!p.off).sort((a,b)=>((a.pos===role?0:1)-(b.pos===role?0:1))||(b.en-a.en))[0]}
+const rndOf=a=>a[Math.floor(Math.random()*a.length)];
+const EB=(k,t,d)=>`<button class="bp" style="width:100%;margin:6px 0;display:block" data-ev="${k}"><b>${t}</b><small style="display:block;color:var(--mut);font-size:13px">${d}</small></button>`;
+function snap(){return {l:S.log.length,p:S.sq.map(p=>({m:p.mood,e:p.en,o:p.off,y:p.yc||0})),f:S.field.slice(),b:Object.assign({a:1,d:1,f:1},S.boost||{}),us:S.us}}
+async function showResult(title,sn){
+  const lines=S.log.slice(sn.l).map(x=>esc(String(x[1]).replace(/^\d+' /,'')));
+  const per=[];
+  S.sq.forEach((p,i)=>{const o=sn.p[i],a=[];
+    if(p.mood!==o.m)a.push(`humør ${p.mood>o.m?'↑ opp':'↓ ned'} (nå ${moodTxt(p.mood).toLowerCase()})`);
+    const de=Math.round(p.en-o.e);if(Math.abs(de)>=3)a.push(`energi ${de>0?'+':'−'}${Math.abs(de)} %`);
+    if(p.off===3&&!o.o)a.push(`skadet, ute i ${p.inj>1?'to kamper':'neste kamp'}`);else if(p.off&&!o.o)a.push('rødt kort og utestengt i neste kamp');else if((p.yc||0)>o.y)a.push('gult kort');
+    if(!sn.f.includes(p.id)&&S.field.includes(p.id))a.push('kom inn fra benken');
+    if(sn.f.includes(p.id)&&!S.field.includes(p.id))a.push('gikk ut');
+    if(a.length)per.push([p.n,a.join(', ')])});
+  const grp={};per.forEach(([n,t])=>(grp[t]=grp[t]||[]).push(n));
+  const eff=Object.entries(grp).map(([t,ns])=>`<b>${ns.length>=4?ns.length+' spillere':ns.map(esc).join(', ')}:</b> ${t}`);
+  const b=Object.assign({a:1,d:1,f:1},S.boost||{}),pc=(x,y)=>Math.round((x/y-1)*100),sg=n=>(n>0?'+':'−')+Math.abs(n);
+  if(pc(b.a,sn.b.a))eff.push(`<b>Laget:</b> angrep ${sg(pc(b.a,sn.b.a))} % resten av omgangen`);
+  if(pc(b.d,sn.b.d))eff.push(`<b>Motstanderen:</b> ${sg(pc(b.d,sn.b.d))} % styrke resten av omgangen`);
+  if(S.us>sn.us)eff.push(`<b>Mål til ${esc(TN())}!</b>`);
+  await ask(`<h3>${title}</h3>${lines.map(l=>`<div class="msg">${l}</div>`).join('')}<p style="margin:12px 0 4px"><b>Effekt av valget</b></p>${eff.length?`<ul style="margin:0;padding-left:20px;font-size:15px;line-height:1.5">${eff.map(e=>`<li>${e}</li>`).join('')}</ul>`:'<p class="sub">Ingen endring for laget.</p>'}<div class="btns"><button class="btn" data-ev="ok">Videre</button></div>`);
+}
+async function celebrate(sh){
+  await sleep(SPD>1?700:1400);
+  const sn=snap();
+  const CEL={salto:['Salto','Imponerende hvis den sitter. Vondt hvis ikke.'],robot:['Robotdans','Hele laget blir med. Dommeren liker ikke lange feiringer.'],kne:['Skli på knærne','Stilig, men kunstgress svir.'],
+   fly:['Flyet','Løp med armene ut. Publikum elsker det.'],vugge:['Vugga','Hele laget vugger en liksom-baby. Koselig.'],troye:['Ta av seg trøya','Publikum går amok. Det gjør dommeren også.'],benk:['Løp til benken','De på benken blir glade for å bli husket.'],
+   selfie:['Selfie med publikum','Stemningen stiger. Dommeren må vente.'],hysj:['Hysj til bortefansen','Tøft. Kan tenne motstanderen.'],gitar:['Luftgitar','Rått, hvis ryggen holder.'],koll:['Kollbøtte','Tryggere enn salto. Nesten like kult.'],
+   mage:['Skli på magen','Best på vått gress.'],flagg:['Dans ved hjørneflagget','En klassiker. Flagget tåler ikke alt.']};
+  const pick3=shuf(Object.keys(CEL)).slice(0,3);
+  const v=await ask(`<h3>Feiring!</h3><p class="sub">${esc(sh.n)} har scoret. Hvordan skal målet feires?</p>${pick3.map(k=>EB(k,CEL[k][0],CEL[k][1])).join('')}${EB('five','High five og tilbake','Trygt. Laget sparer krefter.')}`);
+  const mn=gameMin(),n=sh.n,L=(c,t)=>S.log.push([c,`${mn}' ${t}`]);
+  if(v==='salto'){if(Math.random()<(sh.sk>=4?0.85:0.65)){md(sh,1,'landet saltoen');award('salto');L('g',`${n} slår en perfekt salto. Publikum går av skaftet.`);hype(15)}else{sh.en=Math.max(5,sh.en-12);L('c',`${n} prøver salto og lander på rumpa. Det ble en halv.`)}}
+  else if(v==='robot'){const m=rndOf(S.field.map(P).filter(p=>p!==sh));md(m,1,'robotdanset med laget');if(Math.random()<0.25){sh.en=Math.max(5,sh.en-6);L('c',`Robotdansen varer i to minutter. Dommeren peker på klokka, og ${n} får kjeft.`)}else L('g',`Hele laget danser robotdans. ${m.n} har tydelig øvd hjemme.`)}
+  else if(v==='kne'){if(Math.random()<0.5){sh.en=Math.max(5,sh.en-8);L('c',`${n} sklir på knærne på kunstgresset. Au. Det blir plaster i pausen.`)}else{md(sh,1,'sklei stilig på knærne');L('g',`${n} sklir fem meter på knærne og ser ut som en proff.`)}}
+  else if(v==='fly'){hype(12);sh.en=Math.max(5,sh.en-4);L('g',`${n} flyr over banen med armene ut. Flytårnet melder om uregistrert trafikk.`)}
+  else if(v==='vugge'){shuf(S.field.map(P).filter(p=>p!==sh)).slice(0,2).forEach(p=>md(p,1,'var med på vugga'));L('g','Laget vugger en baby som ikke finnes. Ingen vet hvem som har fått barn.')}
+  else if(v==='troye'){hype(20);if(Math.random()<0.6){L('c',`${n} svinger trøya over hodet. Publikum elsker det, dommeren finner fram kortet.`);yellow(sh,mn)}else L('g',`${n} svinger trøya over hodet. Dommeren så heldigvis en annen vei.`)}
+  else if(v==='benk'){bench().filter(p=>!p.off).forEach(p=>md(p,1,'ble klemt etter målet'));sh.en=Math.max(5,sh.en-5);L('g',`${n} løper til benken og klemmer alle, inkludert vannflaska.`)}
+  else if(v==='selfie'){hype(18);if(Math.random()<0.3){sh.en=Math.max(5,sh.en-6);L('c',`${n} tar selfie med første rad. Dommeren må vente til bildet blir bra nok.`)}else L('g',`${n} tar selfie med første rad. Bildet ble uskarpt, men stemningen ble skarp.`)}
+  else if(v==='hysj'){if(Math.random()<0.5){const B=S.boost=S.boost||{a:1,d:1,f:1};B.d*=1.08;L('m',`${n} hysjer på bortefansen. Det tente motstanderen skikkelig.`)}else{md(sh,1,'følte seg tøff etter hysj-feiringen');L('g',`${n} hysjer på bortefansen. Det ble helt stille. Veldig tøft.`)}}
+  else if(v==='gitar'){if(Math.random()<0.3){sh.en=Math.max(5,sh.en-10);L('c',`${n} spiller luftgitar. Soloen ble for lang, og ryggen sa stopp.`)}else{md(sh,1,'spilte luftgitar');hype(8);L('g',`${n} river av en luftgitarsolo. Publikum ber om ekstranummer.`)}}
+  else if(v==='koll'){if(Math.random()<0.85){hype(8);md(sh,1,'tok en fin kollbøtte');L('g',`${n} tar en kollbøtte. Stødig landing, full pott fra dommerpanelet.`)}else{sh.en=Math.max(5,sh.en-5);L('c',`${n} tar en kollbøtte og får munnen full av gress.`)}}
+  else if(v==='mage'){if(S.wx==='regn'){hype(15);md(sh,1,'sklei tjue meter i regnet');L('g',`${n} sklir tjue meter på magen i regnet. Perfekt.`)}else if(Math.random()<0.5){sh.en=Math.max(5,sh.en-8);L('c',`${n} prøver å skli på magen, men gresset er tørt. Det ble bråstopp.`)}else{md(sh,1,'sklei på magen');L('g',`${n} sklir på magen som en pingvin.`)}}
+  else if(v==='flagg'){hype(10);const m=rndOf(S.field.map(P).filter(p=>p!==sh));md(m,1,'danset ved hjørneflagget');L(Math.random()<0.2?'c':'g',Math.random()<0.2?`${n} danser med hjørneflagget. Flagget knakk. Vaktmesteren er ikke blid.`:`${n} og ${m.n} danser rundt hjørneflagget.`)}
+  else{S.field.forEach(id=>{const p=P(id);p.en=Math.min(100,p.en+3)});L('c','High five hele veien og rett tilbake til midtstreken.')}
+  drawLog();drawBench();drawPitch();
+  await showResult('Feiringen',sn);
+}
+function sendOff(p,mn,why){
+  p.off=1;p.ban=true;p.yc=0;md(p,-1,'fikk rødt kort');
+  const slot=S.field.indexOf(p.id);let b=null;
+  if(slot>=0){b=benchPick(slots()[slot][0]);if(b)S.field[slot]=b.id}
+  S.log.push(['m',`${mn}' RØDT KORT til ${p.n}${why||''}! ${b?b.n+' kommer inn. ':''}${p.n} er utestengt i neste kamp.`]);
+  S.msgs=[`${p.n} fikk rødt kort og er utestengt i neste kamp.`];
+}
+function yellow(p,mn){
+  hype(-8);
+  p.yc=(p.yc||0)+1;
+  if(p.yc>=2){sendOff(p,mn,' (to gule)');return true}
+  S.log.push(['c',`${mn}' Gult kort til ${p.n}. Ett til, og det blir rødt.`]);return false;
+}
+const bigGoal=sh=>{const d=S.us-S.them;return d===0||d===1||sh.mg===3};
+async function cel(sh){const cm=STP[CFG.stops].cel;if(!cm||(cm===1&&!bigGoal(sh)))return;const was=A&&A.clock;if(A)A.clock=false;await celebrate(sh);if(A&&was){A.last=performance.now();A.clock=true}}
+async function goalKick(t){if(!A)return;A.hold=null;A.poss=t;await sleep(350/SPD);await pass(t,nextRecv(t))}
+async function setPiece(kind,t){
+  const T=team(),o=OPP[S.m],ours=t==='u',ot=ours?'o':'u',corner=kind==='corner';
+  let sh=null,goal,variant=corner?'hoyt':'skudd';
+  if(ours&&Math.random()<STP[CFG.stops].sp){
+    const was=A.clock;A.clock=false;
+    variant=await ask(corner?`<h3>Corner til ${esc(TN())}!</h3><p class="sub">${gameMin()}' Hvordan tar dere den?</p>${EB('hoyt','Høyt innlegg','Rett inn i feltet. Den vanlige varianten.')}${EB('kort','Kort corner','Spill dere fram. Best med pasningsspillere på banen.')}${EB('skudd','Legg ut til skudd','Ballen ut til sekstenmeteren. Best med en god skytter.')}`
+      :`<h3>Frispark til ${esc(TN())}!</h3><p class="sub">${gameMin()}' Hva gjør dere?</p>${EB('skudd','Skyt direkte','Best med en spiller som har Skudd.')}${EB('innlegg','Innlegg i feltet','En sjanse på hodet for den som er best plassert.')}${EB('kort','Ta den kort','Ingen avslutning nå, men angrepet får et løft resten av omgangen.')}`);
+    if(A){A.last=performance.now();A.clock=was}
+  }
+  const hd=corner||variant==='innlegg',cw=corner?'corneren':'innlegget',bestSh=()=>T.out.slice().sort((a,b)=>((has(b.p,'skudd')?3:0)+b.p.sk)-((has(a.p,'skudd')?3:0)+a.p.sk))[0];
+  A.hold=null;A.poss=t;A.recv=null;
+  if(corner){
+    A.b.x=Math.random()<.5?14:286;A.b.y=ours?14:386;
+    S.log.push(['c',`${gameMin()}' Corner til ${ours?TN():o.n}.`]);drawLog();
+    await sleep(900/SPD);
+    const tx=150+(Math.random()*56-28),ty=ours?54:346;
+    if(ours){const x=variant==='skudd'?bestSh():wpick(T.out,x=>eff(x.p,x.i)),np=T.out.filter(y=>has(y.p,'pas')).length;sh=x.p;const base=variant==='kort'?0.10+0.09*Math.min(np,2):variant==='skudd'?0.08+(has(sh,'skudd')?0.17:0):0.16+(has(sh,'skudd')?0.08:0);goal=Math.random()<base-(o.s-15)*0.004;A.recv={t:'u',i:x.i,x:tx,y:ty}}
+    else{goal=Math.random()<0.14-T.gkv*0.012+(o.s-15)*0.004+T.qg/2;A.recv={t:'o',i:nextRecv('o'),x:tx,y:ty}}
+    await moveBall(tx,ty,115);
+  }else{
+    A.b.x=cl(A.b.x,60,240);A.b.y=ours?105+Math.random()*40:295-Math.random()*40;
+    if(ours){if(variant==='innlegg'){sh=wpick(T.out,x=>eff(x.p,x.i)).p;goal=Math.random()<0.15+(sh.pos==='A'?0.03:0)-(o.s-15)*0.004}else{sh=bestSh().p;goal=Math.random()<0.11+(has(sh,'skudd')?0.12:0)+sh.sk*0.01-(o.s-15)*0.004}A.hold={t:'u',i:S.field.indexOf(sh.id)}}
+    else{goal=Math.random()<0.13-T.gkv*0.012+(o.s-15)*0.004+T.qg/2;A.hold={t:'o',i:nextRecv('o')}}
+    await sleep(1100/SPD);A.hold=null;
+    if(ours&&variant==='kort'){const B=S.boost=S.boost||{a:1,d:1,f:1};B.a*=1.1;S.log.push(['c',`${gameMin()}' Frisparket tas kort. ${TN()} beholder ballen og bygger opp angrepet.`]);drawLog();await pass('u',nextRecv('u'));return}
+  }
+  const mn=gameMin(),gy=ours?6:394;
+  if(goal){
+    const gx=150+(Math.random()*40-20);A.kd={t:ot,x:gx+(Math.random()<.5?-28:28),y:ours?30:370};
+    await moveBall(gx,gy,200);
+    if(ours){S.us++;sh.g++;sh.mg++}else S.them++;
+    drawTop();flashGoal(ours,ours?`${sh.n} (${sh.nr})`:o.n);
+    S.log.push(ours?['g',hd?`${mn}' MÅL! ${sh.n} stanger inn ${cw}.`:`${mn}' MÅL! ${sh.n} skrur frisparket rett i krysset.`]:['m',corner?`${mn}' ${o.n} scorer på corner.`:`${mn}' ${o.n} scorer på frispark.`]);
+    drawLog();await sleep(1600/SPD);A.kd=null;
+    A.b.x=150;A.b.y=200;A.hold={t:ot,i:4};A.poss=ot;A[ot][4].x=150;A[ot][4].y=ours?185:215;
+    if(ours)await cel(sh);
+  }else if(Math.random()<0.5){
+    const gx=150+(Math.random()*40-20),gy2=ours?32:368;A.kd={t:ot,x:gx,y:gy2};
+    await moveBall(gx,gy2,170);A.hold={t:ot,i:0};A.kd=null;A.poss=ot;
+    if(ours)S.log.push(['c',hd?`${mn}' ${sh.n} header, men keeperen redder.`:`${mn}' Frisparket fra ${sh.n} reddes.`]);
+    else{T.gk.sv++;T.gk.msv++;SFX.save();S.log.push(['c',corner?`${mn}' ${T.gk.n} bokser unna corneren.`:`${mn}' ${T.gk.n} redder frisparket!`])}
+    drawLog();await sleep(400/SPD);
+  }else{
+    await moveBall(Math.random()<.5?108:192,ours?4:396,170);
+    S.log.push(['c',corner?`${mn}' Corneren blir headet over.`:ours&&hd?`${mn}' ${sh.n} header innlegget over.`:ours?`${mn}' ${sh.n} skyter frisparket over.`:`${mn}' Frisparket går i muren og ut.`]);
+    drawLog();SFX.miss();await sleep(350/SPD);
+    A.b.x=150;A.b.y=ours?40:360;A.hold={t:ot,i:0};await goalKick(ot);
+  }
+}
+async function foul(){
+  const T=team(),o=OPP[S.m],mn=gameMin();
+  SFX.whistle(1);
+  if(Math.random()<0.45+(CFG.style==='press'?0.12:0)){
+    const p=wpick(T.out,x=>((6-x.p.mood)+(x.p.pos==='F'?1.5:0))*(QUIRK[x.p.pi]==='krangle'?2.5:1)).p;
+    S.log.push(['c',`${mn}' Frispark til ${o.n} etter en takling fra ${p.n}.`]);
+    if(Math.random()<(QUIRK[p.pi]==='krangle'?0.65:0.4))yellow(p,mn);
+    drawPitch();drawBench();drawLog();drawTop();
+    await setPiece('fri','o');
+  }else{
+    S.log.push(['c',`${mn}' Frispark til ${TN()}.`]);
+    if(Math.random()<0.35){
+      const nr=2+Math.floor(Math.random()*10),cand=[1,2,3,5,6].filter(i=>!S.ored.includes(i));
+      if((S.oyc[nr]||Math.random()<0.08)&&cand.length>3){S.ored.push(rndOf(cand));S.log.push(['g',`${mn}' RØDT KORT til ${o.n} (nr. ${nr})! De må spille med én mindre resten av kampen.`]);drawPitch()}
+      else{S.oyc[nr]=1;S.log.push(['c',`${mn}' Gult kort til ${o.n} (nr. ${nr}).`])}
+    }
+    drawLog();
+    await setPiece('fri','u');
+  }
+}
+async function matchEvent(){
+  A.clock=false;SFX.whistle(1);
+  const sn=snap();
+  const mn=gameMin(),outIds=S.field.slice(1),type=rndOf(['skade','kort','straffe','hund','måke','do','fløyte','hund','måke','do','fløyte']),L=(c,t)=>S.log.push([c,`${mn}' ${t}`]),dn=(p,n)=>p.en=Math.max(5,p.en-n);
+  const btn=(k,t,d)=>`<button class="bp" style="width:100%;margin:6px 0;display:block" data-ev="${k}"><b>${t}</b><small style="display:block;color:var(--mut);font-size:13px">${d}</small></button>`;
+  if(type==='skade'){
+    const p=P(outIds[Math.floor(Math.random()*6)]),slot=S.field.indexOf(p.id),nm=esc(p.n);
+    const v=await ask(`<h3>Skade!</h3><p class="sub">${mn}' ${nm} har fått en smell og holder seg til leggen.</p>${btn('ut','Bytt ut '+nm,'Trygt. Den beste på benken kommer inn.')}${btn('spill','La '+nm+' prøve videre','Kan gå bra, men spilleren kan bli sliten og sur.')}`);
+    const canInj=S.sq.filter(q=>q.off||q.inj>0||q.ban).length<2,hurt=n=>{p.off=3;p.inj=n;md(p,-1,'ble skadet');const b=benchPick(slots()[slot][0]);if(b)S.field[slot]=b.id;return b};
+    if(v==='ut'){if(canInj&&Math.random()<0.25){const b=hurt(1);S.log.push(['m',`${mn}' ${p.n} går ut. Skaden var verre enn den så ut, og ${p.n} mister neste kamp.${b?' '+b.n+' kommer inn.':''}`])}else{const b=benchPick(slots()[slot][0]);if(b){S.field[slot]=b.id;S.log.push(['c',`${mn}' ${p.n} går ut med en smell, men er klar igjen etter litt is. ${b.n} kommer inn.`])}}}
+    else if(Math.random()<0.5)S.log.push(['c',`${mn}' ${p.n} rister det av seg og spiller videre.`]);
+    else if(canInj){const n=Math.random()<0.4?2:1,b=hurt(n);S.log.push(['m',`${mn}' Det gikk ikke. ${p.n} må bæres ut og er skadet i ${n===1?'neste kamp':'de to neste kampene'}.${b?' '+b.n+' kommer inn.':''}`])}
+    else{p.en=Math.max(5,p.en-30);md(p,-1,'haltet videre etter en smell');S.log.push(['m',`${mn}' ${p.n} halter videre og mister mye energi.`])}
+  }else if(type==='kort'){
+    const p=P(wpick(outIds,id=>6-P(id).mood)),slot=S.field.indexOf(p.id),nm=esc(p.n);
+    const v=await ask(`<h3>Gult kort!</h3><p class="sub">${mn}' ${nm} er hissig og får gult kort av dommeren.</p>${btn('ro','Be '+nm+' roe seg ned','Trygt, men '+nm+' spiller forsiktigere og mister litt energi.')}${btn('la','La '+nm+' spille som før','Kan ende med rødt kort. Da må '+nm+' ut og får ikke spille mer i dag.')}`);
+    p.yc=(p.yc||0)+1;
+    if(p.yc>=2)sendOff(p,mn,' (to gule)');
+    else if(v==='ro'){dn(p,10);L('c',`Gult kort til ${p.n}, som roer seg ned.`)}
+    else if(Math.random()<0.3)sendOff(p,mn,' etter enda en stygg takling');
+    else L('c',`Gult kort til ${p.n}, men det går bra denne gangen.`);
+  }else if(type==='hund'){
+    const p=outIds.map(P).sort((a,b)=>((has(b,'fart')?1:0)-(has(a,'fart')?1:0))||(b.en-a.en))[0],nm=esc(p.n);
+    const v=await ask(`<h3>Hund på banen!</h3><p class="sub">${mn}' En glad hund har stukket av med ballen og vil ikke gi den fra seg.</p>${btn('jag','Send '+nm+' etter hunden','Raske spillere tar den fort. Andre blir slitne.')}${btn('lokk','Lokk med pølse fra kiosken','Kan virke. Hunden kan også ta både pølsa og ballen.')}`);
+    if(v==='jag'){if(has(p,'fart')){md(p,1,'tok igjen hunden');award('hund');L('g',`${p.n} tar igjen hunden på tre sekunder. Hunden er imponert.`)}else{dn(p,15);L('c',`${p.n} jager hunden tre runder rundt banen. Hunden vinner.`)}}
+    else if(Math.random()<0.5){const m=rndOf(outIds.map(P));md(m,1,'fikk klappe hunden');L('g',`Hunden bytter ballen mot en pølse. ${m.n} får klappe den. God handel.`)}
+    else L('c','Hunden spiser pølsa og beholder ballen. Kampen fortsetter med reserveballen.');
+  }else if(type==='måke'){
+    const gk=P(S.field[0]),nm=esc(gk.n),B=S.boost=S.boost||{a:1,d:1,f:1};
+    const v=await ask(`<h3>Måke på tverrliggeren!</h3><p class="sub">${mn}' En måke har landet på målet til ${nm} og stirrer på matpakkene.</p>${btn('jag','La '+nm+' jage måka','Koster litt krefter. Måker kan ta hevn.')}${btn('la','La måka sitte','Den kan forstyrre begge lag.')}`);
+    if(v==='jag'){dn(gk,8);if(Math.random()<0.3){md(gk,-1,'ble bæsjet på av en måke');L('m',`Måka flyr, men slipper en hilsen på skulderen til ${gk.n}.`)}else L('c',`${gk.n} vifter med hanskene, og måka flyr fornærmet videre.`)}
+    else if(Math.random()<0.5){B.d*=0.9;L('g','Måka skriker hver gang motstanderen skal skyte. Den er tydeligvis norsk.')}
+    else{B.d*=1.1;L('m',`${gk.n} klarer ikke å la være å se på måka. Litt ukonsentrert bak der.`)}
+  }else if(type==='do'){
+    const p=rndOf(outIds.map(P)),slot=S.field.indexOf(p.id),nm=esc(p.n);
+    const v=await ask(`<h3>Må på do!</h3><p class="sub">${mn}' ${nm} hopper på stedet og sier at det haster. Veldig.</p>${btn('ga','La '+nm+' løpe på do','En fra benken kommer inn så lenge.')}${btn('hold','Be '+nm+' holde seg','Spilleren blir værende, men konsentrasjonen forsvinner.')}`);
+    if(v==='ga'){const b=benchPick(slots()[slot][0]);if(b)S.field[slot]=b.id;md(p,1,'fikk gå på do i tide');L('c',`${p.n} spurter mot garderoben.${b?' '+b.n+' kommer inn.':''}`)}
+    else{dn(p,15);md(p,-1,'måtte holde seg');L('m',`${p.n} spiller videre med beina i kryss.`)}
+  }else if(type==='fløyte'){
+    const p=rndOf(outIds.map(P)),B=S.boost=S.boost||{a:1,d:1,f:1};
+    const v=await ask(`<h3>Dommeren har mistet fløyta!</h3><p class="sub">${mn}' Fløyta ligger et sted i gresset. Dommeren prøver å plystre, men får det ikke til.</p>${btn('let','Hjelp dommeren å lete','Hyggelig. Laget får en liten pust i bakken.')}${btn('spill','Rop «spill videre!»','Kan gi et raskt angrep. Dommeren kan bli sur.')}`);
+    if(v==='let'){S.field.forEach(id=>{const q=P(id);q.en=Math.min(100,q.en+8)});L('c',`Hele laget leter. ${p.n} finner fløyta i sin egen sokk.`)}
+    else if(Math.random()<0.5){B.a*=1.15;L('g',`${TN()} spiller videre mens dommeren leter. Lurt.`)}
+    else{dn(p,10);L('m',`Dommeren finner fløyta og blåser ekstra hardt rett ved øret til ${p.n}.`)}
+  }else{
+    const sc=p=>(has(p,'skudd')?2:0)+p.sk,sh=outIds.map(P).sort((a,b)=>sc(b)-sc(a))[0];
+    const v=+await ask(`<h3>Straffe til ${esc(TN())}!</h3><p class="sub">${mn}' ${esc(sh.n)} tar straffen. Hvor skal skuddet gå?</p><div class="btns">${['Venstre','Midten','Høyre'].map((t,i)=>`<button class="btn" data-ev="${i}">${t}</button>`).join('')}</div>`);
+    const k=Math.floor(Math.random()*3),miss=v!==1&&Math.random()<0.13-sh.sk*0.015-(has(sh,'skudd')?0.06:0);
+    if(!miss&&!(k===v&&Math.random()<(has(sh,'skudd')?0.55:0.75))){S.us++;sh.g++;sh.mg++;flashGoal(true,`${sh.n} (${sh.nr})`);S.log.push(['g',`${mn}' MÅL på straffe! ${sh.n} er iskald.`]);drawTop();await cel(sh)}
+    else{SFX.miss();S.log.push(['c',`${mn}' ${sh.n} bommer på straffen.`])}
+  }
+  S.sel=null;drawPitch();drawBench();drawTop();drawLog();
+  if(!(type==='straffe'&&S.us>sn.us))await showResult('Det som skjedde',sn);
+  if(A){A.last=performance.now();A.clock=true}
+}
+const KG=(n,nr)=>rndPick([`MÅL! ${n} (${nr}) setter den i nettet.`,`MÅL! ${n} (${nr}) banker den inn. Keeperen rakk ikke å blunke.`,`MÅL! ${n} (${nr}) scorer, og en bestemor på tribunen mister vaffelen.`,`MÅL! ${n} (${nr}) trikser seg forbi alle, inkludert en medspiller, og scorer.`,`MÅL! ${n} (${nr}) scorer med leggen. Det teller det også.`,`MÅL! ${n} (${nr}) setter den i krysset og later som det var meningen.`]);
+const KM=n=>rndPick([`${n} skyter utenfor.`,`${n} skyter så høyt at ballen må hentes ned av flygelederen.`,`${n} treffer stolpen, tverrliggeren og nesten en måke. Ikke mål.`,`${n} sparker mer gress enn ball.`,`${n} sikter på krysset og treffer kiosken.`]);
+const KS=n=>rndPick([`Keeperen redder skuddet fra ${n}.`,`Keeperen redder skuddet fra ${n} med ansiktet. Det teller det også.`,`${n} skyter hardt, men keeperen står i veien og angrer litt.`,`Kjemperedning på skuddet fra ${n}!`]);
+const KR=g=>rndPick([`Redning av ${g}!`,`${g} redder med fingertuppene!`,`${g} kaster seg som en katt og redder.`,`${g} redder og later som det var lett.`,`${g} redder med kneet. Stilpoeng: null. Effekt: full.`]);
+const KO_=(o,g)=>rndPick([`${o} scorer. ${g} var sjanseløs.`,`${o} scorer. ${g} rister på hodet og peker på forsvaret.`,`${o} scorer etter rot i forsvaret. Ingen vil ta skylda.`,`${o} scorer. Forsvaret sto og så på en sommerfugl.`]);
+function headline(o,so,fp,best){
+  const d=S.us-S.them,t=TN(),c=CFG.coach?`trener ${CFG.coach}`:'treneren',won=d>0||so==='win',hat=S.sq.find(p=>p.mg>=3),red=S.sq.find(p=>p.off===1);
+  let h,i;
+  if(S.champ){h=`${t.toUpperCase()} ER VERDENSMESTERE!`;i=`Hele landet er på beina. «Jeg sa det hele tiden», sier ${c}, som ikke sa det hele tiden.`}
+  else if(so==='win'){h=`Iskalde fra krittmerket mot ${o.n}`;i=`«Jeg turte ikke se», innrømmer ${c} etter straffedramaet.`}
+  else if(so==='lose'){h='Straffemareritt';i=`${o.n} vant på straffer. «Vi øver på det i morgen. Og i overmorgen», sier ${c}.`}
+  else if(d>=4){h=`${t} knuste ${o.n}`;i=`${S.us}–${S.them}! «Vi hadde litt flaks», sier ${c}. Ingen tror på det.`}
+  else if(d>0){h=`${best.n} ble helten mot ${o.n}`;i=rndPick([`${t} vant ${S.us}–${S.them}. «Jeg var aldri nervøs», sier ${c} med skjelvende stemme.`,`${S.us}–${S.them} etter en kamp som fikk kioskpølsene til å gå tomme.`])}
+  else if(d===0){h=`Poengdeling mot ${o.n}`;i='Begge trenerne mente de burde ha vunnet. Dommeren mente ingenting.'}
+  else if(d>=-1){h=`Bittert tap for ${t}`;i=`${o.n} vant ${S.them}–${S.us}. «Ballen ville ikke inn. Vi har snakket alvorlig med den», sier ${c}.`}
+  else{h=`${o.n} ble for sterke`;i=`${S.them}–${S.us}. «Vi vant i hvert fall myntkastet», sier ${c}.`}
+  if(hat&&won)i+=` ${hat.n} tok med seg kampballen etter hat trick.`;
+  if(red)i+=` ${red.n} så rødt og må stå over neste kamp.`;
+  if(fp>=9)i+=' Alle spillerne fikk nesten like mye spilletid.';
+  return `<div class="avis"><small>FOTBALLAVISA · KAMPREFERAT</small><b>${esc(h)}</b><span>${esc(i)}</span></div>`;
+}
+function lineupDlg(){
+  const o=OPP[S.m],sc=qNow(),sl=slots(),op=oposNow(),oc=oppCol(),tc=c=>lightCol(c)?'#122016':'#fff';
+  let g=`<rect width="300" height="400" fill="#2f8f46"/><g fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="2"><rect x="8" y="8" width="284" height="384"/><line x1="8" y1="200" x2="292" y2="200"/><circle cx="150" cy="200" r="30"/></g>`;
+  g+=op.map(([x,y],i)=>`<circle cx="${x}" cy="${y}" r="11" fill="${i===0?'#7c3aed':oc}" stroke="#122016" stroke-width="1.5"/>`).join('');
+  g+=S.field.map((id,i)=>{const p=P(id),x=sl[i][1],y=sl[i][2],c=i===0?gkCol():CFG.kit;return `<circle cx="${x}" cy="${y}" r="13" fill="${c}" stroke="#122016" stroke-width="1.5"/><text x="${x}" y="${y+4}" text-anchor="middle" style="font:800 11px Rubik,sans-serif;fill:${tc(c)}">${p.nr}</text><text x="${x}" y="${y+(i===0?-17:26)}" text-anchor="middle" style="font:600 10.5px Rubik,sans-serif;fill:#fff">${esc(p.n)}</text>`}).join('');
+  const li=(a,b)=>`<li><b>${a}:</b> ${b}</li>`;
+  show(`<h3 style="font-size:21px">${fl(CFG.nat)} ${esc(TN())} – ${esc(o.n)} ${fl(o.n)}</h3><p class="sub">${esc(o.st)} · kampoppstilling</p>
+   <svg viewBox="0 0 300 400" role="img" aria-label="Begge lagenes oppstilling" style="display:block;width:100%;max-width:250px;margin:10px auto;border-radius:10px">${g}</svg>
+   <ul style="margin:0;padding-left:20px;font-size:15px;line-height:1.5">${li(esc(o.n),`spiller ${esc(o.f||'2-3-1')}${o.star?`, med stjernespilleren ${esc(o.star)}`:''}`)}${sc.q?li('Spillestil',`${esc(o.n)} ${sc.q.n}. ${sc.q.tip} <b>${sc.ok?'✓ På plass.':'✗ Mangler.'}</b>`):''}${li('Du',`spiller ${CFG.form} med ${STYLE[CFG.style].n.toLowerCase()}`)}${li('Været',`${WX[S.wx||'sol'][0]}. ${WX[S.wx||'sol'][1]}`)}</ul>
+   <div class="btns"><button class="btn" data-a="lgo">Start kampen</button>${S.pep[0]?'':'<button class="btn alt" data-a="lpep">Peptalk først</button>'}<button class="btn alt" data-a="close">Endre laget</button></div>`);
+}
+async function playHalf(){
+  if(S.m>=OPP.length||((S.out||S.champ)&&S.h>=2))return seasonEnd();
+  if(S.h>=2)return nextMatch();
+  if(S.h===0&&!S.lineupSeen&&!FAST){S.lineupSeen=true;return lineupDlg()}
+  S.busy=true;PAUSED=false;S.sel=null;S.msgs=[];S.t=0;lastSec=-1;SH={k:null,until:0,cd:0};HY.until=0;
+  initA();draw();
+  const o=OPP[S.m];
+  S.log.push(['c',`— ${S.h+1}. omgang starter —`]);drawLog();
+  A.clock=true;SFX.whistle(1);ambStart();
+  let evT=Math.random()<STP[CFG.stops].ev?12+Math.random()*36:1e9,its_=0;
+  while(S.t<REAL-0.5){
+    while(PAUSED)await sleep(150);
+    its_++;if(FAST)tick(FDT);
+    if(S.t>=evT){evT=1e9;await matchEvent();continue}
+    const T=team();
+    if(Math.random()<T.f){
+      if(Math.random()<T.pUs){
+        const x=wpick(T.out,x=>eff(x.p,x.i)*(has(x.p,'fart')?(CFG.style==='lang'?2:1.5):has(x.p,'skudd')?1.3:1)*(S.boost&&S.boost.star===x.p.id?2.5:1)),sh=x.p;
+        let goal,res;
+        if(Math.random()<STP[CFG.stops].big){
+          A.clock=false;
+          const v=+await ask(`<h3>Stor sjanse!</h3><p class="sub">${gameMin()}' ${esc(sh.n)} er alene med keeperen. Hvor skal skuddet gå?</p><svg viewBox="0 0 300 130" style="width:100%;display:block;border-radius:12px;background:#2f8f46;margin:10px 0"><rect x="30" y="20" width="240" height="90" fill="#1e6b33" stroke="#fff" stroke-width="5"/><g transform="translate(150 82)"><rect x="-18" y="-24" width="36" height="34" rx="8" fill="#7c3aed"/><circle cy="-34" r="10" fill="#f2c9a0"/></g></svg><div class="btns">${['Venstre','Midten','Høyre'].map((t,i)=>`<button class="btn" data-ev="${i}">${t}</button>`).join('')}</div>`);
+          const k=Math.floor(Math.random()*3),miss=v!==1&&Math.random()<0.12-(has(sh,'skudd')?0.06:0);
+          goal=!miss&&(k!==v||Math.random()<(has(sh,'skudd')?0.4:0.22));res=goal?'goal':miss?'miss':'save';
+          if(A){A.last=performance.now();A.clock=true}
+        }else{
+          goal=Math.random()<0.26+sh.sk*0.03+(has(sh,'skudd')?0.1:0)+(STYLE[CFG.style].goal||0)-(o.s-15)*0.005+DIFF[CFG.diff].g;
+          res=goal?'goal':Math.random()<.5?'save':'miss';
+        }
+        await sequence('us',S.field.indexOf(sh.id),res,`${sh.n} (${sh.nr})`);
+        const mn=gameMin();
+        if(goal){sh.g++;sh.mg++;S.log.push(['g',`${mn}' ${KG(sh.n,sh.nr)}`]);drawTop();drawLog();await cel(sh)}
+        else{S.log.push(['c',`${mn}' ${res==='miss'?KM(sh.n):KS(sh.n)}`]);drawLog();if(res==='miss')await goalKick('o');else if(Math.random()<0.4)await setPiece('corner','u')}
+      }else{
+        const goal=Math.random()<0.52-T.gkv*0.04-T.gk.mood*0.01+(o.s-15)*0.01+T.qg-DIFF[CFG.diff].g;
+        await sequence('them',0,goal?'goal':'save',o.n);
+        const mn=gameMin();
+        if(goal){S.log.push(['m',`${mn}' ${o.star&&Math.random()<0.4?`${o.star} scorer for ${o.n}. Stjernespilleren deres var for god.`:KO_(o.n,T.gk.n)}`])}
+        else{T.gk.sv++;T.gk.msv++;SFX.save();S.log.push(['c',`${mn}' ${KR(T.gk.n)}`]);drawLog();if(Math.random()<0.3)await setPiece('corner','o')}
+      }
+      drawTop();drawLog();
+    }else if(Math.random()<0.2)await foul();
+    else await sequence('none');
+  }
+  if(FAST)S.t=REAL;
+  while(S.t<REAL)await sleep(100);
+  ITS.push(its_);ambStop();
+  PAUSED=false;A.clock=false;A.run=false;A=null;S.boost=null;SFX.whistle(S.h===0?2:3);
+  S.log.push(['c',S.h===0?`Pause. Stillingen er ${S.us} – ${S.them}.`:'Slutt på kampen.']);
+  if(S.h===0)S.htd=S.us-S.them;
+  S.h++;S.t=0;S.busy=false;
+  if(S.h>=2){draw();return endMatch()}
+  const tired=S.field.map(P).filter(p=>p.en<45).map(p=>p.n);
+  if(tired.length)S.msgs.push(`Slitne nå: ${tired.join(', ')}. Vurder bytte.`);
+  const few=S.sq.filter(p=>p.min<8).map(p=>p.n);
+  if(few.length)S.msgs.push(`${few.join(', ')} har nesten ikke spilt ennå.`);
+  S.msgs.push('Du kan holde en peptalk i pausen.');
+  draw();
+}
+
+/* ---------- Peptalk ---------- */
+const PEP=[
+ {t:'«Kos dere og ha det gøy!»',d:'Gjør humøret bedre. Kan gjøre laget litt for avslappet.'},
+ {t:'«Nå gir vi alt!»',d:'Mye energi og angrepslyst, men åpnere bak. Noen kan bli stresset.'},
+ {t:'«Stå tett sammen bakover»',d:'Færre sjanser begge veier. Trygt når dere leder, dårlig når dere må score.'},
+ {t:'«Ros til de som har spilt minst»',d:'De med minst spilletid blir mye gladere.'},
+ {t:'«Den som scorer, slipper oppvasken»',d:'Alle vil skyte. Ikke alle liker premien.'},
+ {t:'«Det blir pizza hvis vi vinner»',d:'Stor motivasjon, eller stor diskusjon om ananas.'},
+ {t:'«Gresset er lava!»',d:'Ingen står stille. Noen tar det for bokstavelig.'},
+ {t:()=>`«Spill ballen til ${pepStar().n}!»`,d:'Stjernen får nesten alle sjansene. Andre kan bli sure.'},
+ {t:'«Spar på kreftene, spill smart»',d:'Laget blir mye mindre slitent, men angriper litt mindre.'},
+ {t:'«Vi har ingenting å tape!»',d:'Virker best mot de sterkeste lagene.'},
+ {t:'«Husk det vi øvde på»',d:'Virker best når alle står på riktig plass.'},
+ {t:'«Nå må dere skjerpe dere!»',d:'Streng tale. Kan vekke laget, eller gjøre folk sure.'},
+ {t:'«Bestemor ser på TV i dag»',d:'Noen vil imponere. Andre blir nervøse.'},
+ {t:'«Tenk at ballen er en is»',d:'Alle vil ha ballen. Kanskje litt for mye.'},
+ {t:'«Den som løper mest, bestemmer musikken i bussen»',d:'Fullt kjør, men laget blir fortere slitent.'}];
+const pepStar=()=>S.field.slice(1).map(P).sort((a,b)=>b.sk-a.sk)[0];
+const PT=o=>typeof o.t==='function'?o.t():o.t;
+function pepDlg(fromStart){
+  const d=S.us-S.them,st=S.h===0?`Snart avspark mot ${OPP[S.m].n}.`:`Pause. Stillingen er ${S.us} – ${S.them}. ${d>0?'Dere leder.':d<0?'Dere ligger under.':'Det står likt.'}`;
+  const sur=S.sq.filter(p=>p.mood<2).length,slit=S.field.map(P).filter(p=>p.en<50).length;
+  show(`<h3>Peptalk ${S.h===0?'før kampen':'i pausen'}</h3><p class="sub">${esc(st)}${sur?` ${sur} spiller${sur>1?'e':''} er sur${sur>1?'e':''}.`:''}${slit?` ${slit} på banen er slitne.`:''}</p>
+   <p style="margin:10px 0 4px">Hva sier du til laget?</p>
+   ${shuf([0,1,2,3,7,8,9,10,11]).slice(0,4).concat(shuf([4,5,6,12,13,14]).slice(0,2)).map(i=>[PEP[i],i]).map(([o,i])=>`<button class="bp" style="width:100%;margin:6px 0;display:block" data-pep="${i}"><b>${PT(o)}</b><small style="display:block;color:var(--mut);font-size:13px">${o.d}</small></button>`).join('')}
+   <div class="btns"><button class="btn alt" data-pep="x">${fromStart?'Hopp over og start':'Avbryt'}</button></div>`);
+  pepFromStart=!!fromStart;
+}
+let pepFromStart=false;
+function applyPep(k){
+  const d=S.us-S.them,late=S.h>=1,fp=S.field.map(P),R=[],rnd=Math.random;
+  const up=(p,n)=>md(p,n,n>0?(k===3?'fikk ros i peptalken':k===1?'ble tent av peptalken':'likte peptalken'):(k===1?'ble stresset av peptalken':k===2?'ville heller angripe':'ble ikke nevnt i peptalken')),pick1=a=>a[Math.floor(rnd()*a.length)];
+  let a=1,df=1,f=1;const X={},o_=OPP[S.m];
+  if(k===0){
+    S.sq.forEach(p=>up(p,p.mood<2?2:1));fp.forEach(p=>p.en=Math.min(100,p.en+5));
+    if(d<0&&late&&rnd()<0.6){a=0.97;R.push('Alle smiler, men laget virker litt for avslappet når dere ligger under.')}
+    else{a=1.1;R.push('Smilene er på plass! Laget spiller med glede.')}
+    const s=S.sq.filter(p=>p.mood>=4);if(s.length)R.push(`${pick1(s).n} jubler og vil inn på banen.`);
+  }else if(k===1){
+    fp.forEach(p=>p.en=Math.min(100,p.en+25));
+    a=d<0?1.45:1.2;f=1.15;df=1.1;R.push(d<0?'Laget er helt tent og vil snu kampen!':'Laget vil score mange mål.');R.push('Kampen blir mer åpen, med flere sjanser begge veier.');
+    fp.filter(p=>p.sk>=4).forEach(p=>{up(p,1);R.push(`${p.n} er klar for kamp.`)});
+    fp.filter(p=>p.mood<=2||p.sk<=2).forEach(p=>{if(rnd()<0.5){up(p,-1);R.push(`${p.n} blir litt stresset av presset.`)}});
+  }else if(k===2){
+    f=0.6;df=0.8;a=0.9;
+    R.push(d>0?'Perfekt for å holde på ledelsen. Kampen blir tett med få sjanser.':'Laget står tett, men det blir få sjanser fremover.');
+    if(d<0)fp.filter(p=>p.sk>=4).forEach(p=>{up(p,-1);R.push(`${p.n} vil heller angripe og blir sur.`)});
+    if(P(S.field[0]).gk>=4)R.push(`${P(S.field[0]).n} i mål liker dette.`);
+  }else if(k===7){
+    const st=pepStar();X.star=st.id;a=1.12;md(st,1,'fikk tillit i peptalken');R.push(`${st.n} får ballen hver gang og elsker det.`);
+    const o2=fp.filter(p=>p!==st&&p.sk>=4);if(o2.length&&rnd()<0.5){const p=pick1(o2);md(p,-1,'ville også ha ballen');R.push(`${p.n} synes det er urettferdig.`)}
+  }else if(k===8){
+    X.dr=0.6;a=0.95;f=0.9;R.push('Laget løper smartere og holder mye lenger.');
+  }else if(k===9){
+    if(o_.s>=24){a=1.25;S.sq.forEach(p=>{if(p.mood<3)md(p,1,'ble modig av peptalken')});R.push(`Ingen er redde for ${o_.n} lenger. Laget spiller helt uten nerver.`)}
+    else{a=0.98;R.push('Laget ser litt forvirret ut. Dere er jo favoritter.')}
+  }else if(k===10){
+    const okN=S.field.filter((id,i)=>onSpot(P(id),i)).length;
+    if(okN>=7){a=1.15;df=0.92;R.push('Alle står der de skal, og alt det dere øvde på sitter.')}
+    else if(okN>=5){a=1.06;R.push('Det meste sitter, men et par spillere står på feil plass.')}
+    else{a=0.98;R.push('Halve laget står på feil plass, så det ble mest rot.')}
+  }else if(k===11){
+    if(d<0){a=1.3;fp.forEach(p=>{p.en=Math.min(100,p.en+10);if(rnd()<0.3)md(p,-1,'fikk kjeft i peptalken')});R.push('Det ble stille i garderoben. Så løp alle ut som om det brant.')}
+    else{a=0.95;fp.forEach(p=>{if(rnd()<0.5)md(p,-1,'fikk kjeft uten grunn')});R.push(d>0?'Laget skjønner ikke hvorfor du kjefter når dere leder.':'Laget synes du er urettferdig. Kampen har jo knapt begynt.')}
+  }else if(k===12){
+    a=1.1;shuf(fp).slice(0,2).forEach(p=>md(p,1,'ville imponere bestemor'));R.push('To av spillerne vinker til kamera og spiller sitt livs kamp.');
+    if(rnd()<0.35){const p=pick1(fp);p.en=Math.max(5,p.en-10);md(p,-1,'ble nervøs av at bestemor så på');R.push(`${p.n} ble så nervøs at beina skalv.`)}
+  }else if(k===13){
+    a=1.1;f=1.05;R.push('Alle vil ha ballen. Det har aldri vært så mange som løper mot den samtidig.');
+    if(rnd()<0.4){df=1.06;R.push(`${P(S.field[0]).n} forlot målet for å «smake». Litt åpent bak.`)}
+  }else if(k===14){
+    fp.forEach(p=>p.en=Math.min(100,p.en+10));X.dr=1.25;a=1.15;R.push('Alle løper som besatt. Halve laget vil ha rap, resten vil ha julesanger.');
+  }else if(k===4){
+    a=1.15;f=1.1;R.push('Plutselig skyter alle fra alle kanter. Ingen vil ta oppvasken.');
+    const p=pick1(fp);
+    if(rnd()<0.4){md(p,-1,'liker egentlig å ta oppvasken');R.push(`${p.n} liker egentlig oppvask og mister motivasjonen.`)}
+    else{md(p,1,'vil slippe oppvasken');R.push(`${p.n} har aldri vært så motivert.`)}
+  }else if(k===5){
+    if(rnd()<0.6){a=1.12;S.sq.forEach(p=>{if(rnd()<0.5)md(p,1,'gleder seg til pizza')});R.push('Pizza! Laget løper som om det gjaldt livet.')}
+    else{a=0.92;R.push('Laget diskuterer ananas på pizza i stedet for å følge med.');const p=pick1(fp);md(p,-1,'tapte ananasdiskusjonen');R.push(`${p.n} tapte diskusjonen og furter.`)}
+  }else if(k===6){
+    fp.forEach(p=>p.en=Math.min(100,p.en+15));f=1.1;a=1.08;R.push('Alle løper som gale for ikke å stå stille i lavaen.');
+    if(rnd()<0.35){const p=pick1(fp);md(p,-1,'ble redd for lavaen');R.push(`${p.n} tok det litt for bokstavelig og tør nesten ikke gå utpå.`)}
+  }else{
+    const low=S.sq.slice().sort((x,y)=>(x.tot+x.min)-(y.tot+y.min)).slice(0,3);
+    low.forEach(p=>{up(p,2);p.en=Math.min(100,p.en+10)});
+    R.push(`${low.map(p=>p.n).join(', ')} vokser flere centimeter av rosen.`);
+    if(rnd()<0.4){const st=S.sq.filter(p=>!low.includes(p)&&p.sk>=4);if(st.length){const p=pick1(st);up(p,-1);R.push(`${p.n} ble ikke nevnt og surner litt.`)}}
+    a=1.05;
+  }
+  if(rnd()<0.15){a=1+(a-1)/2;df=1+(df-1)/2;f=1+(f-1)/2;R.push('Noen fulgte ikke helt med. Peptalken virket bare halvveis.')}
+  S.boost=Object.assign({a,d:df,f},X);S.pep[S.h]=true;
+  const ef=[a!==1?`angrep ${a>1?'+':''}${Math.round((a-1)*100)} %`:'',df!==1?`motstanderen ${df>1?'+':''}${Math.round((df-1)*100)} %`:'',f!==1?`${f>1?'flere':'færre'} sjanser (${f>1?'+':''}${Math.round((f-1)*100)} %)`:''].filter(Boolean).join(', ');
+  S.msgs=[...R.slice(0,4),ef?`Effekt i ${S.h===0?'1.':'2.'} omgang: ${ef}.`:''].filter(Boolean);
+  hide();draw();
+}
+
+/* ---------- Kampslutt og straffer ---------- */
+let SO=null;
+const sum=a=>a.filter(Boolean).length;
+function endMatch(){
+  if(S.us===S.them&&!OPP[S.m].g){S.log.push(['g',`Uavgjort ${S.us} – ${S.them}. Straffesparkkonkurranse!`]);drawLog();return startSO()}
+  finishMatch(null);
+}
+function startSO(){SO={us:[],them:[],turn:'us',used:[],shooter:null,last:'Du sparker først. Velg skytter og hjørne.',ball:null,dive:null,done:false};soDraw()}
+function soCheck(){
+  const u=SO.us.length,t=SO.them.length,ug=sum(SO.us),tg=sum(SO.them);
+  if(u<=5&&t<=5){if(ug>tg+5-t)return 'win';if(tg>ug+5-u)return 'lose'}
+  if(u>=5&&u===t&&ug!==tg)return ug>tg?'win':'lose';
+  return null;
+}
+function soKick(d){
+  const p=P(SO.shooter),k=Math.floor(Math.random()*3);
+  const miss=d!==1&&Math.random()<0.13-p.sk*0.015+(p.mood<2?0.08:0)-(has(p,'skudd')?0.06:0);
+  let g;
+  if(miss){g=false;SO.last=`${p.n} skyter utenfor!`}
+  else if(k===d&&Math.random()<(has(p,'skudd')?0.55:0.75)){g=false;SO.last=`Keeperen tar ${p.n} sitt skudd!`}
+  else{g=true;SO.last=`MÅL! ${p.n} setter den sikkert.`}
+  SO.us.push(g);SO.used.push(p.id);SO.ball=miss?[d===0?-1:3,0]:[d,0];SO.dive=k;SO.shooter=null;SO.turn='them';soNext();
+}
+function soDive(k){
+  const gk=P(S.field[0]),d=Math.floor(Math.random()*3);
+  let g;
+  if(Math.random()<0.08){g=false;SO.last='Motstanderen skyter over!'}
+  else if(k===d&&Math.random()<0.45+gk.gk*0.08+(has(gk,'kip')?0.12:0)){g=false;SO.last=`REDNING! ${gk.n} kaster seg riktig vei!`}
+  else{g=true;SO.last=k===d?`${gk.n} var nære, men den går inn.`:`Mål for motstanderen. ${gk.n} gikk feil vei.`}
+  SO.them.push(g);SO.ball=[d,1];SO.dive=k;SO.turn='us';soNext();
+}
+function soNext(){const r=soCheck();if(r){SO.done=r;SO.last+=r==='win'?' Dere vinner straffekonkurransen!':' Motstanderen vinner på straffer.'}soDraw()}
+function soDraw(){
+  const dots=a=>{let h='';for(let i=0;i<Math.max(5,a.length);i++)h+=`<span class="mood" style="width:14px;height:14px;background:${a[i]===undefined?'var(--line)':a[i]?'#2fbf5b':'#e5484d'}"></span>`;return h};
+  const X=[70,150,230],kx=SO.dive===null?150:X[SO.dive];
+  let bx=150,by=150;if(SO.ball){const[c]=SO.ball;bx=c<0?20:c>2?280:X[c];by=c<0||c>2?40:70}
+  const svg=`<svg viewBox="0 0 300 170" style="width:100%;display:block;border-radius:12px;background:#2f8f46;margin:10px 0">
+   <rect x="30" y="30" width="240" height="90" fill="#1e6b33" stroke="#fff" stroke-width="5"/>
+   <g stroke="#fff" stroke-opacity=".25">${[60,90,120,150,180,210,240].map(x=>`<line x1="${x}" y1="30" x2="${x}" y2="120"/>`).join('')}${[50,70,90,110].map(y=>`<line x1="30" y1="${y}" x2="270" y2="${y}"/>`).join('')}</g>
+   <g transform="translate(${kx} 92)"><rect x="-18" y="-24" width="36" height="34" rx="8" fill="${SO.ball&&SO.ball[1]===1?'#3b82f6':'#e5484d'}"/><circle cy="-34" r="10" fill="#f2c9a0"/></g>
+   <circle cx="${bx}" cy="${by}" r="9" fill="#fff" stroke="#122016" stroke-width="2"/>
+   <line x1="0" y1="150" x2="300" y2="150" stroke="#fff" stroke-opacity=".6" stroke-width="2"/></svg>`;
+  let ctl='';
+  if(SO.done)ctl=`<div class="btns"><button class="btn" data-so="end">Videre</button></div>`;
+  else if(SO.turn==='us'){
+    if(SO.used.length>=S.sq.length)SO.used=[];
+    const avail=S.sq.filter(p=>!SO.used.includes(p.id));
+    ctl=`<p style="margin:6px 0"><b>Velg skytter</b></p><div class="bench" style="grid-template-columns:repeat(auto-fill,minmax(110px,1fr))">${avail.map(p=>`<button class="bp${SO.shooter===p.id?' sel':''}" style="min-height:48px;padding:6px" data-so="sh" data-id="${p.id}"><span class="nr" style="width:28px;height:28px">${p.nr}</span><span class="t">${esc(p.n)}${has(p,'skudd')?'<small>Skudd</small>':''}</span></button>`).join('')}</div>
+     <p style="margin:12px 0 6px"><b>Hvor skal du skyte?</b></p><div class="btns" style="margin:0">${['Venstre','Midten','Høyre'].map((t,i)=>`<button class="btn${SO.shooter===null?' alt':''}" ${SO.shooter===null?'disabled':''} data-so="kick" data-d="${i}">${t}</button>`).join('')}</div>`;
+  }else ctl=`<p style="margin:6px 0"><b>Motstanderen sparker. Hvor kaster ${esc(P(S.field[0]).n)} seg?</b></p><div class="btns" style="margin:0">${['Venstre','Midten','Høyre'].map((t,i)=>`<button class="btn" data-so="dive" data-d="${i}">${t}</button>`).join('')}</div>`;
+  show(`<h3>Straffespark</h3><p class="sub">Mot ${OPP[S.m].n} · ${sum(SO.us)} – ${sum(SO.them)}</p>
+   <div style="display:grid;grid-template-columns:auto 1fr;gap:6px 10px;align-items:center;margin-top:10px;font-size:14px"><span>Dere</span><span>${dots(SO.us)}</span><span>${OPP[S.m].n}</span><span>${dots(SO.them)}</span></div>
+   ${svg}<div class="msg">${esc(SO.last)}</div>${ctl}`);
+}
+function finishMatch(so){
+  const o=OPP[S.m],r=S.rec;
+  r.gf+=S.us;r.ga+=S.them;
+  let res;if(S.us>S.them){r.w++;res='Seier'}else if(S.us===S.them){r.u++;res='Uavgjort';if(so==='win')res='Seier på straffer';else if(so==='lose')res='Tap på straffer'}else{r.t++;res='Tap'}
+  if(so)S.log.push(['g',so==='win'?`${TN()} vant straffekonkurransen!`:'Tap i straffekonkurransen.']);
+  S.hist[S.m]={us:S.us,them:S.them,so};
+  let vmMsg='';
+  const upd=(a,b,ga,gb)=>{const A1=S.tab[a],B1=S.tab[b];A1.k++;B1.k++;A1.gf+=ga;A1.ga+=gb;B1.gf+=gb;B1.ga+=ga;if(ga>gb)A1.p+=3;else if(ga<gb)B1.p+=3;else{A1.p++;B1.p++}};
+  if(o.g){
+    upd(ME,o.n,S.us,S.them);(S.gres=S.gres||[]).push([S.m,TN(),o.n,S.us,S.them]);
+    const [x,y]=[[2,1],[2,0],[1,0]][S.m].map(k=>OPP[k].n),sim=(a,b)=>{let g=0;for(let i=0;i<8;i++)if(Math.random()<0.16*a/((a+b)/2))g++;return g};
+    const gx=sim(gStr(x),gStr(y)),gy=sim(gStr(y),gStr(x));upd(x,y,gx,gy);S.gres.push([S.m,x,y,gx,gy]);
+    vmMsg=`Andre kamp i gruppen: ${x} – ${y} ${gx}–${gy}.`;
+    if(S.m===2){const t=sortTab(),pl=t.findIndex(z=>z.n===ME)+1,pts=t[pl-1].p;
+      if(pl<=2)vmMsg+=` ${TN()} går videre som nummer ${pl} i gruppa!`;
+      else if(pl===3&&pts>=4)vmMsg+=` ${TN()} går videre som en av de beste treerne!`;
+      else{S.out=true;vmMsg+=` ${TN()} endte som nummer ${pl} og er ute av VM.`}}
+  }else{
+    const won=S.us>S.them||so==='win';
+    if(S.mode==='single'){S.out=true;vmMsg=won?`${TN()} vant enkeltkampen mot ${o.n}!`:`${TN()} tapte enkeltkampen mot ${o.n}.`}
+    else if(!won){S.out=true;vmMsg=`${TN()} er slått ut i ${o.st.toLowerCase()}en.`.replace('finaleen','finalen')}
+    else if(S.m===OPP.length-1){S.champ=true;vmMsg=`${TN().toUpperCase()} ER VERDENSMESTER!`}
+    else vmMsg=`${TN()} er videre til ${OPP[S.m+1].st.toLowerCase()}!`;
+  }
+  S.log.push(['g',vmMsg]);
+  S.sq.forEach(p=>p.min=Math.round(p.min));
+  const mins=S.sq.map(p=>p.min),mx=Math.max(...mins),mn=Math.min(...mins);
+  const fp=mn===0?0:Math.round(10*mn/mx);r.fair+=fp;
+  const par=[],sms=[],spr=S.sq.filter(p=>has(p,'hum')&&p.min>=HALF);
+  S.sq.forEach(p=>{
+    p.tot+=p.min;
+    if(p.min<12){md(p,-2,`fikk bare ${p.min} min`);par.push(p)}
+    else if(p.min<22)md(p,-1,`fikk lite spilletid (${p.min} min)`);
+    else if(p.min>=32)md(p,1,'fikk spille mye');
+    if(p.mg>0)md(p,1,p.mg===1?'scoret mål':`scoret ${p.mg} mål`);
+    if(S.cap===p.id&&p.min<22&&!p.off)md(p,-1,'kapteinen ble benket');
+  });
+  if(par.length===1)sms.push(`Melding fra forelderen til ${par[0].n}: «Hei ${coach()}! Hvorfor fikk ${par[0].n} bare ${par[0].min} minutter i dag?»`);
+  else if(par.length>1)sms.push(`Foreldrene til ${par.map(p=>p.n).join(', ')} sender melding: «Hei ${coach()}! Hvorfor fikk de nesten ikke spille i dag?»`);
+  if(spr.length){S.sq.forEach(p=>{if(!spr.includes(p)&&Math.random()<0.5)md(p,1,`${spr[0].n} spredte godt humør`)});sms.unshift(`${spr.map(p=>p.n).join(' og ')} sprer godt humør i garderoben.`)}
+  const bsc=p=>p.mg*3+p.msv+p.min/25,best=S.sq.slice().sort((a,b)=>bsc(b)-bsc(a))[0];
+  const bestTxt=`Banens beste: ${best.n}${best.mg?` (${best.mg} mål)`:best.msv?` (${best.msv} redninger)`:''}.`;
+  md(best,1,'ble banens beste');
+  const gain=2+((S.us>S.them||so==='win')?1:0)+(fp>=7?1:0);S.tp+=gain;
+  if(fp>=7){S.sq.forEach(p=>md(p,1,'god lagånd'));sms.unshift('Alle fikk spille mye. Lagånden er på topp, og hele laget blir gladere.')}
+  const sure=S.sq.filter(p=>p.mood<=1).map(p=>p.n);
+  if(sure.length)sms.push(sure.length===1?`${sure[0]} er sur og spiller mye dårligere til humøret blir bedre.`:`${sure.join(', ')} er sure og spiller mye dårligere til humøret blir bedre.`);
+  S.log.push(['g',`Slutt: ${S.us} – ${S.them} mot ${o.n}. ${res}!`]);
+  draw();
+  S.sq.forEach(p=>{p.last=(p.why||[]).slice(0,6);p.why=[]});
+  const rows=S.sq.slice().sort((a,b)=>b.min-a.min).map(p=>`<tr><td>${p.nr}</td><td>${esc(p.n)}<div style="font-size:12px;color:var(--mut);line-height:1.3">${p.last.length?p.last.map(esc).join('<br>'):'ingen endring i humøret'}</div></td><td class="n">${p.min}</td><td style="white-space:nowrap"><span class="mood" style="background:${moodCol(p.mood)}"></span>${moodTxt(p.mood)}</td></tr>`).join('');
+  const wonM=S.us>S.them||so==='win',dM=S.us-S.them;
+  if(o.rv){sms.unshift(`${o.rv}: «${wonM?rndPick(['Dommeren var imot meg. Og gresset. Og vinden.','Jeg lot dere vinne. Av høflighet.','Dette teller ikke. Jeg hadde solen i øynene.']):dM===0&&!so?'Uavgjort teller som seier for meg. Sånn er reglene mine.':rndPick(['Som forventet. Hils hjem.','Takk for oppvarmingen.'])}»`);if(wonM)award('rival')}
+  if(wonM){award('forste');if(S.them===0)award('nullen');if(!S.sq.some(p=>p.mood<=1))award('glad');if(so==='win')award('straffe');if((S.htd|0)<0)award('snu');if(dM>=5)award('stor');if(o.s>=24)award('kjempe');if(!S.sq.some(p=>p.yc>0||p.off===1))award('ren')}
+  if(S.sq.some(p=>p.mg>=3))award('hat');if(fp>=9)award('fair');
+  const R_=TRO.r;R_.played++;R_.maxGoals=Math.max(R_.maxGoals,S.us);R_.bigWin=Math.max(R_.bigWin,dM);
+  if(S.mode!=='single'){
+    if(S.m===2&&!S.out)award('gruppe');if(S.m===OPP.length-1)award('finale');
+    if(S.champ){award('vm');R_.titles++}
+    R_.stage=Math.max(R_.stage,S.champ?9:S.m+1);
+    const tp_=S.sq.slice().sort((a,b)=>b.g-a.g)[0];if(tp_.g>R_.topG){R_.topG=tp_.g;R_.topN=tp_.n}
+  }
+  saveTro();
+  const nb=NEWB.splice(0).map(k=>`<div class="msg" style="border:2px solid var(--vest)"><b>★ Nytt merke: ${BADGES[k][0]}</b> – ${BADGES[k][1].toLowerCase()}.</div>`).join('');
+  const avis=headline(o,so,fp,best);
+  const scr=u=>{const m={};(S.goals||[]).filter(g=>g.u===u).forEach(g=>{const k=u?g.n.replace(/ \(\d+\)$/,''):'';(m[k]=m[k]||[]).push(g.m+"'")});return Object.entries(m).map(([k,v])=>esc((k?k+' ':'')+v.join(', '))).join('<br>')||'–'};
+  const sumHtml=`<div class="sb"><h3>${res}${so?` · ${S.us} – ${S.them} etter full tid`:''}</h3><div class="sbrow"><span>${fl(CFG.nat)} ${esc(TN())}</span><b>${S.us} – ${S.them}</b><span>${esc(o.n)} ${fl(o.n)}</span></div><div class="sbsc"><div>${scr(true)}</div><div>${scr(false)}</div></div></div><p class="sub" style="margin:8px 0">${esc(o.st)} · Fair play ${fp}/10</p>${avis}${nb}
+   <div class="msg"><b>${esc(bestTxt)}</b>${S.mode==='single'?'':` Du får ${gain} treningspoeng.`}</div>
+   ${sms.slice(0,4).map(s=>`<div class="msg">${esc(s)}</div>`).join('')}
+   <table><thead><tr><th>Nr</th><th>Spiller og hvorfor</th><th class="n">Min</th><th>Humør</th></tr></thead><tbody>${rows}</tbody></table>
+   ${vmMsg?`<div class="msg"><b>${esc(vmMsg)}</b></div>`:''}
+   `;
+  BM={tab:'kamp',last:'',sum:sumHtml,iv:null,day:null,cont:!S.out&&!S.champ&&S.m<OPP.length-1&&S.mode!=='single',end:S.mode==='single'?'Til menyen':'Se VM-resultatet'};
+  if(FAST){BM=null;return}
+  betweenDlg();
+}
+function nextMatch(){
+  if(S.out||S.champ||S.m>=OPP.length-1){draw();return seasonEnd()}
+  S.m++;
+  S.h=0;S.t=0;S.us=0;S.them=0;S.pep=[false,false];S.pepAsked=false;S.msgs=[];S.log=[];S.boost=null;S.drinks=5;
+  S.ored=[];S.oyc={};S.goals=[];S.lineupSeen=false;
+  S.sq.forEach(p=>{p.en=Math.min(100,p.en+45);p.min=0;p.mg=0;p.msv=0;p.yc=0;p.off=p.ban?2:(p.inj>0?3:0);if(p.inj>0)p.inj--;p.ban=false});
+  S.wx=rndPick(['sol','sol','regn','vind','varme']);S.hype=S.hypeN||0;S.hypeN=0;S.fire=S.fireN||0;S.fireN=0;S.scout=0;S.htd=0;
+  S.field.forEach((id,slot)=>{if(P(id).off){const b=benchPick(slots()[slot][0]);if(b)S.field[slot]=b.id}});
+  const sus=S.sq.filter(p=>p.off===2).map(p=>p.n),skd=S.sq.filter(p=>p.off===3).map(p=>p.n);
+  if(sus.length)S.msgs.push(`${sus.join(' og ')} er utestengt i denne kampen etter rødt kort.`);
+  if(skd.length)S.msgs.push(`${skd.join(' og ')} er skadet og står over denne kampen.`);
+  draw();
+}
+function seasonEnd(){
+  if(S.mode==='single')return menu();
+  const r=S.rec,played=S.hist.filter(Boolean).length,last=OPP[Math.min(played,OPP.length)-1];
+  const stage=S.champ?'Verdensmester!':played<=3?'Ute i gruppespillet':`Ute i ${last.st.toLowerCase()}en`.replace('finaleen','finalen');
+  const grade=S.champ?(r.fair>=played*7?'Legendetrener':'Mestertrener'):played>=6?'Supertrener':played>=4?'God trener':'Lærlingtrener';
+  show(`<h3>${esc(stage)}</h3><p class="sub">${CFG.coach?esc(CFG.coach)+', du er ':'Du er '}${grade.toLowerCase()} · Fair play ${r.fair} av ${played*10}</p>
+   <div class="stats" style="margin:12px 0"><div><b>${played}</b><span>Kamper</span></div><div><b>${r.w}-${r.u}-${r.t}</b><span>S-U-T</span></div><div><b>${r.gf}-${r.ga}</b><span>Mål</span></div></div>
+   <p>${S.champ?esc(TN())+' har vunnet VM! De beste trenerne vinner og gir alle spilletid.':'Prøv igjen. Kanskje en annen formasjon eller flere glade spillere gjør susen?'}</p>
+   <div class="btns"><button class="btn" data-a="new">Nytt VM</button><button class="btn alt" data-a="menu">Meny</button></div>`);
+}
+let trainAfter=false,trainSel=null,trainSkill=false,trainUndo=[];
+function trainHtml(){
+
+  const tb=(attr,t,d,dis)=>`<button class="bp" style="width:100%;margin:6px 0;display:block${dis?';opacity:.45;pointer-events:none':''}" ${attr} ${dis?'disabled':''}><b>${t}</b><small style="display:block;color:var(--mut);font-size:13px">${d}</small></button>`;
+  const pts=`<div class="msg" style="display:flex;align-items:center;gap:10px;margin:10px 0"><b style="font-size:28px;line-height:1">${S.tp}</b><span>treningspoeng igjen${S.tp===0?'. Alt er brukt.':''}</span></div>`;
+  const grid=`<div class="bench" style="grid-template-columns:repeat(auto-fill,minmax(118px,1fr))">${['K','F','M','A'].map(k=>S.sq.filter(p=>p.pos===k).map(p=>`<button class="bp${trainSel===p.id?' sel':''}" style="min-height:52px;padding:6px 8px" data-tp="${p.id}"><span class="nr" style="width:30px;height:30px;background:${PCOL[p.pos]};color:#fff">${p.nr}</span><span class="t">${esc(p.n)}<small>Nivå ${p.sk} · Keeper ${p.gk}</small></span></button>`).join('')).join('')}</div>`;
+  let card='<p class="hint" style="margin:12px 0">Trykk på en spiller for å se hva hen kan trene på.</p>';
+  if(trainSel!==null){
+    const p=P(trainSel),nm=esc(p.n);
+    card=`<div style="border:2px solid var(--vest);border-radius:14px;padding:10px 12px;margin:12px 0"><b>Hva skal ${nm} trene på?</b><div style="font-size:13px;color:var(--mut)">${POSN[p.pos]} · ${TR[p.tr].n}${p.tr2?' og '+TR[p.tr2].n:''}</div>`;
+    card+=p.sk>=5?tb('',`Utespiller: nivå 5 ${DOTS(5,5)}`,'Allerede på topp.',true):tb(`data-trn="sk"`,`Bedre utespiller: nivå ${p.sk} → ${p.sk+1}`,`Koster 1 poeng. ${nm} blir bedre i både angrep og forsvar.`,S.tp<1);
+    card+=p.gk>=5?tb('',`Keeper: nivå 5 ${DOTS(5,5)}`,'Allerede på topp.',true):tb(`data-trn="gk"`,`Bedre keeper: nivå ${p.gk} → ${p.gk+1}`,`Koster 1 poeng. Teller bare når ${nm} står i mål.`,S.tp<1);
+    if(p.tr2)card+=tb('','To ferdigheter',`${nm} har allerede ${TR[p.tr].n} og ${TR[p.tr2].n}.`,true);
+    else if(!trainSkill)card+=tb(`data-trn="open"`,'Lær en ny ferdighet',S.tp<2?'Koster 2 poeng. Du har ikke nok ennå.':`Koster 2 poeng. ${nm} får en ferdighet i tillegg til ${TR[p.tr].n}.`,S.tp<2);
+    else card+=`<p style="margin:10px 0 2px"><b>Velg ny ferdighet (2 poeng)</b></p>${Object.entries(TR).filter(([k])=>k!==p.tr).map(([k,t])=>tb(`data-trn="tr2" data-k="${k}"`,t.n,t.d+'.',false)).join('')}`;
+    card+='</div>';
+  }
+  return `<p class="sub" style="margin:0">1. Velg en spiller. 2. Velg hva spilleren skal trene på. Poeng du ikke bruker, tar du med videre.</p>${pts}${grid}${card}${trainUndo.length?'<div class="btns" style="margin:6px 0"><button class="btn alt" data-trn="undo">Angre siste</button></div>':''}`;
+}
+function trainDlg(after){
+  trainAfter=!!after;if(BM)return betweenDlg();
+  const st=$('dlg').scrollTop;
+  show(`<h3>Trening</h3>${trainHtml()}<div class="btns"><button class="btn" data-a="close">Ferdig</button></div>`);
+  $('dlg').scrollTop=st;
+}
+let BM=null;
+function ivHtml(){
+  const r_=S.hist[S.m]||{us:0,them:0},won=r_.us>r_.them||r_.so==='win',drw=r_.us===r_.them&&!r_.so;
+  const q=won?'Gratulerer med seieren! Hva var hemmeligheten?':drw?'Uavgjort. Er du fornøyd med det?':'Tungt tap. Hva gikk galt?';
+  const opts=won?[['ros','«Spillerne var helt fantastiske»','Trygt og hyggelig.'],['geni','«Det var taktikken min, selvfølgelig»','Publikum liker selvtillit. Spillerne liker det mindre.'],['vaffel','«Vaflene i kiosken. De er undervurdert»','Hvem vet hva som skjer.']]
+    :[['ansvar','«Dette tar jeg på min kappe»','Spillerne setter pris på det.'],['dommer','«Dommeren trenger nye briller»','Laget liker det. Forbundet liker det ikke.'],['skjerp','«Spillerne må skjerpe seg»','Noen blir sure, men laget vil bevise at du tar feil.']];
+  return `<p class="sub" style="margin:0 0 6px">Journalisten fra Fotballavisa spør: «${q}» Du kan også hoppe over intervjuet.</p>${opts.map(([k,t,d])=>DBT(`data-iv="${k}"`,t,d)).join('')}`;
+}
+function dayHtml(){
+  const n=OPP[S.m+1],fe=S.pairs&&S.pairs[1],D=[['hvile','Hviledag','Alle får 25 % mer energi til neste kamp.'],['middag','Lagmiddag',`Alle blir gladere.${fe?` ${esc(P(fe[0]).n)} og ${esc(P(fe[1]).n)} blir venner igjen.`:''}`],['trening','Ekstra treningsøkt','Du får ett treningspoeng til, som du kan bruke før kampen.'],['speid','Speid på motstanderen',`Du finner en svakhet. ${esc(n.n)} blir 8 % svakere.`]];
+  return `<p class="sub" style="margin:0 0 6px">Neste: ${esc(n.st)} mot ${fl(n.n)} ${esc(n.n)}. Dere rekker én ting før kampen.</p>${D.map(([k,t,d])=>`<button class="bp${BM&&BM.day===k?' sel':''}" style="width:100%;margin:6px 0;display:block" data-day="${k}"><b>${BM&&BM.day===k?'✓ ':''}${t}</b><small style="display:block;color:var(--mut);font-size:13px">${d}</small></button>`).join('')}`;
+}
+function betweenDlg(){
+  if(!BM||FAST)return;
+  const st=$('dlg').scrollTop,same=BM.tab===BM.last,T=[['kamp','Kampen'],['iv',`Intervju${BM.iv?' ✓':''}`],['tr',`Trening (${S.tp})`],['dag',`Neste kamp${BM.day?' ✓':''}`]];
+  const body=BM.tab==='iv'?(BM.iv||ivHtml()):BM.tab==='tr'?trainHtml():BM.tab==='dag'?dayHtml():BM.sum;
+  let foot;
+  if(!BM.cont)foot=`<div class="btns"><button class="btn" data-a="next">${BM.end}</button></div>`;
+  else{const ix=T.findIndex(x=>x[0]===BM.tab),nx=T[ix+1];
+    foot=`<div class="btns" style="position:sticky;bottom:-20px;background:var(--card);padding:10px 0 20px;margin:8px 0 -20px">${nx?`<button class="btn" data-bt="${nx[0]}">Videre: ${nx[1].replace(/ ✓| \(\d+\)/g,'')}</button>`:`<button class="btn" data-a="bmgo" ${BM.day?'':'disabled'}>Start neste kamp</button>${BM.day?'':'<span class="hint" style="margin:0;align-self:center">Velg én ting først.</span>'}`}</div>`}
+  show(`${BM.cont?`<div class="bmtabs" role="tablist">${T.map(([k,t])=>`<button class="tab" role="tab" data-bt="${k}" aria-selected="${BM.tab===k}">${t}</button>`).join('')}</div>`:''}${body}${foot}`);
+  $('dlg').scrollTop=same?st:0;BM.last=BM.tab;
+}
+function trainClick(el){
+  const tp=el.closest('[data-tp]');
+  if(tp){const id=+tp.dataset.tp;trainSel=trainSel===id?null:id;trainSkill=false;trainDlg(trainAfter);const c=$('dlg').querySelector('[data-trn="gk"],[data-trn="open"]');if(c&&c.scrollIntoView)c.scrollIntoView({block:'nearest'});return}
+  const k=el.closest('[data-trn]').dataset.trn,p=trainSel!==null?P(trainSel):null;
+  if(k==='undo'){const u=trainUndo.pop();if(u){const q=P(u.id);q[u.k]=u.prev;S.tp+=u.cost}}
+  else if(!p){}
+  else if(k==='open')trainSkill=true;
+  else if(k==='tr2'){const key=el.closest('[data-trn]').dataset.k;if(S.tp>=2&&TR[key]&&key!==p.tr&&!p.tr2){trainUndo.push({id:p.id,k:'tr2',prev:null,cost:2});p.tr2=key;S.tp-=2;trainSkill=false}}
+  else if((k==='sk'||k==='gk')&&S.tp>=1&&p[k]<5){trainUndo.push({id:p.id,k,prev:p[k],cost:1});p[k]++;S.tp--}
+  trainDlg(trainAfter);
+}
+const DBT=(attr,t,d)=>`<button class="bp" style="width:100%;margin:6px 0;display:block" ${attr}><b>${t}</b><small style="display:block;color:var(--mut);font-size:13px">${d}</small></button>`;
+function interviewDlg(){
+  const r_=S.hist[S.m]||{us:0,them:0},won=r_.us>r_.them||r_.so==='win',drw=r_.us===r_.them&&!r_.so;
+  const q=won?'Gratulerer med seieren! Hva var hemmeligheten?':drw?'Uavgjort. Er du fornøyd med det?':'Tungt tap. Hva gikk galt?';
+  const opts=won?[['ros','«Spillerne var helt fantastiske»','Trygt og hyggelig.'],['geni','«Det var taktikken min, selvfølgelig»','Publikum liker selvtillit. Spillerne liker det mindre.'],['vaffel','«Vaflene i kiosken. De er undervurdert»','Hvem vet hva som skjer.']]
+    :[['ansvar','«Dette tar jeg på min kappe»','Spillerne setter pris på det.'],['dommer','«Dommeren trenger nye briller»','Laget liker det. Forbundet liker det ikke.'],['skjerp','«Spillerne må skjerpe seg»','Noen blir sure, men laget vil bevise at du tar feil.']];
+  show(`<h3>Intervju</h3><p class="sub">Journalisten fra Fotballavisa stikker mikrofonen opp i ansiktet ditt: «${q}»</p>${opts.map(([k,t,d])=>DBT(`data-iv="${k}"`,t,d)).join('')}`);
+}
+function applyIv(k){
+  const some=n=>shuf(S.sq).slice(0,n);let quote,eff;
+  if(k==='ros'){S.sq.forEach(p=>{if(Math.random()<0.4)md(p,1,'fikk ros i avisa')});quote='Spillerne var helt fantastiske';eff='Flere av spillerne klipper ut artikkelen og henger den på veggen.'}
+  else if(k==='geni'){S.hypeN=35;some(2).forEach(p=>md(p,-1,'treneren tok all æren'));quote='Det var taktikken min, selvfølgelig';eff='Supporterne elsker det, så stemningen starter høyt i neste kamp. To av spillerne himler med øynene.'}
+  else if(k==='vaffel'){some(3).forEach(p=>md(p,1,'lo av vaffelintervjuet'));quote='Vaflene i kiosken. De er undervurdert';eff='Garderoben ler så de griner. Kiosken melder om rekordsalg.'}
+  else if(k==='ansvar'){S.sq.forEach(p=>{if(Math.random()<0.5)md(p,1,'treneren tok ansvaret')});quote='Dette tar jeg på min kappe';eff='Spillerne setter pris på at du tar støyten.'}
+  else if(k==='dommer'){some(3).forEach(p=>md(p,1,'treneren forsvarte laget'));quote='Dommeren trenger nye briller';if(Math.random()<0.5&&S.tp>0){S.tp--;eff='Laget jubler, men forbundet er ikke imponert. Du mister ett treningspoeng i bot.'}else eff='Laget jubler. Forbundet lot det passere denne gangen.'}
+  else{some(3).forEach(p=>md(p,-1,'fikk kritikk i avisa'));S.fireN=1;quote='Spillerne må skjerpe seg';eff='Tre spillere er sure, men hele laget vil vise at du tar feil. Angrepet blir 8 % bedre i neste kamp.'}
+  S.sq.forEach(p=>{p.last=(p.last||[]).concat(p.why||[]).slice(-6);p.why=[]});
+  const ivR=`<div class="avis"><small>FOTBALLAVISA · INTERVJU</small><b>«${quote}»</b><span>${eff}</span></div>`;
+  if(BM){BM.iv=ivR;betweenDlg()}else show(`<h3>Intervju</h3>${ivR}<div class="btns"><button class="btn" data-a="iv2">Videre</button></div>`);
+  save();
+}
+function dayDlg(){
+  const n=OPP[S.m+1],fe=S.pairs&&S.pairs[1];
+  show(`<h3>Dagene før neste kamp</h3><p class="sub">Neste: ${esc(n.st)} mot ${esc(n.n)}. Dere rekker én ting.</p>${DBT('data-day="hvile"','Hviledag','Alle får 25 % mer energi til neste kamp.')}${DBT('data-day="middag"','Lagmiddag',`Alle blir gladere.${fe?` ${esc(P(fe[0]).n)} og ${esc(P(fe[1]).n)} blir venner igjen.`:''}`)}${DBT('data-day="trening"','Ekstra treningsøkt','Du får ett treningspoeng til.')}${DBT('data-day="speid"','Speid på motstanderen',`Du finner en svakhet. ${esc(n.n)} blir 8 % svakere.`)}`);
+}
+function applyDay(k){
+  if(k==='hvile'){S.sq.forEach(p=>p.en=Math.min(100,p.en+25));S.msgs.push('Hviledag: laget har ladet batteriene.')}
+  else if(k==='middag'){S.sq.forEach(p=>md(p,1,'lagmiddag'));const fe=S.pairs&&S.pairs[1];if(fe){S.msgs.push(`Lagmiddag: ${P(fe[0]).n} og ${P(fe[1]).n} ble venner igjen over tacoen.`);S.pairs[1]=null}else S.msgs.push('Lagmiddag: god stemning rundt bordet.');S.sq.forEach(p=>{p.last=(p.last||[]).concat(p.why||[]).slice(-6);p.why=[]})}
+  else if(k==='trening'){S.tp++;S.msgs.push('Ekstra treningsøkt: du fikk ett treningspoeng. Bruk det med Trening-knappen.')}
+  else{S.scout=1;S.msgs.push(`Speideren fant en svakhet hos ${OPP[S.m].n}. De er 8 % svakere i denne kampen.`)}
+}
+function helpDlg(){
+  if(S.busy&&!PAUSED){PAUSED=true;drawTop();drawPitch()}
+  show(`<h3>Hjelp</h3><ul style="margin:8px 0;padding-left:20px;font-size:15px;line-height:1.5">
+   <li><b>Bytte:</b> trykk på en spiller og så en annen, også midt i kampen. Oransje stiplet ring betyr at spilleren står på feil plass.</li>
+   <li><b>Energi og humør:</b> streken under spilleren viser energi. Slitne og sure spillere spiller dårligere. Spillerne tar med seg slitenheten til neste kamp.</li>
+   <li><b>Energidrikk:</b> velg en spiller og trykk på den gule knappen. Fem per kamp.</li>
+   <li><b>Kampen:</b> 2 × 25 minutter, og hver omgang tar ett minutt. Hovedknappen er pauseknapp under kampen.</li>
+   <li><b>VM:</b> seier gir 3 poeng og uavgjort 1. De to beste går videre, og treeren går videre med minst 4 poeng. I sluttspillet avgjøres uavgjort på straffer.</li>
+   <li><b>Fair play:</b> gi alle omtrent like mye spilletid. 7 eller mer gir gladere lag og et ekstra treningspoeng.</li>
+   <li><b>Kort og skader:</b> to gule gir rødt. Rødt kort betyr utestengelse i neste kamp. Skadde spillere står over én eller to kamper.</li>
+   <li><b>Dødballer:</b> på cornere og frispark kan du velge variant. Hvor ofte du blir spurt, styrer du med «Stopp i kampen» på Lag-siden.</li>
+   <li><b>Rop:</b> under kampen kan du rope Press, Rolig eller Alle frem. Det virker i ti sekunder.</li>
+   <li><b>Særtrekk:</b> ${Object.values(QN).map(([a,b])=>`${a} ${b}`).join('. ')}.</li></ul>
+   <div class="btns"><button class="btn" data-a="close">Lukk</button><button class="btn alt" data-a="tut">Vis innføringen</button><button class="btn alt" data-a="laer">Lær å spille</button></div>`);
+}
+const TUT=[['pitch','Dette er laget ditt. Trykk på en spiller og så en annen for å bytte plass. Det går også midt i kampen.'],['bench','Benken. Trykk på en her og så en på banen for å bytte inn. Streken viser energi og prikken humør. Alle vil spille!'],['drink','Velg en sliten spiller og trykk her for å gi energidrikk. Du har fem per kamp.'],['play','Hovedknappen. Den starter kampen, og under kampen er den pauseknapp.'],['t-lag','På Lag-siden velger du tropp, formasjon, spillestil, drakt og ferdigheter.'],['t-meny','I menyen starter du nytt VM eller en enkeltkamp.']];
+function tutStep(i){
+  document.querySelectorAll('.tut-hl').forEach(e=>e.classList.remove('tut-hl'));
+  const box=$('tut');
+  if(i<0||i>=TUT.length){box.hidden=true;$('tutdim').hidden=true;try{localStorage.setItem('treneren-tut','1')}catch(e){}return}
+  const el=$(TUT[i][0]);el.classList.add('tut-hl');if(el.scrollIntoView)el.scrollIntoView({block:'center'});
+  $('tutdim').hidden=false;box.hidden=false;
+  box.innerHTML=`<p>${TUT[i][1]}</p><div class="btns" style="margin:10px 0 0"><button class="btn" data-tut="${i+1}">${i===TUT.length-1?'Ferdig':'Neste'} (${i+1}/${TUT.length})</button><button class="btn alt" data-tut="-1">Hopp over</button></div>`;
+  requestAnimationFrame(()=>{const r=el.getBoundingClientRect(),bh=box.offsetHeight;let top=r.bottom+12;if(top+bh>innerHeight-8)top=r.top-bh-12;if(top<8)top=innerHeight-bh-12;box.style.top=top+'px'});
+}
+$('tut').addEventListener('click',e=>{const b=e.target.closest('[data-tut]');if(b)tutStep(+b.dataset.tut)});
+function maybeTut(){let seen=false;try{seen=!!localStorage.getItem('treneren-tut')}catch(e){seen=true}if(!seen&&!S.busy)tutStep(0)}
+const BADGES={forste:['Første seier','Vinn en kamp'],hat:['Hat trick','En spiller scorer tre mål i én kamp'],nullen:['Holdt nullen','Vinn uten å slippe inn mål'],fair:['Fair play-helt','Få 9 eller 10 i fair play'],glad:['Glad gjeng','Vinn uten en eneste sur spiller'],straffe:['Iskald','Vinn en straffekonkurranse'],snu:['Snuoperasjon','Vinn etter å ha ligget under til pause'],stor:['Storseier','Vinn med fem mål eller mer'],kjempe:['Kjempedreper','Slå et av de sterkeste lagene'],ren:['Rent spill','Vinn en kamp uten kort'],hund:['Hundefanger','Ta igjen hunden på banen'],salto:['Turner','Land en perfekt salto'],rival:['Rivalknuser','Slå rivalen din'],gruppe:['Videre!','Gå videre fra gruppespillet'],finale:['Finalist','Kom til VM-finalen'],vm:['Verdensmester','Vinn VM']};
+let TRO={b:{},r:{titles:0,played:0,stage:0,maxGoals:0,bigWin:0,topN:'',topG:0}},NEWB=[];
+function mergeTro(t){
+  if(!t||typeof t!=='object')return;
+  Object.keys(BADGES).forEach(k=>{if(t.b&&t.b[k]&&!TRO.b[k])TRO.b[k]=+t.b[k]||1});
+  const a=TRO.r,b=t.r||{};['titles','played','stage','maxGoals','bigWin'].forEach(k=>{a[k]=Math.max(a[k]|0,cl(+b[k]|0,0,9999))});
+  if((+b.topG|0)>a.topG){a.topG=+b.topG|0;a.topN=clean(b.topN)}
+}
+try{mergeTro(JSON.parse(localStorage.getItem('treneren-pokal')||'null'))}catch(e){}
+const saveTro=()=>{if(FAST)return;try{localStorage.setItem('treneren-pokal',JSON.stringify(TRO))}catch(e){}};
+function award(id){if(FAST||!BADGES[id]||TRO.b[id])return;TRO.b[id]=Date.now();NEWB.push(id);saveTro()}
+function pokalDlg(){
+  const r=TRO.r,n=Object.keys(TRO.b).length,stg=r.stage>=9?'Verdensmester':r.stage>0?STAGES[Math.min(r.stage,8)-1]:'–';
+  show(`<h3>Pokalskap</h3><p class="sub">${n} av ${Object.keys(BADGES).length} merker</p>
+   <div class="stats" style="margin:10px 0"><div><b>${r.titles}</b><span>VM-titler</span></div><div><b>${r.played}</b><span>Kamper</span></div><div><b>${r.maxGoals}</b><span>Flest mål i en kamp</span></div><div><b>${r.bigWin>0?'+'+r.bigWin:'–'}</b><span>Største seier</span></div></div>
+   <p class="hint" style="margin:0 0 10px"><b>Beste VM:</b> ${esc(stg)}${r.topG?` · <b>Beste toppscorer:</b> ${esc(r.topN)} med ${r.topG} mål i ett VM`:''}</p>
+   <div class="bdg">${Object.entries(BADGES).map(([k,[t,d]])=>`<div class="${TRO.b[k]?'on':''}"><b>${t}</b>${d}</div>`).join('')}</div>
+   <div class="btns"><button class="btn alt" data-menu="back">Tilbake</button></div>`);
+}
+async function simVM(diff){
+  CFG.diff=diff;fresh();
+  const r3=()=>Math.floor(Math.random()*3);
+  for(let guard=0;guard<10;guard++){
+    S.lineupSeen=true;S.pepAsked=true;
+    applyPep(Math.floor(Math.random()*15));
+    await playHalf();
+    autoSwap();S.field.map(P).filter(p=>p.en<50).forEach(p=>{if(S.drinks>0){p.en=Math.min(100,p.en+35);S.drinks--}});
+    applyPep(Math.floor(Math.random()*15));
+    await playHalf();
+    if(SO){let g2=0;while(!SO.done&&g2++<60){if(SO.turn==='us'){if(SO.used.length>=S.sq.length)SO.used=[];SO.shooter=S.sq.filter(p=>!SO.used.includes(p.id))[0].id;soKick(r3())}else soDive(r3())}const rr=SO.done||'lose';SO=null;finishMatch(rr)}
+    BM=null;
+    if(S.out||S.champ)break;
+    const h=S.hist[S.m],won=h.us>h.them||h.so==='win';
+    applyIv(rndPick(won?['ros','geni','vaffel']:['ansvar','dommer','skjerp']));
+    while(S.tp>0){const c=S.sq.filter(p=>p.sk<5);if(!c.length)break;rndPick(c).sk++;S.tp--}
+    const d=rndPick(['hvile','middag','trening','speid']);nextMatch();applyDay(d);
+  }
+  return {played:S.hist.filter(Boolean).length,champ:!!S.champ,gf:S.rec.gf,ga:S.rec.ga,w:S.rec.w};
+}
+window.__bafc={its:()=>ITS.slice(),sim:async(n,diff)=>{
+  const S0=S,O0=OPP,C0=JSON.stringify(CFG),T0=JSON.stringify(TRO),out=[];
+  FAST=true;
+  try{for(let i=0;i<n;i++)out.push(await simVM(diff))}finally{FAST=false;S=S0;setOpp(O0);CFG=JSON.parse(C0);TRO=JSON.parse(T0);NEWB=[];SO=null;BM=null;A=null;draw()}
+  return out}};
+let VMSTASH=null;
+function setNation(n){
+  if(!TEAMS[n])return;
+  CFG.nat=n;CFG.team=n==='Eget'?(CFG.cname||'Mitt lag'):n;CFG.kit=TEAMS[n].k;const nm=TEAMS[n].n;
+  NAMES.forEach((x,i)=>{CFG.names[i]=nm?nm[i]:x[0]});
+  saveCfg();
+}
+function natDlg(){
+  show(`<h3>Nytt VM</h3><p class="sub">Velg landslaget du vil trene. Gruppa trekkes på nytt, og VM-et du holder på med, slettes.</p><label class="f">Landslag<select id="natnew">${natOpts()}</select></label><p class="hint">Favorittene møter motstandere som føles litt svakere. Underdogene har det tøffere. Bytter du landslag, får spillerne nye navn. Velger du «Eget lag», lager du navn, draktfarge og flagg på Lag-siden.</p><div class="btns"><button class="btn" data-menu="startvm">Start VM</button><button class="btn alt" data-menu="back">Tilbake</button></div>`);
+}
+function newVM(){VMSTASH=null;fresh()}
+function startSingle(tier){
+  if(S.mode!=='single')VMSTASH=JSON.stringify({v:4,cfg:CFG,s:Object.assign({},S,{busy:false,sel:null})});
+  const x=rndOf(NAT.filter(n=>(!tier||n[2]===tier)&&n[0]!==CFG.nat)),keep=VMSTASH;
+  fresh();VMSTASH=keep;
+  setOpp([{st:'Enkeltkamp',n:x[0],q:rndOf(QK),s:{1:16,2:21,3:27}[x[2]],c:x[1]}]);S.opps=OPP;S.mode='single';
+}
+function resumeVM(){
+  if(S.mode!=='single')return;
+  const cur=CFG;let ok=false;
+  try{if(VMSTASH)ok=restore(JSON.parse(VMSTASH))}catch(e){}
+  if(!ok){try{const raw=JSON.parse(localStorage.getItem(SKEY)||'null');if(raw&&raw.data)ok=restore(JSON.parse(raw.data))}catch(e){}}
+  if(!ok)fresh();
+  else{CFG=Object.assign({},cur,{squad:CFG.squad});applyCfg()}
+  VMSTASH=null;
+}
+const LOGO2="<svg width=\"88\" height=\"88\" viewBox=\"0 0 400 400\" role=\"img\" aria-label=\"BAFC-logo: taktikktavle med kryss, ringer og pil\"><defs><clipPath id=\"rq\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"360\" rx=\"84\"/></clipPath></defs><g clip-path=\"url(#rq)\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"360\" fill=\"#1f7a3a\"/><g fill=\"#27904a\"><rect x=\"20\" y=\"20\" width=\"360\" height=\"42\"/><rect x=\"20\" y=\"104\" width=\"360\" height=\"42\"/><rect x=\"20\" y=\"188\" width=\"360\" height=\"42\"/></g><g fill=\"none\" stroke=\"#ffffff\" stroke-width=\"6\" stroke-opacity=\".9\"><line x1=\"20\" y1=\"150\" x2=\"380\" y2=\"150\"/><circle cx=\"200\" cy=\"150\" r=\"48\"/></g><g fill=\"none\" stroke=\"#ffffff\" stroke-width=\"9\"><circle cx=\"112\" cy=\"96\" r=\"17\"/><circle cx=\"286\" cy=\"214\" r=\"17\"/></g><g stroke=\"#ffd23f\" stroke-width=\"10\" stroke-linecap=\"round\"><line x1=\"276\" y1=\"76\" x2=\"306\" y2=\"106\"/><line x1=\"306\" y1=\"76\" x2=\"276\" y2=\"106\"/><line x1=\"96\" y1=\"200\" x2=\"126\" y2=\"230\"/><line x1=\"126\" y1=\"200\" x2=\"96\" y2=\"230\"/></g><path d=\"M134 104C176 128 214 150 258 196\" fill=\"none\" stroke=\"#ffd23f\" stroke-width=\"9\" stroke-linecap=\"round\" stroke-dasharray=\"2 18\"/><polygon points=\"270,208 240,200 258,182\" fill=\"#ffd23f\"/><rect x=\"20\" y=\"268\" width=\"360\" height=\"112\" fill=\"#122016\"/><text x=\"200\" y=\"350\" text-anchor=\"middle\" style=\"font-family: Rubik, system-ui, sans-serif; font-weight: 800; font-size: 82px; fill: #ffd23f; letter-spacing: 2px\">BAFC</text></g><rect x=\"20\" y=\"20\" width=\"360\" height=\"360\" rx=\"84\" fill=\"none\" stroke=\"#122016\" stroke-width=\"10\"/></svg>";
+// LÆR Å SPILLE: ett kort per tema. Legg til eller oppdater et kort her hver gang spillet får en ny funksjon.
+const LEARN=[
+ {t:'Målet med spillet',i:'<path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H5v1a3 3 0 0 0 3 3M16 6h3v1a3 3 0 0 1-3 3M12 13v4M8 20h8"/>',p:['Du er trener for et landslag i 7er-fotball og skal vinne VM.','Først tre gruppekamper. De to beste går videre, og treeren går videre med minst 4 poeng.','Så venter sluttspill fra sekstendelsfinale til finale. Uavgjort avgjøres på straffer.','Du kan også spille en enkeltkamp fra menyen uten at VM-et påvirkes.']},
+ {t:'Laget og bytter',i:'<path d="M4 8h13l-3-3M20 16H7l3 3"/>',p:['Sju spillere er på banen, og tre sitter på benken rett under.','Trykk på en spiller og så en annen for å bytte. Det går også midt i kampen.','Oransje stiplet ring betyr at spilleren står på feil plass og spiller dårligere.','«Rettferdig bytte» setter inn dem som har spilt minst.']},
+ {t:'Energi og humør',i:'<path d="M13 2 5 13h6l-1 9 8-12h-6z"/>',p:['Streken under spilleren viser energi. Slitne spillere spiller dårligere.','Prikken på benken viser humør. Sure spillere spiller mye dårligere.','Spilletid gjør spillerne glade, og de som sitter på benken blir sure.','Du har fem energidrikker per kamp. Velg en spiller og trykk på den gule knappen.','Slitenheten blir med til neste kamp, så bruk hele troppen.']},
+ {t:'Selve kampen',i:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',p:['Før avspark ser du begge lagenes oppstilling, motstanderens stjernespiller, spillestil og været.','En kamp er 2 × 25 minutter, og hver omgang tar ett minutt.','Hovedknappen er pauseknapp under kampen. «Spol fram» går fire ganger fortere.','Rop «Press!», «Rolig!» eller «Alle frem!» for å påvirke laget i ti sekunder.','Stemningsmåleren på tribunen stiger med mål og redninger. Når den er full, får angrepet et løft.','Været skifter fra kamp til kamp og påvirker spillet.']},
+ {t:'Valg underveis',i:'<path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6L12 16.8 6.7 19.6l1.1-6L3.4 9.4l6-.8z"/>',p:['Hendelser stopper klokka og gir deg et valg: skade, gult kort, straffe, hund på banen og flere.','Ved store sjanser velger du selv hvilket hjørne skuddet skal gå i.','På cornere og frispark kan du velge variant: innlegg, kort eller skudd.','Etter viktige mål velger du feiring. Noen er trygge, andre kan gå galt.','Etter hvert valg ser du hva som skjedde og hvilken effekt det fikk.','Vil du ha færre avbrudd, velger du «Få» under «Stopp i kampen» på Lag-siden.']},
+ {t:'Peptalk',i:'<path d="M4 5h16v10H10l-5 4v-4H4z"/>',p:['Du kan holde én peptalk før kampen og én i pausen.','Du får seks tilfeldige valg hver gang, både seriøse og tullete.','Effekten avhenger av stillingen og av spillerne, og den varer i omgangen som kommer.']},
+ {t:'Taktikk',i:'<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9l3 3M11 9l-3 3"/><circle cx="15.5" cy="15" r="2"/>',p:['På Lag-siden velger du formasjon og spillestil.','Speiderrapporten før kampen forteller hvordan motstanderen spiller, og hvilket motgrep som virker.','Kaptein, bestevenner og spillere som har kranglet, påvirker også laget.','Lagene du kan velge, er ulike. Favorittene har det lettest, og underdogene har det tøffest.']},
+ {t:'Kort og skader',i:'<rect x="5" y="4" width="9" height="14" rx="1.5"/><rect x="10" y="7" width="9" height="14" rx="1.5"/>',p:['Taklinger gir frispark, og av og til gult kort. To gule gir rødt.','Rødt kort betyr at spilleren må ut og er utestengt i neste kamp.','En skadet spiller kan bli borte i én eller to kamper.','Høyt press gir flere frispark imot.']},
+ {t:'Mellom kampene',i:'<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/>',p:['Etter kampen får du ett vindu med fire faner: Kampen, Intervju, Trening og Neste kamp.','Kampen viser resultat, avisforside, banens beste og hvorfor spillerne er glade eller sure.','I intervjuet velger du ett svar, som påvirker humøret eller neste kamp. Du kan hoppe over det.','Treningspoeng bruker du på bedre nivå, bedre keeper eller en ekstra ferdighet.','Under Neste kamp velger du én ting: hvile, lagmiddag, ekstra trening eller speiding.']},
+ {t:'Lag-siden',i:'<path d="M9 4 4 7l2 3 2-1v10h8V9l2 1 2-3-5-3-3 2z"/>',p:['Velg landslag før VM starter, eller lag ditt eget med navn, drakt og flagg.','Ta ut 10 av 16 spillere i troppen, og gi dem navn, posisjon og ferdighet.','Noen spillere har særtrekk, som Drømmeren og Lagkameraten.','Her finner du også vanskelighetsgrad, stopp i kampen, lyd, publikumslyd og tema.']},
+ {t:'Pokalskap og lagring',i:'<circle cx="12" cy="14" r="5"/><path d="M9 3l3 6 3-6"/>',p:['Pokalskapet i menyen samler 16 merker og rekordene dine på tvers av VM-er.','VM-et lagres automatisk på enheten, så du kan fortsette senere.','Enkeltkamper lagres ikke.','Lurer du på noe underveis, ligger «Hjelp» under banen.']}];
+function learnDlg(){
+  show(`<h3>Lær å spille</h3><p class="sub">Sveip eller bruk knappene for å bla.</p><div class="lrn" id="lrn" tabindex="0" aria-label="Kort om hvordan spillet fungerer">${LEARN.map((c,i)=>`<section aria-label="Kort ${i+1} av ${LEARN.length}"><div class="ic"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${c.i}</svg></div><h4>${c.t}</h4><ul>${c.p.map(x=>`<li>${x}</li>`).join('')}</ul></section>`).join('')}</div>
+   <div class="lrnnav"><button class="btn alt" data-lrn="-1">‹ Forrige</button><span id="lrnpos">1 / ${LEARN.length}</span><button class="btn" data-lrn="1">Neste ›</button></div>
+   <div class="btns"><button class="btn alt" data-menu="back">Tilbake til menyen</button></div>`);
+  const el=$('lrn'),idx=()=>Math.round(el.scrollLeft/(el.firstElementChild.offsetWidth+12));
+  el.addEventListener('scroll',()=>{$('lrnpos').textContent=`${Math.min(LEARN.length,idx()+1)} / ${LEARN.length}`});
+  el.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();learnGo(e.key==='ArrowRight'?1:-1)}});
+}
+function learnGo(d){const el=$('lrn');if(!el)return;const w=el.firstElementChild.offsetWidth+12,i=cl(Math.round(el.scrollLeft/w)+d,0,LEARN.length-1);el.scrollTo({left:i*w,behavior:RM?'auto':'smooth'})}
+const MB=(k,t,d)=>`<button class="bp" style="width:100%;margin:6px 0;display:block" data-menu="${k}"><b>${t}</b><small style="display:block;color:var(--mut);font-size:13px">${d}</small></button>`;
+function menu(){
+  if(S.busy)return;
+  const single=S.mode==='single',o=OPP[S.m],over=S.out||S.champ,begun=S.h>0||S.hist.length>0;
+  let h=`<div style="display:flex;align-items:center;gap:14px;margin-bottom:8px">${LOGO2}<div><h3 style="margin:0">${esc(TN())}</h3><p class="sub">BAFC · Be A Football Coach</p></div></div>`;
+  if(single){
+    if(!over)h+=MB('cont','Fortsett enkeltkampen',`Mot ${esc(o.n)}.`);
+    h+=MB('vm','Tilbake til VM','VM-et ditt er lagret og venter der du slapp.');
+    h+=MB('single','Ny enkeltkamp','Én kamp mot en motstander du velger styrken på.');
+  }else{
+    h+=over?MB('vm','Se VM-resultatet','Dette VM-et er ferdig.'):MB('cont',begun?'Fortsett VM':'Start VM',`${esc(o.st)} mot ${esc(o.n)}.`);
+    h+=MB('single','Enkeltkamp','Én kamp uten at VM-et ditt påvirkes.');
+  }
+  h+=MB('new','Nytt VM','Velg landslag og få ny trekning. VM-et du holder på med, slettes.');
+  h+=MB('laer','Lær å spille',`${LEARN.length} korte kort om hvordan spillet fungerer.`);
+  h+=MB('pokal','Pokalskap',`${Object.keys(TRO.b).length} av ${Object.keys(BADGES).length} merker, og rekordene dine.`);
+  h+=MB('tema',`Tema: ${THN[CFG.theme]}`,'Trykk for å bytte mellom lyst, mørkt og automatisk.');
+  h+=MB('lag','Lag og taktikk','Tropp, formasjon, spillestil, vanskelighetsgrad og lyd.');
+  show(h);
+}
+function singleDlg(){
+  show(`<h3>Enkeltkamp</h3><p class="sub">Velg hvor sterk motstanderen skal være. Laget ditt starter uthvilt og uten treningspoeng.</p>${MB('s1','Lett motstander','For eksempel Qatar eller New Zealand.')}${MB('s2','Middels motstander','For eksempel Japan eller Sveits.')}${MB('s3','Sterk motstander','For eksempel Brasil eller Frankrike.')}${MB('s0','Tilfeldig','La trekningen bestemme.')}<div class="btns"><button class="btn alt" data-menu="back">Tilbake</button></div>`);
+}
+function show(h){if(FAST)return;$('dlg').innerHTML=h;$('ov').classList.add('on')}
+function hide(){$('ov').classList.remove('on')}
+
+/* ---------- Hendelser ---------- */
+$('pitch').addEventListener('click',e=>{const g=e.target.closest('.pl');if(g)pick(+g.dataset.id)});
+$('pitch').addEventListener('keydown',e=>{const g=e.target.closest('.pl');if(g&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pick(+g.dataset.id)}});
+$('bench').addEventListener('click',e=>{const b=e.target.closest('.bp');if(b)pick(+b.dataset.id)});
+$('play').addEventListener('click',()=>{if(S.busy){PAUSED=!PAUSED;drawTop();drawPitch();return}playHalf()});
+$('help').addEventListener('click',helpDlg);
+$('auto').addEventListener('click',autoSwap);
+$('drink').addEventListener('click',()=>{
+  if(S.drinks<=0||S.sel===null||SO||(S.h>=2&&!S.busy))return;
+  const p=P(S.sel),before=Math.round(p.en);p.en=Math.min(100,p.en+35);S.drinks--;
+  const where=S.field.includes(p.id)?'':' på benken';
+  S.log.push(['c',`${S.busy?gameMin()+"' ":''}${p.n}${where} får energidrikk (${before} → ${Math.round(p.en)} % energi).`]);
+  S.sel=null;draw();
+});
+$('nt').addEventListener('click',()=>{NT.forEach(([n,pos,tr],i)=>{CFG.names[i]=n;CFG.pos[i]=pos;CFG.traits[i]=tr});CFG.team='Norge';cfgChanged(true);$('ntmsg').textContent='Landslaget er på plass: Nyland i mål, Haaland og Sørloth på topp, Ødegaard styrer midtbanen.'});
+$('train').addEventListener('click',()=>{if(!S.busy&&S.tp>0&&!SO){trainSel=null;trainSkill=false;trainUndo=[];trainDlg(false)}});
+$('natsel').addEventListener('change',e=>{if(S.busy||S.h>0||S.hist.length>0||S.mode==='single'){return drawLag()}setNation(e.target.value);newVM();$('welcome').innerHTML='';drawLag();drawTop();drawPitch();drawBench();save()});
+$('owncard').addEventListener('input',()=>{CFG.cflag={p:$('cf-p').value,a:$('cf-a').value,b:$('cf-b').value,c:$('cf-c').value};saveCfg();$('cf-prev').innerHTML=flagSvg('Eget');$('cf-prev').firstChild.style.cssText='display:block;width:100%;height:100%';drawTop();save()});
+$('capsel').addEventListener('change',e=>{if(S.busy)return;S.cap=cl(+e.target.value|0,0,9);drawLag();drawPitch();save()});
+$('shouts').addEventListener('click',e=>{const b=e.target.closest('[data-sh]');if(!b||!S.busy||PAUSED||S.t<SH.cd)return;const k=b.dataset.sh;SH={k,until:S.t+10,cd:S.t+25};S.log.push(['c',`${gameMin()}' Treneren roper «${b.textContent.replace(/ .*$/,'').replace('Alle','Alle frem!')}»`]);drawLog();drawShouts()});
+$('kits').addEventListener('click',e=>{const b=e.target.closest('[data-kit]');if(b){CFG.kit=b.dataset.kit;cfgChanged(true);drawPitch()}});
+$('logos').addEventListener('click',e=>{const b=e.target.closest('[data-logo]');if(b){CFG.logo=b.dataset.logo;cfgChanged(true)}});
+$('stops').addEventListener('click',e=>{const b=e.target.closest('[data-stop]');if(b){CFG.stops=b.dataset.stop;cfgChanged(true)}});
+$('amb').addEventListener('click',()=>{CFG.amb=!CFG.amb;saveCfg();if(!CFG.amb)ambStop();drawLag();save()});
+$('thm').addEventListener('click',()=>{nextTheme();drawLag()});
+$('snd').addEventListener('click',()=>{CFG.sound=!CFG.sound;saveCfg();drawLag();save();if(CFG.sound)SFX.whistle(1)});
+$('diffs').addEventListener('click',e=>{const b=e.target.closest('[data-diff]');if(b&&!S.busy){CFG.diff=b.dataset.diff;cfgChanged(true)}});
+$('squad').addEventListener('click',e=>{const b=e.target.closest('[data-sq]');if(!b||S.busy||S.h>0||S.hist.length>0)return;const pi=+b.dataset.sq;
+  if(lagSel===null||lagSel===pi){lagSel=lagSel===pi?null:pi;return drawLag()}
+  const a=CFG.squad.indexOf(lagSel),c=CFG.squad.indexOf(pi);
+  if((a>=0)===(c>=0)){lagSel=pi;return drawLag()}
+  if(a>=0)CFG.squad[a]=pi;else CFG.squad[c]=lagSel;
+  lagSel=null;saveCfg();const sm=S.mode,op=OPP;fresh();if(sm==='single'){setOpp(op);S.opps=OPP;S.mode='single'}drawLag();drawTop();save()});
+$('dlg').addEventListener('change',e=>{const t=e.target;if(t.dataset.tr2===undefined)return;const p=P(+t.dataset.tr2);if(S.tp>=2&&TR[t.value]&&t.value!==p.tr&&!p.tr2){p.tr2=t.value;S.tp-=2}trainDlg(trainAfter)});
+$('std').addEventListener('click',()=>{const nm_=(TEAMS[CFG.nat]||{}).n;NAMES.forEach((x,i)=>{CFG.names[i]=nm_?nm_[i]:x[0];CFG.pos[i]=x[4];CFG.traits[i]=x[5]});cfgChanged(true);$('ntmsg').textContent='Tilbake til standardnavnene.'});
+$('pep').addEventListener('click',()=>{if(!S.busy&&S.h<2&&!S.pep[S.h])pepDlg(false)});
+$('ff').addEventListener('click',()=>{SPD=SPD>1?(RM?4:1):4;drawTop()});
+$('t-kamp').addEventListener('click',()=>showTab('kamp'));
+$('t-lag').addEventListener('click',()=>showTab('lag'));
+$('tomatch').addEventListener('click',()=>{$('welcome').innerHTML='';showTab('kamp');maybeTut()});
+$('reset').addEventListener('click',e=>{const b=e.currentTarget;if(S.busy)return;if(b.dataset.ok){delete b.dataset.ok;b.textContent='Start nytt VM';newVM();showTab('kamp')}else{b.dataset.ok=1;b.textContent='Trykk igjen for å slette sesongen'}});
+function cfgChanged(full){saveCfg();applyCfg();if(full)drawLag();save();drawTop()}
+$('f-coach').addEventListener('input',e=>{CFG.coach=clean(e.target.value);cfgChanged(false)});
+$('f-team').addEventListener('input',e=>{CFG.team=clean(e.target.value);if(CFG.nat==='Eget')CFG.cname=CFG.team;cfgChanged(false)});
+$('forms').addEventListener('click',e=>{const b=e.target.closest('[data-form]');if(b&&!S.busy){CFG.form=b.dataset.form;if(S.h===0&&!S.hist.length)arrange();cfgChanged(true)}});
+$('styles').addEventListener('click',e=>{const b=e.target.closest('[data-style]');if(b&&!S.busy){CFG.style=b.dataset.style;cfgChanged(true)}});
+$('players').addEventListener('input',e=>{const i=e.target.dataset.pn;if(i!==undefined){CFG.names[+i]=clean(e.target.value)||NAMES[+i][0];cfgChanged(false)}});
+$('players').addEventListener('change',e=>{const t=e.target;
+  if(t.dataset.pp!==undefined){CFG.pos[+t.dataset.pp]=posOk(t.value,+t.dataset.pp);cfgChanged(true)}
+  if(t.dataset.pt!==undefined){CFG.traits[+t.dataset.pt]=trOk(t.value,+t.dataset.pt);cfgChanged(true)}});
+$('t-meny').addEventListener('click',menu);
+$('dlg').addEventListener('click',e=>{
+  const lr=e.target.closest('[data-lrn]');if(lr)return learnGo(+lr.dataset.lrn);
+  const iv=e.target.closest('[data-iv]');if(iv)return applyIv(iv.dataset.iv);
+  const bt=e.target.closest('[data-bt]');if(bt&&BM){BM.tab=bt.dataset.bt;if(BM.tab==='tr'){trainSel=null;trainSkill=false}return betweenDlg()}
+  const dy=e.target.closest('[data-day]');if(dy){if(BM){BM.day=dy.dataset.day;return betweenDlg()}hide();nextMatch();applyDay(dy.dataset.day);return draw()}
+  const mb=e.target.closest('[data-menu]');
+  if(mb){const k=mb.dataset.menu;
+    if(k==='cont'){hide();$('welcome').innerHTML='';return showTab('kamp')}
+    if(k==='back')return menu();
+    if(k==='single')return singleDlg();
+    if(k==='pokal')return pokalDlg();
+    if(k==='laer')return learnDlg();
+    if(k==='tema'){nextTheme();return menu()}
+    if(k==='lag'){hide();return showTab('lag')}
+    if(k==='vm'){resumeVM();hide();showTab('kamp');if(S.out||S.champ)seasonEnd();return}
+    if(k==='new')return natDlg();
+    if(k==='startvm'){const n=$('natnew').value;const own=n==='Eget'&&CFG.nat!=='Eget';if(n!==CFG.nat)setNation(n);newVM();hide();$('welcome').innerHTML='';return showTab(own?'lag':'kamp')}
+    if(/^s[0-3]$/.test(k)){startSingle(+k[1]);hide();$('welcome').innerHTML='';return showTab('kamp')}
+    return}
+  const ev=e.target.closest('[data-ev]');if(ev&&evRes){const f=evRes;evRes=null;hide();return f(ev.dataset.ev)}
+  if(e.target.closest('[data-trn],[data-tp]'))return trainClick(e.target);
+  const pp=e.target.closest('[data-pep]');
+  if(pp){const v=pp.dataset.pep;if(v==='x'){hide();if(pepFromStart)playHalf();return}applyPep(+v);if(pepFromStart)playHalf();return}
+  const s=e.target.closest('[data-so]');
+  if(s&&SO){const v=s.dataset.so;
+    if(v==='sh'){SO.shooter=+s.dataset.id;return soDraw()}
+    if(v==='kick'&&SO.shooter!==null)return soKick(+s.dataset.d);
+    if(v==='dive')return soDive(+s.dataset.d);
+    if(v==='end'){const r=SO.done;SO=null;hide();return finishMatch(r)}
+    return}
+  const a=e.target.closest('[data-a]');if(!a)return;
+  const k=a.dataset.a;
+  if(k==='bmgo'){if(!BM||!BM.day)return;const d_=BM.day;BM=null;hide();nextMatch();applyDay(d_);return draw()}
+  if(k==='lgo'){hide();return playHalf()}
+  if(k==='lpep'){return pepDlg(true)}
+  if(k==='next')BM=null;
+  const cont=false;
+  if(k==='next'&&cont)return interviewDlg();
+  if(k==='iv2'){if(S.tp>0){trainSel=null;trainSkill=false;trainUndo=[];return trainDlg(true)}return dayDlg()}
+  if(k==='go'&&cont)return dayDlg();
+  hide();
+  if(k==='menu')return menu();
+  if(k==='laer')return learnDlg();
+  if(k==='tut'){hide();showTab('kamp');return tutStep(0)}
+  if(k==='new')return natDlg();
+  else if(k==='next'||k==='go')nextMatch();
+  else draw();
+});
+
+/* ---------- Lagring: på enheten og på Claude-kontoen ---------- */
+const SKEY='treneren-save-v4';
+let DBREF=null,lastJson='',saveT=null,saving=false,localAt=0;
+function setSaved(where){const t=new Date().toLocaleTimeString('nb-NO',{hour:'2-digit',minute:'2-digit'});$('saved').textContent=`Lagret kl. ${t} ${where}.`}
+function save(){
+  if(!S||S.busy||SO||S.mode==='single'||FAST)return;
+  clearTimeout(saveT);
+  saveT=setTimeout(async()=>{
+    if(S.busy||SO||S.mode==='single')return;
+    const j=JSON.stringify({v:4,cfg:CFG,s:Object.assign({},S,{busy:false,sel:null})});
+    if(j===lastJson)return;lastJson=j;
+    const at=Date.now();
+    try{localStorage.setItem(SKEY,JSON.stringify({at,data:j}));localAt=at;setSaved('på denne enheten')}catch(e){}
+    if(DBREF&&!saving){saving=true;try{await DBREF.set({at,data:j,tro:JSON.stringify(TRO)});setSaved('på Claude-kontoen din')}catch(e){}saving=false}
+  },700);
+}
+function restore(o){
+  try{
+    if(!o||o.v!==4||!o.s||!Array.isArray(o.s.sq)||o.s.sq.length!==10||!Array.isArray(o.s.field)||o.s.field.length!==7)return false;
+    const s=o.s,f=s.field.map(x=>cl(+x|0,0,9));
+    if(new Set(f).size!==7)return false;
+    const c=cfgFrom(o.cfg);if(c)CFG=c;
+    setOpp(sanOpps(s.opps));
+    S={opps:OPP,m:cl(+s.m|0,0,OPP.length),h:cl(+s.h|0,0,2),t:0,us:+s.us|0,them:+s.them|0,
+      pep:Array.isArray(s.pep)?[!!s.pep[0],!!s.pep[1]]:[false,false],pepAsked:!!s.pepAsked,busy:false,sel:null,
+      boost:s.boost&&typeof s.boost==='object'?{a:+s.boost.a||1,d:+s.boost.d||1,f:+s.boost.f||1}:null,
+      tp:cl(+s.tp|0,0,99),cap:cl(+s.cap|0,0,9),wx:WX[s.wx]?s.wx:'sol',hype:cl(+s.hype|0,0,100),scout:s.scout?1:0,fire:s.fire?1:0,fireN:s.fireN?1:0,hypeN:cl(+s.hypeN|0,0,100),htd:+s.htd|0,
+      pairs:(()=>{const ok=x=>Array.isArray(x)&&x.length===2&&x.every(n=>Number.isInteger(n)&&n>=0&&n<10)&&x[0]!==x[1];const p=Array.isArray(s.pairs)?s.pairs:[];return [ok(p[0])?p[0]:null,ok(p[1])?p[1]:null]})(),
+      gres:Array.isArray(s.gres)?s.gres.filter(g=>Array.isArray(g)&&g.length===5).slice(0,6).map(g=>[cl(+g[0]|0,0,2),clean(g[1]),clean(g[2]),+g[3]|0,+g[4]|0]):[],goals:Array.isArray(s.goals)?s.goals.slice(0,40).map(g=>({u:!!g.u,n:clean(g.n),m:+g.m|0})):[],ored:Array.isArray(s.ored)?s.ored.filter(i=>[1,2,3,5,6].includes(i)).slice(0,3):[],oyc:{},
+      sq:s.sq.map((p,i)=>{const pi=cl(+p.pi|0,0,NAMES.length-1);return {id:i,pi,nr:NAMES[pi][1],sk:cl(+p.sk||NAMES[pi][2],1,5),gk:cl(+p.gk||NAMES[pi][3],1,5),en:cl(+p.en||0,0,100),min:+p.min||0,mood:cl(Math.round(+p.mood||0),0,5),tot:+p.tot||0,g:+p.g|0,sv:+p.sv|0,mg:+p.mg|0,msv:+p.msv|0,off:cl(+p.off|0,0,3),inj:cl(+p.inj|0,0,2),yc:cl(+p.yc|0,0,2),ban:!!p.ban,tr2:TR[p.tr2]?p.tr2:null,why:Array.isArray(p.why)?p.why.slice(0,8).map(x=>String(x).slice(0,60)):[],last:Array.isArray(p.last)?p.last.slice(0,6).map(x=>String(x).slice(0,60)):[]}}),
+      field:f,rec:Object.assign({w:0,u:0,t:0,gf:0,ga:0,pts:0,fair:0},s.rec||{}),
+      log:Array.isArray(s.log)?s.log.filter(x=>Array.isArray(x)).map(([c,t])=>[String(c),String(t)]).slice(-80):[],
+      msgs:Array.isArray(s.msgs)?s.msgs.map(String).slice(0,6):[],
+      drinks:cl(+s.drinks|0,0,5),out:!!s.out,champ:!!s.champ,
+      hist:Array.isArray(s.hist)?s.hist.slice(0,OPP.length).map(x=>x&&typeof x==='object'?{us:+x.us|0,them:+x.them|0,so:x.so==='win'||x.so==='lose'?x.so:null}:null):[],
+      tab:Object.fromEntries(GRP.map(n=>{const t=(s.tab||{})[n]||(n===ME?(s.tab||{}).Norge:null)||{};return [n,{k:+t.k|0,p:+t.p|0,gf:+t.gf|0,ga:+t.ga|0}]}))};
+    if(new Set(S.sq.map(p=>p.pi)).size!==10)return false;
+    CFG.squad=S.sq.map(p=>p.pi);
+    applyCfg();
+    return true;
+  }catch(e){return false}
+}
+let loaded=false;
+try{const raw=JSON.parse(localStorage.getItem(SKEY)||'null');if(raw&&raw.data&&restore(JSON.parse(raw.data))){loaded=true;localAt=+raw.at||0;lastJson=raw.data}}catch(e){}
+if(!loaded)fresh();
+draw();
+if(loaded){$('saved').textContent='VM er hentet fra denne enheten.';menu()}
+else{$('welcome').innerHTML=`<div class="msg" style="margin:0 0 12px"><b>Velkommen til VM, trener!</b> Du er ${esc(TN())} i gruppe I med ${GRP[1]}, ${GRP[2]} og ${GRP[3]}. Vil du trene et annet landslag, velger du det under «Landslag» her. Motstanderne trekkes på nytt for hvert VM. Velg formasjon, posisjoner og ferdigheter, eller trykk «Bruk Norges landslag». Trykk «Til kampen» når du er klar.</div>`;showTab('lag')}
+(async()=>{
+  try{
+    if(!window.claude||!claude.use)return;
+    const [db,user]=await Promise.all([claude.use('db'),claude.use('user')]);
+    if(!db||!user)return;
+    const uid=await user.id();if(!uid)return;
+    DBREF=db.collection('data/users/'+uid).doc('treneren4');
+    const snap=await DBREF.get();
+    if(snap.exists){
+      const d=snap.data()||{};
+      if(typeof d.tro==='string'){try{mergeTro(JSON.parse(d.tro));saveTro()}catch(e){}}
+      if((+d.at||0)>localAt&&typeof d.data==='string'&&!S.busy&&S.mode!=='single'){
+        try{if(restore(JSON.parse(d.data))){lastJson=d.data;$('welcome').innerHTML='';showTab('kamp');$('saved').textContent='VM er hentet fra Claude-kontoen din.';menu();return}}catch(e){}
+      }
+    }
+    lastJson='';save();
+  }catch(e){DBREF=null}
+})();
+}
+</script>
+</body>
+</html>
